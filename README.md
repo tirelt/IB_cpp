@@ -23,3 +23,5 @@ rm twsapi_macunix.1019.04.zip
 
 - [api-introduction](https://ibkrcampus.com/ibkr-api-page/twsapi-doc/#api-introduction)
 - [api download](https://interactivebrokers.github.io/#)
+- [TwsApiCpp](https://github.com/JanBoonen/TwsApiCpp/tree/master)
+- [Fix bug smaple API](https://groups.io/g/twsapi/topic/build_problem_with_cppclient/99520064)
