@@ -24,7 +24,7 @@ rm twsapi_macunix.1019.04.zip
 
 ##  Compile `TestCppClient`
 
-The Api comes with a test app `/IBJts/samples/Cpp/TestCppClient` which packs a mmakefile.
+The Api comes with a test app `/IBJts/samples/Cpp/TestCppClient` which packs a makefile.
 
 ```Bash
 cd tws_api/IBJts/samples/Cpp/TestCppClient
@@ -35,24 +35,28 @@ On our system we get the issue
 g++: error: ../../../source/cppclient/client/lib/libbid.a: No such file or directory
 ```
 The issue has been raised and solved [here](https://groups.io/g/twsapi/topic/build_problem_with_cppclient/99520064).
-We need to install another big decimal library. IB comes with their own with is not compatible with `ld`.
+We need to install another big decimal library. IB comes with their own which is not compatible with `ld`.
 
+We will install `libintelrdfpmath-dev` instead (developped by intel).
 
-Edit the makefile so it uses /libbidgcc000.a instead of libbid.a
+1. Edit the makefile so it uses /libbidgcc000.a instead of libbid.a.
+
 ```
 $(TARGET)Static:
 -	$(CXX) $(CXXFLAGS) $(INCLUDES) $(BASE_SRC_DIR)/*.cpp ./*.cpp $(BASE_SRC_DIR)/lib/libbid.a -o$(TARGET)Static
 +	$(CXX) $(CXXFLAGS) $(INCLUDES) $(BASE_SRC_DIR)/*.cpp ./*.cpp -lbidgcc000 -o$(TARGET)Static
 ```
+2. install the library
+
 ```Bash
 sudo apt-get install libintelrdfpmath-dev
 make clean
 make
 ```
-On our system `apt-get` wouldn't find `libintelrdfpmath-dev` so we installed manually. We run on a `armhf` architecture. You can find all the versions [here](https://packages.debian.org/sid/libintelrdfpmath-dev).
+On our system `apt-get` wouldn't find `libintelrdfpmath-dev` so we install it manually. We run on a `armhf` architecture. You can find all the versions [here](https://packages.debian.org/sid/libintelrdfpmath-dev).
 
 ```Bash
-wget http://ftp.hk.debian.org/debian/pool/main/i/intelrdfpmath/libintelrdfpmath-dev_2.0u3-1_armhf.deb
+wget http://ftp.hk.debian.org/debian/pool/main/i/intelrdfpmath/libintelrdfpmath-dev_2.0u3-1_armhf.deb #manual download
 sudo apt install ./libintelrdfpmath-dev_2.0u3-1_armhf.deb
 rm libintelrdfpmath-dev_2.0u3-1_armhf.deb
 dpkg -L libintelrdfpmath-dev #to check where it is installed.
@@ -63,7 +67,7 @@ To run the test app
 ```Bash
 ./TestCppClientStatic <Host> <port> #default on local host:7497. You can change in main.cpp the default
 ```
-We get the below followed by market data errors (using the Paper Trading account this is normal).
+We get the below followed by market data errors (we are using a Paper Trading account so it expected).
 
 ```Bash
 Start of C++ Socket Client Test 0
@@ -74,7 +78,6 @@ Account List: <AccountNumber>
 Next Valid Id: 1
 ```
 
-We 
 ## Doc
 
 - [api-introduction](https://ibkrcampus.com/ibkr-api-page/twsapi-doc/#api-introduction)
