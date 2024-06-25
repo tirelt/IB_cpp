@@ -37,7 +37,7 @@ g++: error: ../../../source/cppclient/client/lib/libbid.a: No such file or direc
 The issue has been raised and solved [here](https://groups.io/g/twsapi/topic/build_problem_with_cppclient/99520064).
 We need to install another big decimal library. IB comes with their own which is not compatible with `ld`.
 
-We will install `libintelrdfpmath-dev` instead (developped by intel).
+We will install `libintelrdfpmath-dev` (big decimal library by intel) instead:
 
 1. Edit the makefile so it uses /libbidgcc000.a instead of libbid.a.
 
@@ -61,7 +61,7 @@ sudo apt install ./libintelrdfpmath-dev_2.0u3-1_armhf.deb
 rm libintelrdfpmath-dev_2.0u3-1_armhf.deb
 dpkg -L libintelrdfpmath-dev #to check where it is installed.
 ```
-If you're getting `/usr/bin/ld: cannot find -l<nameOfTheLibrary> you can follow [this](https://stackoverflow.com/questions/16710047/usr-bin-ld-cannot-find-lnameofthelibrary#) to manually manually create the symlink.
+If you're getting `/usr/bin/ld: cannot find -l<nameOfTheLibrary>` you can follow [this](https://stackoverflow.com/questions/16710047/usr-bin-ld-cannot-find-lnameofthelibrary#) to manually manually create the symlink.
 
 To run the test app
 ```Bash
