@@ -53,7 +53,7 @@ sudo apt-get install libintelrdfpmath-dev
 make clean
 make
 ```
-On our system `apt-get` wouldn't find `libintelrdfpmath-dev` so we install it manually. We run on a `armhf` architecture. You can find all the versions [here](https://packages.debian.org/sid/libintelrdfpmath-dev).
+On our system `apt-get` doesn't find `libintelrdfpmath-dev` so we install it manually. You can find all the versions [here](https://packages.debian.org/sid/libintelrdfpmath-dev). We run on a `armhf` architecture so we downaload and install the appropriete version using:
 
 ```Bash
 wget http://ftp.hk.debian.org/debian/pool/main/i/intelrdfpmath/libintelrdfpmath-dev_2.0u3-1_armhf.deb #manual download
@@ -67,7 +67,7 @@ To run the test app
 ```Bash
 ./TestCppClientStatic <Host> <port> #default on local host:7497. You can change in main.cpp the default
 ```
-We get the below followed by market data errors (we are using a Paper Trading account so it expected).
+We get the below followed by market data errors (we are using a paper trading account so this is expected).
 
 ```Bash
 Start of C++ Socket Client Test 0
