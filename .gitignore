@@ -32,3 +32,7 @@
 *.app
 
 tws_api
+
+.vscode
+
+!./tws_api/IBJts/samples/Cpp/TestCppClient/TestCppClientStatic
