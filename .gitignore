@@ -31,7 +31,7 @@
 *.out
 *.app
 
-.vscode
+.vscode/*
 
 tws_api/*
 !tws_api/IBJts/
