@@ -13,20 +13,14 @@ TARGET=MyApp
 $(TARGET)Static:
 	$(CXX) $(CXXFLAGS) $(INCLUDES) $(BASE_SRC_DIR)/*.cpp ./src/*.cpp -lbidgcc000 -o$(TARGET)Static
 	
-$(TARGET):
-	$(CXX) $(CXXFLAGS) $(INCLUDES) $(BASE_SRC_DIR)/*.cpp ./*.cpp -L$(LIB_DIR) -l:$(LIB_NAME_SO) -o$(TARGET)
-
 $(TARGET)Dynamic:
-	$(CXX) $(CXXFLAGS) $(INCLUDES)  ./*.cpp -L$(LIB_DIR) -l:$(LIB_NAME_SO) -L$(SOURCE_DIR) -l:$(SOURCE_LIB) -o$(TARGET)Dynamic
+	$(CXX) $(CXXFLAGS) $(INCLUDES)  ./src/*.cpp -lbidgcc000 -L$(SOURCE_DIR) -l:$(SOURCE_LIB) -o$(TARGET)Dynamic
 
 run$(TARGET)Static:
 	./$(TARGET)Static
 
-run$(TARGET):
-	LD_LIBRARY_PATH=$(PWD)/$(LIB_DIR):$(LD_LIBRARY_PATH) ./$(TARGET)
-
 run$(TARGET)Dynamic:
-	LD_LIBRARY_PATH=$(PWD)/$(LIB_DIR):$(PWD)/$(SOURCE_DIR):$(LD_LIBRARY_PATH) ./$(TARGET)Dynamic
+	LD_LIBRARY_PATH=$(PWD)/$(SOURCE_DIR):$(LD_LIBRARY_PATH) ./$(TARGET)Dynamic
 
 clean:
 	rm -f $(TARGET) $(TARGET)Static $(TARGET)Dynamic *.o
