@@ -32,15 +32,3 @@
 *.app
 
 .vscode/*
-
-tws_api/*
-!tws_api/IBJts/
-tws_api/IBJts/*
-!tws_api/IBJts/samples/
-tws_api/IBJts/samples/*
-!tws_api/IBJts/samples/Cpp
-tws_api/IBJts/samples/Cpp/*
-!tws_api/IBJts/samples/Cpp/TestCppClient
-tws_api/IBJts/samples/Cpp/TestCppClient/*
-!tws_api/IBJts/samples/Cpp/TestCppClient/TestCppClientStatic
-!tws_api/IBJts/samples/Cpp/TestCppClient/makefile
