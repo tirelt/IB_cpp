@@ -15,6 +15,7 @@ $(TARGET)Static:
 	
 $(TARGET)Dynamic:
 	$(CXX) $(CXXFLAGS) $(INCLUDES)  ./src/*.cpp -lbidgcc000 -L$(SOURCE_DIR) -l:$(SOURCE_LIB) -o$(TARGET)Dynamic
+	touch $(TARGET)
 
 run$(TARGET)Static:
 	./$(TARGET)Static

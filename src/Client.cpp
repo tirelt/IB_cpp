@@ -34,7 +34,6 @@
 #include <iostream>
 #include <thread>
 #include <ctime>
-#include <fstream>
 #include <cstdint>
 
 const int PING_DEADLINE = 2; // seconds
@@ -50,8 +49,9 @@ Client::Client() :
 	, m_sleepDeadline(0)
 	, m_orderId(0)
     , m_extraAuth(false)
+	, log(new Log)
+	, write_log( true )
 {
-	log.open("client_log",std::ofstream::app);
 }
 
 
@@ -63,11 +63,11 @@ Client::~Client()
 		m_pReader.reset();
 
 	delete m_pClient;
-	log.close();
 }
 
 bool Client::connect(const char *host, int port, int clientId)
 {
+	if (write_log){log->write("Client - connect","");}
 	// trying to connect
 	printf( "Connecting to %s:%d clientId:%d\n", !( host && *host) ? "127.0.0.1" : host, port, clientId);
 	
@@ -97,6 +97,7 @@ void Client::disconnect() const
 
 bool Client::isConnected() const
 {
+	if (write_log){log->write("Client - isConnected - m_state:",m_state);}
 	return m_pClient->isConnected();
 }
 
@@ -112,6 +113,8 @@ State Client::getState() const
 
 void Client::processMessages()
 {
+	if (write_log){log->write("Client - processMessages 1 - m_state:",m_state);}
+	
 	time_t now = time(NULL);
 
 	/*****************************************************************/
@@ -339,10 +342,14 @@ void Client::processMessages()
 			}
 			break;
 	}
+	if (write_log){log->write("Client - processMessages 2 - m_state:",m_state);}
 
 	m_osSignal.waitForSignal();
 	errno = 0;
+	if (write_log){log->write("Client - processMessages 2.5 - m_state:",m_state);}
 	m_pReader->processMsgs();
+
+	if (write_log){log->write("Client - processMessages 3 - m_state:",m_state);}
 }
 
 //////////////////////////////////////////////////////////////////

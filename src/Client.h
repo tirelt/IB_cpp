@@ -8,6 +8,7 @@
 #include "EWrapper.h"
 #include "EReaderOSSignal.h"
 #include "EReader.h"
+#include "Log.h"
 
 #include <memory>
 #include <vector>
@@ -198,7 +199,8 @@ private:
 	std::unique_ptr<EReader> m_pReader;
     bool m_extraAuth;
 	std::string m_bboExchange;
-	std::ifstream log;
+	std::shared_ptr<Log> log;
+	bool write_log;
 };
 
 #endif
