@@ -2,8 +2,8 @@
  * and conditions of the IB API Non-Commercial License or the IB API Commercial License, as applicable. */
 
 #pragma once
-#ifndef TWS_API_SAMPLES_TESTCPPCLIENT_TESTCPPCLIENT_H
-#define TWS_API_SAMPLES_TESTCPPCLIENT_TESTCPPCLIENT_H
+#ifndef TWS_API_SAMPLES_CPPCLIENT_CPPCLIENT_H
+#define TWS_API_SAMPLES_CPPCLIENT_CPPCLIENT_H
 
 #include "EWrapper.h"
 #include "EReaderOSSignal.h"
@@ -11,6 +11,7 @@
 
 #include <memory>
 #include <vector>
+#include <fstream>
 
 class EClientSocket;
 
@@ -110,13 +111,13 @@ enum State {
 };
 
 //! [ewrapperimpl]
-class TestCppClient : public EWrapper
+class Client : public EWrapper
 {
 //! [ewrapperimpl]
 public:
 
-	TestCppClient();
-	~TestCppClient();
+	Client();
+	~Client();
 
 	void setConnectOptions(const std::string&);
 	void processMessages();
@@ -126,7 +127,7 @@ public:
 	bool connect(const char * host, int port, int clientId = 0);
 	void disconnect() const;
 	bool isConnected() const;
-
+	State getState() const;
 private:
     void pnlOperation();
     void pnlSingleOperation();
@@ -197,6 +198,7 @@ private:
 	std::unique_ptr<EReader> m_pReader;
     bool m_extraAuth;
 	std::string m_bboExchange;
+	std::ifstream log;
 };
 
 #endif

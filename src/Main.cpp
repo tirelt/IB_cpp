@@ -8,8 +8,9 @@
 
 #include <chrono>
 #include <thread>
+#include <fstream>
 
-#include "TestCppClient.h"
+#include "Client.h"
 
 const unsigned MAX_ATTEMPTS = 50;
 const unsigned SLEEP_TIME = 10;
@@ -28,13 +29,14 @@ int main(int argc, char** argv)
 	int clientId = 0;
 
 	unsigned attempt = 0;
+	
 	printf( "Start of C++ Socket Client Test %u\n", attempt);
 
 	for (;;) {
 		++attempt;
 		printf( "Attempt %u of %u\n", attempt, MAX_ATTEMPTS);
 
-		TestCppClient client;
+		Client client();
 
 		// Run time error will occur (here) if TestCppClient.exe is compiled in debug mode but TwsSocketClient.dll is compiled in Release mode
 		// TwsSocketClient.dll (in Release Mode) is copied by API installer into SysWOW64 folder within Windows directory 
