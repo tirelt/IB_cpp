@@ -107,7 +107,7 @@ void Client::setConnectOptions(const std::string& connectOptions)
 
 State Client::getState() const
 {
-	return m_state
+	return m_state;
 }
 
 void Client::processMessages()
