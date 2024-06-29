@@ -10,7 +10,7 @@
 class Log
 {
     public:
-        Log(std::string name = "log") {log_file.open(name,std::ofstream::app);};
+        Log(std::string name = "log") {log_file.open("log/"+name,std::ofstream::app);};
         ~Log(){log_file.close();}
         template<typename T> void write(const char* message,T value){
             std::time_t now = std::time(nullptr);
