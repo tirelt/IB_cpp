@@ -78,6 +78,15 @@ Account List: <AccountNumber>
 Next Valid Id: 1
 ```
 
+##  Compile `libTwsSocketClient.so`
+
+Our app uses `libTwsSocketClient.so`, to compile it use the `Makefile` in tws_api/IBJts/source/cppclient/client/source.
+The `Makefile` needs to be updated as per below to also use `libbidgcc000` instead of the big decimal library provided by IB. The file in the repo is already updated.
+
+##  Compile `MyApp`
+
+We created a custom `Makefile` to only recompile changed files and link the shared objects `libTwsSocketClient.so`. Simply run `make`.
+
 ## Doc
 
 - [api-introduction](https://ibkrcampus.com/ibkr-api-page/twsapi-doc/#api-introduction)

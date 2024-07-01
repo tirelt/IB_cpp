@@ -1,13 +1,5 @@
 CXX=g++
 CXXFLAGS=-pthread -Wall -Wno-switch -Wpedantic -Wno-unused-function -std=c++11
-ROOT_DIR=tws_api/IBJts/source/cppclient
-BASE_SRC_DIR=${ROOT_DIR}/client
-INCLUDES=-I${BASE_SRC_DIR} -I${ROOT_DIR}
-SOURCE_DIR=${BASE_SRC_DIR}
-
-LIB_DIR=$(SOURCE_DIR)/lib
-LIB_NAME_A=libbid.a
-LIB_NAME_SO=libbid.so
 TARGET=MyApp
 
 PATH_SRC=src
