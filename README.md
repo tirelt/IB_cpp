@@ -3,6 +3,7 @@
 ## Config
 
 Linux raspberrypi 5.10.103-v7l+ #1529 SMP Tue Mar 8 12:24:00 GMT 2022 armv7l GNU/Linux
+VSCode connected in SSH 
 
 ## Download
 
@@ -86,6 +87,7 @@ The `Makefile` needs to be updated as per below to also use `libbidgcc000` inste
 ##  Compile `MyApp`
 
 We created a custom `Makefile` to only recompile changed files and link the shared objects `libTwsSocketClient.so`. Simply run `make`.
+Use `make run` to run the app.
 
 ## Doc
 
