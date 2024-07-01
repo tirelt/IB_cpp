@@ -342,14 +342,9 @@ void Client::processMessages()
 			}
 			break;
 	}
-	if (write_log){log->write("Client - processMessages 2 - m_state:",m_state);}
-
 	m_osSignal.waitForSignal();
 	errno = 0;
-	if (write_log){log->write("Client - processMessages 2.5 - m_state:",m_state);}
 	m_pReader->processMsgs();
-
-	if (write_log){log->write("Client - processMessages 3 - m_state:",m_state);}
 }
 
 //////////////////////////////////////////////////////////////////
