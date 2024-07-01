@@ -6,10 +6,11 @@ INCLUDES=-I${ROOT_DIR}
 LIB_DIR=lib
 LIB_NAME=libbid.so
 TARGET=libTwsSocketClient.so
+DEBUG_FLAG=-fdiagnostics-color=always -g
 
 $(TARGET):
-	$(CXX) $(CXXFLAGS) $(INCLUDES) $(BASE_SRC_DIR)/*.cpp -lbidgcc000 -o$(TARGET)
+	$(CXX) $(DEBUG_FLAG) $(CXXFLAGS) $(INCLUDES) $(BASE_SRC_DIR)/*.cpp -lbidgcc000 -o$(TARGET)
 
 clean:
-	rm -f $(TARGET) *.o
+	rm -f $(TARGET) *.so
 

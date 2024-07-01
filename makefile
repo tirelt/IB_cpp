@@ -2,6 +2,7 @@ CXX=g++
 CXXFLAGS=-pthread -Wall -Wno-switch -Wpedantic -Wno-unused-function -std=c++11
 TARGET=MyApp
 
+DEBUG_FLAG=-fdiagnostics-color=always -g
 PATH_SRC=src
 PATH_INLUCE=include
 PATH_OBJ=obj
@@ -18,8 +19,10 @@ $(TARGET): $(OBJS)
 	$(CXX) $(OBJS) $(PATH_LIBOBJ) -lbidgcc000 -o $(TARGET)
 
 $(PATH_OBJ)/%.o: $(PATH_SRC)/%.cpp $(PATH_INLUCE)/%.h
-	${CXX} -c $< -I $(PATH_INLUCE) -I $(PATH_LIB) -I $(PATH_CLIENT) -o $@
+	${CXX} $(DEBUG_FLAG) -c $< -I $(PATH_INLUCE) -I $(PATH_LIB) -I $(PATH_CLIENT) -o $@
 
 run:
 	./$(TARGET)
 
+clean:
+	rm -f $(TARGET) $(PATH_OBJ)/*.o

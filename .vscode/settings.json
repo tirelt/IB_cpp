@@ -54,19 +54,4 @@
         "streambuf": "cpp",
         "typeinfo": "cpp"
     },
-    "makefile.configurations": [
-        {
-            "name": "Default",
-            "makeArgs": []
-        }
-    ],
-    "makefile.launchConfigurations": [
-        {
-            "cwd": ".",
-            "binaryPath": "MyApp",
-            "binaryArgs": []
-        }
-    ],
-    "makefile.buildLog": "",
-    "makefile.loggingLevel": "Normal"
 }
