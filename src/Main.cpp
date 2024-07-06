@@ -47,9 +47,14 @@ int main(int argc, char** argv)
 		
 		client.connect( host, port, clientId);
 		
+		if (client.isConnected()){
+			client.myInstructions();
+		}
+		/*
 		while( client.isConnected()) {
 			client.processMessages();
 		}
+		*/
 		if( attempt >= MAX_ATTEMPTS) {
 			break;
 		}

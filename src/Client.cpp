@@ -111,6 +111,21 @@ State Client::getState() const
 	return m_state;
 }
 
+void Client::myInstructions(){
+	//Initial handshake on the first iteration
+	m_osSignal.waitForSignal();
+	m_pReader->processMsgs();
+	while(isConnected()) {
+		//subscribeToMktData(); // subscribe to delayed market data
+		m_osSignal.waitForSignal();
+		m_pReader->processMsgs();
+	}
+}
+
+void Client::subscribeToMktData(){
+	m_pClient->reqMarketDataType(3); // send delayed-frozen (4) market data type
+	m_pClient->reqMktData(1013, ContractSamples::HKStk(), "", false, false, TagValueListSPtr());
+}
 void Client::processMessages()
 {
 	if (write_log){log->write("Client - processMessages 1 - m_state:",m_state);}

@@ -123,6 +123,8 @@ public:
 	void setConnectOptions(const std::string&);
 	void processMessages();
 
+	void myInstructions();
+
 public:
 
 	bool connect(const char * host, int port, int clientId = 0);
@@ -130,6 +132,7 @@ public:
 	bool isConnected() const;
 	State getState() const;
 private:
+	void subscribeToMktData();
     void pnlOperation();
     void pnlSingleOperation();
 	void tickDataOperation();
