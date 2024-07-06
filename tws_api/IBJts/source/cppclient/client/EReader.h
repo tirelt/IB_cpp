@@ -21,7 +21,9 @@ class TWSAPIDLLEXP EReader
     EClientSocket *m_pClientSocket;
     EReaderSignal *m_pEReaderSignal;
     EDecoder processMsgsDecoder_;
+public:
     std::deque<std::shared_ptr<EMessage>> m_msgQueue;
+private:    
     EMutex m_csMsgQueue;
     std::vector<char> m_buf;
     std::atomic<bool> m_isAlive;

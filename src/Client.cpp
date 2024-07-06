@@ -51,6 +51,7 @@ Client::Client() :
     , m_extraAuth(false)
 	, log(new Log)
 	, write_log( true )
+	, m_tickerId(0)
 {
 }
 
@@ -112,13 +113,23 @@ State Client::getState() const
 }
 
 void Client::myInstructions(){
-	//Initial handshake on the first iteration
-	m_osSignal.waitForSignal();
+	//Initial handshake
+	std::this_thread::sleep_for(std::chrono::seconds(5));
 	m_pReader->processMsgs();
+
 	while(isConnected()) {
-		//subscribeToMktData(); // subscribe to delayed market data
+		// Emulating live market data subscrition
+		m_pClient->reqMarketDataType(4);
+		m_pClient->reqMktData(m_tickerId++, ContractSamples::HKStk(), "", false, false, TagValueListSPtr());
+		//std::this_thread::sleep_for(std::chrono::seconds(1));
+		//std::this_thread::sleep_for(std::chrono::seconds(10));
 		m_osSignal.waitForSignal();
+		//while ((m_pReader->m_msgQueue).size()){
+		while (m_osSignal.open){
+			m_osSignal.waitForSignal();
+		}
 		m_pReader->processMsgs();
+		m_pClient->cancelMktData(m_tickerId-1);
 	}
 }
 

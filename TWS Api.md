@@ -16,3 +16,25 @@ The API programs have 3 threads: a reader thread, a queue thread, and then a wra
 Test fails on ST_CONTRACTOPERATION_ACK where msg is always empty
 
 Do not put breakpoints in the tws_api source code (segmentation fails)
+
+Initial handshake msg id
+5 OPEN_ORDER 
+3 ORDER_STATUS
+5 OPEN_ORDER 
+3 ORDER_STATUS
+53 OPEN_ORDER_END
+15 MANAGED_ACCTS
+9 NEXT_VALID_ID
+4 ERR_MSG (multiple times)
+
+4 ERR_MSG
+58 MARKET_DATA_TYPE
+4 ERR_MSG
+1 TICK_PRICE
+1 TICK_PRICE
+2 TICK_SIZE
+46 TICK_STRING
+
+4 ERR_MSG
+
+81 TICK_REQ_PARAMS

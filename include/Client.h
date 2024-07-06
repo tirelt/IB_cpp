@@ -197,7 +197,7 @@ private:
 	//! [socket_declare]
 	State m_state;
 	time_t m_sleepDeadline;
-
+	TickerId m_tickerId;
 	OrderId m_orderId;
 	std::unique_ptr<EReader> m_pReader;
     bool m_extraAuth;
