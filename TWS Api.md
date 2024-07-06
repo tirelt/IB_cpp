@@ -12,3 +12,7 @@ c.f. [doc](https://ibkrcampus.com/ibkr-api-page/twsapi-doc/#architecture)
 - `EReader`:  class which reads and parses raw messages from TWS.
 
 The API programs have 3 threads: a reader thread, a queue thread, and then a wrapper thread.
+
+Test fails on ST_CONTRACTOPERATION_ACK where msg is always empty
+
+Do not put breakpoints in the tws_api source code (segmentation fails)
