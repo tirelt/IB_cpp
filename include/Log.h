@@ -26,6 +26,7 @@ class MyLog
                 throw std::runtime_error("Log file in bad state!");
             }
         }
+        int a=1;
     private:
         std::ofstream log_file;
 };

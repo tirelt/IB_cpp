@@ -23,12 +23,10 @@
 #include <bitset>
 #include <cmath>
 
-EDecoder::EDecoder() : 
+EDecoder::EDecoder(int serverVersion, EWrapper *callback, EClientMsgSink *clientMsgSink) :
 	my_log(new MyLog("EDecoder")),
-	write_my_log( true ){
-}
-
-EDecoder::EDecoder(int serverVersion, EWrapper *callback, EClientMsgSink *clientMsgSink) {
+	write_my_log( true )
+	{
 	m_pEWrapper = callback;
 	m_serverVersion = serverVersion;
 	m_pClientMsgSink = clientMsgSink;
