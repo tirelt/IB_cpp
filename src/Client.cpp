@@ -117,20 +117,26 @@ void Client::myInstructions(){
 	std::this_thread::sleep_for(std::chrono::seconds(5));
 	m_pReader->processMsgs();
 
+	m_pClient->reqMarketDataType(3);
+	m_pClient->reqMktData(m_tickerId++, ContractSamples::EurGbpFx(), "", false, false, TagValueListSPtr());
+	std::this_thread::sleep_for(std::chrono::seconds(3));
 	while(isConnected()) {
 		// Emulating live market data subscrition
-		m_pClient->reqMarketDataType(4);
-		m_pClient->reqMktData(m_tickerId++, ContractSamples::HKStk(), "", false, false, TagValueListSPtr());
+		
+		
 		//std::this_thread::sleep_for(std::chrono::seconds(1));
 		//std::this_thread::sleep_for(std::chrono::seconds(10));
 		m_osSignal.waitForSignal();
-		//while ((m_pReader->m_msgQueue).size()){
-		while (m_osSignal.open){
-			m_osSignal.waitForSignal();
-		}
 		m_pReader->processMsgs();
-		m_pClient->cancelMktData(m_tickerId-1);
+		std::this_thread::sleep_for(std::chrono::seconds(5));
+		//while ((m_pReader->m_msgQueue).size()){
+		//	m_pReader->processMsgs();
+			//std::this_thread::sleep_for(std::chrono::seconds(1));
+		//	m_osSignal.waitForSignal();		
+		//}
+		
 	}
+	m_pClient->cancelMktData(m_tickerId-1);
 }
 
 void Client::subscribeToMktData(){
