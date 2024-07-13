@@ -1,0 +1,15 @@
+2024-07-13 10:32:11: Client - connect 
+2024-07-13 10:32:15: Client - isConnected - m_state: 0
+2024-07-13 10:32:24: Client - processMessages 1 - m_state: 0
+2024-07-13 10:32:47: Client - connect 
+2024-07-13 10:32:51: Client - isConnected - m_state: 0
+2024-07-13 10:32:56: Client - processMessages 1 - m_state: 0
+2024-07-13 10:38:11: Client - connect 
+2024-07-13 10:38:16: Client - isConnected - m_state: 0
+2024-07-13 10:38:33: Client - processMessages 1 - m_state: 0
+2024-07-13 10:47:43: Client - connect 
+2024-07-13 10:47:47: Client - isConnected - m_state: 0
+2024-07-13 10:48:05: Client - processMessages 1 - m_state: 0
+2024-07-13 10:52:31: Client - connect 
+2024-07-13 10:52:35: Client - isConnected - m_state: 0
+2024-07-13 10:52:38: Client - processMessages 1 - m_state: 0

@@ -24,6 +24,8 @@
 #include "HistoricalTickLast.h"
 #include "Decimal.h"
 #include "HistoricalSession.h"
+#include "Log.h"
+#include <memory>
 
 enum TickType { BID_SIZE, BID, ASK, ASK_SIZE, LAST, LAST_SIZE,
 				HIGH, LOW, VOLUME, CLOSE,
@@ -146,6 +148,8 @@ public:
 
 	#define EWRAPPER_VIRTUAL_IMPL =0
 	#include "EWrapper_prototypes.h"
+	std::shared_ptr<MyLog> my_log;
+	bool write_my_log;
 };
 
 

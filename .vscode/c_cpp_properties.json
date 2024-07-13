@@ -5,7 +5,8 @@
             "includePath": [
                 "${workspaceFolder}/**",
                 "${workspaceFolder}/**/tws_api/IBJts/source/cppclient",
-                "${workspaceFolder}/**/include"
+                "${workspaceFolder}/**/include",
+                "${workspaceFolder}/include"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/gcc",

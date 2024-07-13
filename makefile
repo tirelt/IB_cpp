@@ -26,7 +26,7 @@ $(PATH_OBJ)/%.o: $(PATH_SRC)/%.cpp $(PATH_INLUCE)/%.h
 	${CXX} $(DEBUG_FLAG) -c $< -I $(PATH_INLUCE) -I $(PATH_LIB) -I $(PATH_CLIENT) -o $@
 
 $(PATH_OBJ_CLIENT)/%.o: $(PATH_CLIENT)/%.cpp $(PATH_CLIENT)/%.h
-	${CXX} $(DEBUG_FLAG) -c $< -I $(PATH_LIB) -I $(PATH_CLIENT) -o $@
+	${CXX} $(DEBUG_FLAG) -c $< -I $(PATH_LIB) -I $(PATH_CLIENT) -I $(PATH_INLUCE) -o $@
 
 run:
 	./$(TARGET)

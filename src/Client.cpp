@@ -49,8 +49,8 @@ Client::Client() :
 	, m_sleepDeadline(0)
 	, m_orderId(0)
     , m_extraAuth(false)
-	, log(new Log)
-	, write_log( true )
+	, my_log(new MyLog)
+	, write_my_log( true )
 	, m_tickerId(0)
 {
 }
@@ -68,7 +68,7 @@ Client::~Client()
 
 bool Client::connect(const char *host, int port, int clientId)
 {
-	if (write_log){log->write("Client - connect","");}
+	if (write_my_log){my_log->write("Client - connect","");}
 	// trying to connect
 	printf( "Connecting to %s:%d clientId:%d\n", !( host && *host) ? "127.0.0.1" : host, port, clientId);
 	
@@ -98,7 +98,7 @@ void Client::disconnect() const
 
 bool Client::isConnected() const
 {
-	if (write_log){log->write("Client - isConnected - m_state:",m_state);}
+	if (write_my_log){my_log->write("Client - isConnected - m_state:",m_state);}
 	return m_pClient->isConnected();
 }
 
@@ -160,7 +160,7 @@ void Client::subscribeToMktData(){
 }
 void Client::processMessages()
 {
-	if (write_log){log->write("Client - processMessages 1 - m_state:",m_state);}
+	if (write_my_log){my_log->write("Client - processMessages 1 - m_state:",m_state);}
 	
 	time_t now = time(NULL);
 

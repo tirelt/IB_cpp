@@ -2241,6 +2241,10 @@ int EDecoder::parseAndProcessMsg(const char*& beginPtr, const char* endPtr) {
 		int msgId;
 		DECODE_FIELD( msgId);
 
+		MyLog& l = *(m_pEWrapper->my_log);
+		l.write("EDecoder - parseAndProcessMsg - msgId:",msgId);
+		if (m_pEWrapper->write_my_log){m_pEWrapper->my_log->write("EDecoder - parseAndProcessMsg - msgId:",msgId);}
+
 		switch( msgId) {
 		case TICK_PRICE:
 			ptr = processTickPriceMsg(ptr, endPtr);

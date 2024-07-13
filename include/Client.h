@@ -202,8 +202,8 @@ private:
 	std::unique_ptr<EReader> m_pReader;
     bool m_extraAuth;
 	std::string m_bboExchange;
-	std::shared_ptr<Log> log;
-	bool write_log;
+	std::shared_ptr<MyLog> my_log;
+	bool write_my_log;
 };
 
 #endif
