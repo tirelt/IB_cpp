@@ -382,9 +382,13 @@ public:
     static bool DecodeFieldMax(long&, const char*& ptr, const char* endPtr);
     static bool DecodeFieldMax(double&, const char*& ptr, const char* endPtr);
 
+    EDecoder();
     EDecoder(int serverVersion, EWrapper *callback, EClientMsgSink *clientMsgSink = 0);
 
     int parseAndProcessMsg(const char*& beginPtr, const char* endPtr);
+
+    std::shared_ptr<MyLog> my_log;
+	bool write_my_log;
 };
 
 #define DECODE_FIELD(x) if (!EDecoder::DecodeField(x, ptr, endPtr)) return 0;
