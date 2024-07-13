@@ -112,52 +112,53 @@ State Client::getState() const
 	return m_state;
 }
 
+void Client::selectContract(Contract c){
+	contract = c;
+}
+
 void Client::myInstructions(){
-	//Initial handshake
-	//std::this_thread::sleep_for(std::chrono::seconds(5));
-/*
-	m_pClient->reqMarketDataType(3);
-	m_pClient->reqMktData(m_tickerId++, ContractSamples::EurGbpFx(), "", false, false, TagValueListSPtr());
-*/
-	m_osSignal.waitForSignal();
-	errno = 0;
-	m_pReader->processMsgs();
-	m_state = ST_CONTRACTOPERATION;
-	Contract contract;
-	contract.symbol = "ESTX50";
-	contract.secType = "OPT";
-	contract.currency = "EUR";
-	contract.exchange = "EUREX";
-	contract.lastTradeDateOrContractMonth = "20240719";
-	m_pClient->reqContractDetails(m_tickerId++, contract);
-	m_state = ST_CONTRACTOPERATION_ACK;
-	m_osSignal.waitForSignal();
-	errno = 0;
-	m_pReader->processMsgs();
-
-	while(isConnected()) {
-		// Emulating live market data subscrition
-		
-		
-		//std::this_thread::sleep_for(std::chrono::seconds(1));
-		//std::this_thread::sleep_for(std::chrono::seconds(10));
-		m_osSignal.waitForSignal();
-		m_pReader->processMsgs();
-		std::this_thread::sleep_for(std::chrono::seconds(1));
-		//while ((m_pReader->m_msgQueue).size()){
-		//	m_pReader->processMsgs();
-			//std::this_thread::sleep_for(std::chrono::seconds(1));
-		//	m_osSignal.waitForSignal();		
-		//}
-		
+	if (write_my_log){my_log->write("Client - myInstructions - m_state:",m_state);}
+	switch (m_state) {
+		case ST_IDLE:
+			std::this_thread::sleep_for(std::chrono::seconds(10));
+			break;
+		case ST_CONNECT:
+			break;
+		case ST_GET_OPTIONS:
+			getOptions();
+			break;
+		case ST_GET_OPTIONS_ACK:
+			break;
 	}
-	m_pClient->cancelMktData(m_tickerId-1);
+	m_osSignal.waitForSignal();
+	errno = 0;
+	m_pReader->processMsgs();
 }
 
-void Client::subscribeToMktData(){
-	m_pClient->reqMarketDataType(3); // send delayed-frozen (4) market data type
-	m_pClient->reqMktData(1013, ContractSamples::HKStk(), "", false, false, TagValueListSPtr());
+void Client::getOptions()
+{
+	m_pClient->reqContractDetails(m_tickerId++, contract);
+	m_state = ST_GET_OPTIONS_ACK;
 }
+
+//! [contractdetails]
+void Client::contractDetails( int reqId, const ContractDetails& contractDetails) {
+	printf( "ContractDetails begin. ReqId: %d\n", reqId);
+	printContractMsg(contractDetails.contract);
+	printContractDetailsMsg(contractDetails);
+	printf( "ContractDetails end. ReqId: %d\n", reqId);
+}
+
+//! [contractdetailsend]
+void Client::contractDetailsEnd( int reqId) {
+	printf( "ContractDetailsEnd. %d\n", reqId);
+	if(m_state==ST_GET_OPTIONS_ACK){
+		m_state =ST_GET_MKT_DATA;
+	} else {
+		m_state =ST_IDLE;
+	}
+}
+
 void Client::processMessages()
 {
 	if (write_my_log){my_log->write("Client - processMessages 1 - m_state:",m_state);}
@@ -1522,6 +1523,8 @@ void Client::nextValidId(OrderId orderId)
 {
 	printf("Next Valid Id: %ld\n", orderId);
 	m_orderId = orderId;
+	
+	m_state = ST_GET_OPTIONS;
 	//! [nextvalidid]
 
     //m_state = ST_TICKOPTIONCOMPUTATIONOPERATION; 
@@ -1537,7 +1540,7 @@ void Client::nextValidId(OrderId orderId)
 	//m_state = ST_REALTIMEBARS;
 	//m_state = ST_MARKETDATATYPE;
 	//m_state = ST_HISTORICALDATAREQUESTS;
-	m_state = ST_CONTRACTOPERATION;
+	//m_state = ST_CONTRACTOPERATION;
 	//m_state = ST_MARKETSCANNERS;
 	//m_state = ST_FUNDAMENTALS;
 	//m_state = ST_BULLETINS;
@@ -1701,13 +1704,6 @@ void Client::accountDownloadEnd(const std::string& accountName) {
 //! [accountdownloadend]
 
 //! [contractdetails]
-void Client::contractDetails( int reqId, const ContractDetails& contractDetails) {
-	printf( "ContractDetails begin. ReqId: %d\n", reqId);
-	printContractMsg(contractDetails.contract);
-	printContractDetailsMsg(contractDetails);
-	printf( "ContractDetails end. ReqId: %d\n", reqId);
-}
-//! [contractdetails]
 
 //! [bondcontractdetails]
 void Client::bondContractDetails( int reqId, const ContractDetails& contractDetails) {
@@ -1813,10 +1809,6 @@ void Client::printBondContractDetailsMsg(const ContractDetails& contractDetails)
 	printContractDetailsSecIdList(contractDetails.secIdList);
 }
 
-//! [contractdetailsend]
-void Client::contractDetailsEnd( int reqId) {
-	printf( "ContractDetailsEnd. %d\n", reqId);
-}
 //! [contractdetailsend]
 
 //! [execdetails]

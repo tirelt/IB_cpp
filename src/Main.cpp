@@ -30,6 +30,14 @@ int main(int argc, char** argv)
 
 	unsigned attempt = 0;
 	
+	// Select slice
+	Contract contract;
+	contract.symbol = "ESTX50";
+	contract.secType = "OPT";
+	contract.currency = "EUR";
+	contract.exchange = "EUREX";
+	contract.lastTradeDateOrContractMonth = "20240719";
+
 	printf( "Start of C++ Socket Client Test %u\n", attempt);
 
 	for (;;) {
@@ -38,6 +46,7 @@ int main(int argc, char** argv)
 
 		Client client;
 
+		client.selectContract(contract);
 		// Run time error will occur (here) if TestCppClient.exe is compiled in debug mode but TwsSocketClient.dll is compiled in Release mode
 		// TwsSocketClient.dll (in Release Mode) is copied by API installer into SysWOW64 folder within Windows directory 
 		
@@ -47,15 +56,16 @@ int main(int argc, char** argv)
 		
 		client.connect( host, port, clientId);
 		
-		/*
-		if (client.isConnected()){
+
+		while(client.isConnected()){
 			client.myInstructions();
+			std::this_thread::sleep_for(std::chrono::seconds(1));
 		}
-		*/
+		/*
 		while( client.isConnected()) {
 			client.processMessages();
 		}
-		
+		*/
 		if( attempt >= MAX_ATTEMPTS) {
 			break;
 		}

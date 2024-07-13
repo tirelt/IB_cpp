@@ -108,7 +108,11 @@ enum State {
 	ST_IBKRATSSAMPLE,
 	ST_IBKRATSSAMPLE_ACK,
 	ST_WSH,
-	ST_WSH_ACK
+	ST_WSH_ACK,
+	ST_GET_OPTIONS,
+	ST_GET_OPTIONS_ACK,
+	ST_GET_MKT_DATA,
+	ST_GET_MKT_DATA_ACk
 };
 
 //! [ewrapperimpl]
@@ -124,6 +128,8 @@ public:
 	void processMessages();
 
 	void myInstructions();
+
+	void selectContract(Contract);
 
 public:
 
@@ -179,6 +185,9 @@ private:
 
 	void reqCurrentTime();
 
+	void getOptions();
+
+	Contract contract;
 public:
 	// events
 	#include "EWrapper_prototypes.h"
