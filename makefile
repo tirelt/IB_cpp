@@ -19,7 +19,7 @@ OBJS_CLIENT := $(SRCS_CLIENT:$(PATH_CLIENT)/%cpp=$(PATH_OBJ_CLIENT)/%o)
 
 all: $(TARGET)
 
-$(TARGET): $(OBJS) $(OBJS_CLIENT)
+$(TARGET): dir $(OBJS) $(OBJS_CLIENT)
 	$(CXX) $(OBJS) $(OBJS_CLIENT) $(CXXFLAGS) -o $(TARGET)
 
 $(PATH_OBJ)/%.o: $(PATH_SRC)/%.cpp $(PATH_INLUCE)/%.h
@@ -28,6 +28,8 @@ $(PATH_OBJ)/%.o: $(PATH_SRC)/%.cpp $(PATH_INLUCE)/%.h
 $(PATH_OBJ_CLIENT)/%.o: $(PATH_CLIENT)/%.cpp $(PATH_CLIENT)/%.h
 	${CXX} $(DEBUG_FLAG) -c $< -I $(PATH_LIB) -I $(PATH_CLIENT) -I $(PATH_INLUCE) -o $@
 
+dir: 
+	mkdir -p $(PATH_OBJ) $(PATH_OBJ_CLIENT)
 run:
 	./$(TARGET)
 

@@ -21,7 +21,7 @@ const unsigned SLEEP_TIME = 10;
 /* Before contacting our API support team please refer to the available documentation. */
 int main(int argc, char** argv)
 {
-	const char* host = argc > 1 ? argv[1] : "192.168.1.13";
+	const char* host = argc > 1 ? argv[1] : "192.168.0.20"; //"192.168.1.13";
 	int port = argc > 2 ? atoi(argv[2]) : 0;
 	if (port <= 0)
 		port = 7497;

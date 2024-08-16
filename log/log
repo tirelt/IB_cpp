@@ -76,3 +76,37 @@
 2024-07-13 11:53:28: Client - isConnected - m_state: 18
 2024-07-13 11:53:35: Client - processMessages 1 - m_state: 18
 2024-07-13 11:53:35: Client - isConnected - m_state: 18
+2024-08-16 11:16:48: Client - connect 
+2024-08-16 11:20:39: Client - connect 
+2024-08-16 11:20:47: Client - isConnected - m_state: 0
+2024-08-16 11:20:47: Client - myInstructions - m_state: 0
+2024-08-16 11:20:48: Client - isConnected - m_state: 0
+2024-08-16 11:20:48: Client - myInstructions - m_state: 0
+2024-08-16 11:20:49: Client - isConnected - m_state: 92
+2024-08-16 11:20:49: Client - myInstructions - m_state: 92
+2024-08-16 11:20:50: Client - isConnected - m_state: 93
+2024-08-16 11:20:50: Client - myInstructions - m_state: 93
+2024-08-16 11:20:53: Client - isConnected - m_state: 93
+2024-08-16 11:20:53: Client - myInstructions - m_state: 93
+2024-08-16 11:20:56: Client - isConnected - m_state: 93
+2024-08-16 11:20:56: Client - myInstructions - m_state: 93
+2024-08-16 11:20:59: Client - isConnected - m_state: 93
+2024-08-16 11:20:59: Client - myInstructions - m_state: 93
+2024-08-16 11:21:02: Client - isConnected - m_state: 93
+2024-08-16 11:21:02: Client - myInstructions - m_state: 93
+2024-08-16 11:21:05: Client - isConnected - m_state: 93
+2024-08-16 11:21:05: Client - myInstructions - m_state: 93
+2024-08-16 11:21:08: Client - isConnected - m_state: 93
+2024-08-16 11:21:08: Client - myInstructions - m_state: 93
+2024-08-16 11:21:11: Client - isConnected - m_state: 93
+2024-08-16 11:21:11: Client - myInstructions - m_state: 93
+2024-08-16 11:21:14: Client - isConnected - m_state: 93
+2024-08-16 11:21:14: Client - myInstructions - m_state: 93
+2024-08-16 11:21:17: Client - isConnected - m_state: 93
+2024-08-16 11:21:17: Client - myInstructions - m_state: 93
+2024-08-16 11:21:20: Client - isConnected - m_state: 93
+2024-08-16 11:21:20: Client - myInstructions - m_state: 93
+2024-08-16 11:21:23: Client - isConnected - m_state: 93
+2024-08-16 11:21:23: Client - myInstructions - m_state: 93
+2024-08-16 11:21:26: Client - isConnected - m_state: 93
+2024-08-16 11:21:26: Client - myInstructions - m_state: 93
