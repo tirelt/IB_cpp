@@ -11,9 +11,7 @@ VSCode connected in SSH
 git https://github.com/tirelt/IB_cpp.git
 cd IB_cpp
 ```
-
-## Install
-
+The projects comes with `tws_api`, to update it: 
 ```Bash
 mkdir tws_api
 cd tws_api
