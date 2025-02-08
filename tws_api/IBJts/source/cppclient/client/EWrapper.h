@@ -24,8 +24,6 @@
 #include "HistoricalTickLast.h"
 #include "Decimal.h"
 #include "HistoricalSession.h"
-#include "Log.h"
-#include <memory>
 
 enum TickType { BID_SIZE, BID, ASK, ASK_SIZE, LAST, LAST_SIZE,
 				HIGH, LOW, VOLUME, CLOSE,
@@ -122,6 +120,8 @@ enum TickType { BID_SIZE, BID, ASK, ASK_SIZE, LAST, LAST_SIZE,
 				SOCIAL_MARKET_ANALYTICS,
 				ESTIMATED_IPO_MIDPOINT,
 				FINAL_IPO_LAST,
+	            DELAYED_YIELD_BID,
+	            DELAYED_YIELD_ASK,
 				NOT_SET };
 
 typedef std::map<int, std::tuple<std::string, char>> SmartComponentsMap;
@@ -148,8 +148,6 @@ public:
 
 	#define EWRAPPER_VIRTUAL_IMPL =0
 	#include "EWrapper_prototypes.h"
-	std::shared_ptr<MyLog> my_log;
-	bool write_my_log;
 };
 
 

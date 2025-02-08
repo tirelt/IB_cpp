@@ -1,4 +1,4 @@
-﻿/* Copyright (C) 2019 Interactive Brokers LLC. All rights reserved. This code is subject to the terms
+/* Copyright (C) 2024 Interactive Brokers LLC. All rights reserved. This code is subject to the terms
  * and conditions of the IB API Non-Commercial License or the IB API Commercial License, as applicable. */
 #include "StdAfx.h"
 
@@ -200,7 +200,7 @@ Contract ContractSamples::BondWithCusip() {
 	//! [bondwithcusip]
 	Contract contract;
 	// enter CUSIP as symbol
-	contract.symbol= "912828C57";
+	contract.symbol= "449276AA2";
 	contract.secType = "BOND";
 	contract.exchange = "SMART";
 	contract.currency = "USD";
@@ -211,7 +211,7 @@ Contract ContractSamples::BondWithCusip() {
 Contract ContractSamples::Bond() {
 	//! [bond]
 	Contract contract;
-	contract.conId = 285191782;
+	contract.conId = 456467716;
 	contract.exchange = "SMART";
 	//! [bond]
 	return contract;
@@ -729,6 +729,17 @@ Contract ContractSamples::ByIssuerId() {
 	Contract contract;
 	contract.issuerId = "e1453318";
 	//! [ByIssuerId]
+	return contract;
+}
+
+Contract ContractSamples::Fund() {
+	//! [fundcontract]
+	Contract contract;
+	contract.symbol = "I406801954";
+	contract.secType = "FUND";
+	contract.exchange = "ALLFUNDS";
+	contract.currency = "USD";
+	//! [fundcontract]
 	return contract;
 }
    

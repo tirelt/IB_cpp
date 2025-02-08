@@ -2,8 +2,7 @@
 
 ## Config
 
-Linux raspberrypi 5.10.103-v7l+ #1529 SMP Tue Mar 8 12:24:00 GMT 2022 armv7l GNU/Linux
-VSCode connected in SSH 
+Darwin Mac 24.1.0 Darwin Kernel Version 24.1.0: Thu Nov 14 18:19:02 PST 2024; root:xnu-11215.41.3~13/RELEASE_ARM64_T8132 arm64
 
 ## Download
 
@@ -15,56 +14,55 @@ The projects comes with `tws_api`, to update it:
 ```Bash
 mkdir tws_api
 cd tws_api
-wget https://interactivebrokers.github.io/downloads/twsapi_macunix.1019.04.zip
+wget https://interactivebrokers.github.io/downloads/twsapi_macunix.1019.04.zip #check latest version online
 unzip twsapi_macunix.1019.04.zip
 rm twsapi_macunix.1019.04.zip
-
 ```
 
-##  Compile `TestCppClient`
+## TWS
 
-The Api comes with a test app `/IBJts/samples/Cpp/TestCppClient` which packs a makefile.
-
+The API requires TWS which can be intalled with 
 ```Bash
-cd tws_api/IBJts/samples/Cpp/TestCppClient
-make
-```
-On our system we get the issue 
+brew install --cask trader-workstation
+``` 
+In Global `Configuration > API Settings` tick the option `Enable ActiveX and Socket Clients`. If you connect remotely you also need to untick `Allow connections from localhost only` at the bottom.
+
+## Install Intel(R) Decimal Floating-Point Math Library
+
+The API uses [Intel(R) Decimal Floating-Point Math Library](https://www.intel.com/content/www/us/en/developer/articles/tool/intel-decimal-floating-point-math-library.html). So we need to download the library, compile it and change the `makefile` of the API to make it use our library.
+
+To download the library follow:
 ```Bash
-g++: error: ../../../source/cppclient/client/lib/libbid.a: No such file or directory
+wget http://www.netlib.org/misc/intel/IntelRDFPMathLib20U2.tar.gz
+tar -xzf IntelRDFPMathLib20U3.tar.gz
 ```
-The issue has been raised and solved [here](https://groups.io/g/twsapi/topic/build_problem_with_cppclient/99520064).
-We need to install another big decimal library. IB comes with their own which is not compatible with `ld`.
-
-We will install `libintelrdfpmath-dev` (big decimal library by intel) instead:
-
-1. Edit the makefile so it uses /libbidgcc000.a instead of libbid.a.
-
-```
-$(TARGET)Static:
--	$(CXX) $(CXXFLAGS) $(INCLUDES) $(BASE_SRC_DIR)/*.cpp ./*.cpp $(BASE_SRC_DIR)/lib/libbid.a -o$(TARGET)Static
-+	$(CXX) $(CXXFLAGS) $(INCLUDES) $(BASE_SRC_DIR)/*.cpp ./*.cpp -lbidgcc000 -o$(TARGET)Static
-```
-2. install the library
-
+To compile:
 ```Bash
-sudo apt-get install libintelrdfpmath-dev
-make clean
-make
+cd LIBRARY
+make CC=gcc CALL_BY_REF=0 GLOBAL_RND=0 GLOBAL_FLAGS=0 UNCHANGED_BINARY_FLAGS=0 # cf Readme.md for argument definition
 ```
-On our system `apt-get` doesn't find `libintelrdfpmath-dev` so we install it manually. You can find all the versions [here](https://packages.debian.org/sid/libintelrdfpmath-dev). We run on a `armhf` architecture so we downaload and install the appropriete version using:
-
-```Bash
-wget http://ftp.hk.debian.org/debian/pool/main/i/intelrdfpmath/libintelrdfpmath-dev_2.0u3-1_armhf.deb #manual download
-sudo apt install ./libintelrdfpmath-dev_2.0u3-1_armhf.deb
-rm libintelrdfpmath-dev_2.0u3-1_armhf.deb
-dpkg -L libintelrdfpmath-dev #to check where it is installed.
+It creates `libbid.a` then create a `lib` directory at the root of the project and put it there. Then we can simplify update the `makefile` of the API as such:
+from:
+```Makefile
+LIB_DIR=lib
+LIB_NAME=libbid.so
 ```
-If you're getting `/usr/bin/ld: cannot find -l<nameOfTheLibrary>` you can follow [this](https://stackoverflow.com/questions/16710047/usr-bin-ld-cannot-find-lnameofthelibrary#) to manually manually create the symlink.
+to:
+```Makefile
+LIB_DIR=./../../../../../lib # relative path to lib, this is the one from the IB_cpp/tws_api/IBJts/source/cppclient/client
+LIB_NAME=bid
+``
+PS: We only build the static libbid.a. TWSApi FINALLY provides documentation to build the Intel library c.f. IB_cpp/tws_api/IBJts/source/Intel_lib_build.txt
 
-To run the test app
+## Compile `libTwsSocketClient.so`
+To compile update the make file in `IB_cpp/tws_api/IBJts/source/cppclient/client` as per above and use `make`. This library is useful to not recompile the API everytime and just recompile the project. 
+
+## Compile `TestCppClient`
+
+To build the test app provide by the Api, update the makefile in `IB_cpp/tws_api/IBJts/samples/Cpp/TestCppClient` as per above.
 ```Bash
-./TestCppClientStatic <Host> <port> #default on local host:7497. You can change in main.cpp the default
+make TestCppClient # to recompile API
+./TestCppClientStatic <Host> <port> #default on local host:7497. You can change in main.cpp the default.
 ```
 We get the below followed by market data errors (we are using a paper trading account so this is expected).
 
@@ -76,12 +74,6 @@ Connected to <Host>:<Port> clientId:0
 Account List: <AccountNumber>
 Next Valid Id: 1
 ```
-
-##  Compile `libTwsSocketClient.so`
-
-Our app uses `libTwsSocketClient.so`, to compile it use the `Makefile` in tws_api/IBJts/source/cppclient/client/source.
-The `Makefile` needs to be updated as per below to also use `libbidgcc000` instead of the big decimal library provided by IB. The file in the repo is already updated.
-
 ##  Compile `MyApp`
 
 We created a custom `Makefile` to only recompile changed files and link the shared objects `libTwsSocketClient.so`. Simply run `make`.

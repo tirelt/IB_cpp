@@ -1,4 +1,4 @@
-﻿/* Copyright (C) 2019 Interactive Brokers LLC. All rights reserved. This code is subject to the terms
+/* Copyright (C) 2024 Interactive Brokers LLC. All rights reserved. This code is subject to the terms
  * and conditions of the IB API Non-Commercial License or the IB API Commercial License, as applicable. */
 
 #pragma once
@@ -106,7 +106,9 @@ enum State {
 	ST_IBKRATSSAMPLE,
 	ST_IBKRATSSAMPLE_ACK,
 	ST_WSH,
-	ST_WSH_ACK
+	ST_WSH_ACK,
+	ST_RFQOPERATIONS,
+	ST_RFQOPERATIONS_ACK
 };
 
 //! [ewrapperimpl]
@@ -119,6 +121,7 @@ public:
 	~TestCppClient();
 
 	void setConnectOptions(const std::string&);
+	void setOptionalCapabilities(const std::string&);
 	void processMessages();
 
 public:
@@ -171,6 +174,7 @@ private:
 	void whatIfSamples();
 	void ibkratsSample();
 	void wshCalendarOperations();
+	void rfqOperations();
 
 	void reqCurrentTime();
 
@@ -184,6 +188,7 @@ private:
 	void printContractDetailsMsg(const ContractDetails& contractDetails);
 	void printContractDetailsSecIdList(const TagValueListSPtr &secIdList);
 	void printBondContractDetailsMsg(const ContractDetails& contractDetails);
+	void printContractDetailsIneligibilityReasonList(const IneligibilityReasonListSPtr &ineligibilityReasonList);
 
 private:
 	//! [socket_declare]

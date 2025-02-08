@@ -1,4 +1,4 @@
-/* Copyright (C) 2019 Interactive Brokers LLC. All rights reserved. This code is subject to the terms
+/* Copyright (C) 2024 Interactive Brokers LLC. All rights reserved. This code is subject to the terms
  * and conditions of the IB API Non-Commercial License or the IB API Commercial License, as applicable. */
 
 #include "StdAfx.h"
@@ -14,6 +14,8 @@
 #include "EClientMsgSink.h"
 #include "PriceIncrement.h"
 #include "EOrderDecoder.h"
+#include "Utils.h"
+#include "IneligibilityReason.h"
 
 #include <string.h>
 #include <cstdlib>
@@ -23,10 +25,8 @@
 #include <bitset>
 #include <cmath>
 
-EDecoder::EDecoder(int serverVersion, EWrapper *callback, EClientMsgSink *clientMsgSink) :
-	my_log(new MyLog("EDecoder")),
-	write_my_log( true )
-	{
+
+EDecoder::EDecoder(int serverVersion, EWrapper *callback, EClientMsgSink *clientMsgSink) {
 	m_pEWrapper = callback;
 	m_serverVersion = serverVersion;
 	m_pClientMsgSink = clientMsgSink;
@@ -410,7 +410,10 @@ const char* EDecoder::processOpenOrderMsg(const char* ptr, const char* endPtr) {
           && eOrderDecoder.decodeDuration(ptr, endPtr)
           && eOrderDecoder.decodePostToAts(ptr, endPtr)
           && eOrderDecoder.decodeAutoCancelParent(ptr, endPtr, MIN_SERVER_VER_AUTO_CANCEL_PARENT)
-          && eOrderDecoder.decodePegBestPegMidOrderAttributes(ptr, endPtr);
+          && eOrderDecoder.decodePegBestPegMidOrderAttributes(ptr, endPtr)
+          && eOrderDecoder.decodeCustomerAccount(ptr, endPtr)
+          && eOrderDecoder.decodeProfessionalCustomer(ptr, endPtr)
+          && eOrderDecoder.decodeBondAccruedInterest(ptr, endPtr);
 
         if (!success) {
           return nullptr;
@@ -530,6 +533,9 @@ const char* EDecoder::processContractDataMsg(const char* ptr, const char* endPtr
 	DECODE_FIELD( contract.contract.symbol);
 	DECODE_FIELD( contract.contract.secType);
 	ptr = decodeLastTradeDate(ptr, endPtr, contract, false);
+	if (m_serverVersion >= MIN_SERVER_VER_LAST_TRADE_DATE) {
+		DECODE_FIELD( contract.contract.lastTradeDate);
+	}
 	DECODE_FIELD( contract.contract.strike);
 	DECODE_FIELD( contract.contract.right);
 	DECODE_FIELD( contract.contract.exchange);
@@ -606,6 +612,45 @@ const char* EDecoder::processContractDataMsg(const char* ptr, const char* endPtr
 		DECODE_FIELD(contract.minSize);
 		DECODE_FIELD(contract.sizeIncrement);
 		DECODE_FIELD(contract.suggestedSizeIncrement);
+	}
+	if (m_serverVersion >= MIN_SERVER_VER_FUND_DATA_FIELDS && contract.contract.secType == "FUND")	{
+		DECODE_FIELD(contract.fundName);
+		DECODE_FIELD(contract.fundFamily);
+		DECODE_FIELD(contract.fundType);
+		DECODE_FIELD(contract.fundFrontLoad);
+		DECODE_FIELD(contract.fundBackLoad);
+		DECODE_FIELD(contract.fundBackLoadTimeInterval);
+		DECODE_FIELD(contract.fundManagementFee);
+		DECODE_FIELD(contract.fundClosed);
+		DECODE_FIELD(contract.fundClosedForNewInvestors);
+		DECODE_FIELD(contract.fundClosedForNewMoney);
+		DECODE_FIELD(contract.fundNotifyAmount);
+		DECODE_FIELD(contract.fundMinimumInitialPurchase);
+		DECODE_FIELD(contract.fundSubsequentMinimumPurchase);
+		DECODE_FIELD(contract.fundBlueSkyStates);
+		DECODE_FIELD(contract.fundBlueSkyTerritories);
+		std::string fundDistributionPolicyIndicator;
+		DECODE_FIELD(fundDistributionPolicyIndicator);
+		contract.fundDistributionPolicyIndicator = Utils::getFundDistributionPolicyIndicator(fundDistributionPolicyIndicator);
+		std::string fundAssetType;
+		DECODE_FIELD(fundAssetType);
+		contract.fundAssetType = Utils::getFundAssetType(fundAssetType);
+	}
+
+	if (m_serverVersion >= MIN_SERVER_VER_INELIGIBILITY_REASONS) {
+		int ineligibilityReasonCount = 0;
+		DECODE_FIELD(ineligibilityReasonCount);
+		if (ineligibilityReasonCount > 0) {
+			IneligibilityReasonListSPtr ineligibilityReasonList(new IneligibilityReasonList);
+			ineligibilityReasonList->reserve(ineligibilityReasonCount);
+			for (int i = 0; i < ineligibilityReasonCount; ++i) {
+				IneligibilityReasonSPtr ineligibilityReason(new IneligibilityReason());
+				DECODE_FIELD(ineligibilityReason->id);
+				DECODE_FIELD(ineligibilityReason->description);
+				ineligibilityReasonList->push_back(ineligibilityReason);
+			}
+			contract.ineligibilityReasonList = ineligibilityReasonList;
+		}
 	}
 
 	m_pEWrapper->contractDetails( reqId, contract);
@@ -759,6 +804,10 @@ const char* EDecoder::processExecutionDetailsMsg(const char* ptr, const char* en
 
     if (m_serverVersion >= MIN_SERVER_VER_LAST_LIQUIDITY) {
         DECODE_FIELD(exec.lastLiquidity);
+    }
+
+    if (m_serverVersion >= MIN_SERVER_VER_PENDING_PRICE_REVISION) {
+        DECODE_FIELD(exec.pendingPriceRevision);
     }
 
 	m_pEWrapper->execDetails( reqId, contract, exec);
@@ -2136,7 +2185,9 @@ const char* EDecoder::processCompletedOrderMsg(const char* ptr, const char* endP
           && eOrderDecoder.decodeParentPermId(ptr, endPtr)
           && eOrderDecoder.decodeCompletedTime(ptr, endPtr)
           && eOrderDecoder.decodeCompletedStatus(ptr, endPtr)
-          && eOrderDecoder.decodePegBestPegMidOrderAttributes(ptr, endPtr);
+          && eOrderDecoder.decodePegBestPegMidOrderAttributes(ptr, endPtr)
+          && eOrderDecoder.decodeCustomerAccount(ptr, endPtr)
+          && eOrderDecoder.decodeProfessionalCustomer(ptr, endPtr);
 
         if (!success) {
           return nullptr;
@@ -2242,8 +2293,6 @@ int EDecoder::parseAndProcessMsg(const char*& beginPtr, const char* endPtr) {
 
 		int msgId;
 		DECODE_FIELD( msgId);
-
-		if (write_my_log){my_log->write("EDecoder - parseAndProcessMsg - msgId:",msgId);}
 
 		switch( msgId) {
 		case TICK_PRICE:
@@ -2717,7 +2766,7 @@ bool EDecoder::DecodeField(Decimal& decimalValue, const char*& ptr, const char* 
 	const char* fieldEnd = FindFieldEnd(fieldBeg, endPtr);
 	if (!fieldEnd)
 		return false;
-	decimalValue = stringToDecimal(fieldBeg);
+	decimalValue = DecimalFunctions::stringToDecimal(fieldBeg);
 	ptr = ++fieldEnd;
 	return true;
 }

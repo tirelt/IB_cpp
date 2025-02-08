@@ -20,9 +20,7 @@ class TWSAPIDLLEXP EReaderOSSignal :
     pthread_condattr_t m_condattr;
     pthread_cond_t m_evMsgs;
     pthread_mutex_t m_mutex;
-public:
-	bool open;
-private:
+    bool open;
 #elif defined(IB_WIN32)
 	HANDLE m_evMsgs;
 #else

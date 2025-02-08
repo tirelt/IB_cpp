@@ -1,8 +1,9 @@
-﻿/* Copyright (C) 2019 Interactive Brokers LLC. All rights reserved. This code is subject to the terms
+/* Copyright (C) 2024 Interactive Brokers LLC. All rights reserved. This code is subject to the terms
  * and conditions of the IB API Non-Commercial License or the IB API Commercial License, as applicable. */
 #include "StdAfx.h"
 
 #include "Order.h"
+#include "OrderCancel.h"
 #include "OrderSamples.h"
 #include "PriceCondition.h"
 #include "executioncondition.h"
@@ -1070,3 +1071,54 @@ Order OrderSamples::PegMidOrder(std::string action, Decimal quantity, double lim
 	return order;
 }
 
+Order OrderSamples::LimitOrderWithCustomerAccount(std::string action, Decimal quantity, double limitPrice, std::string customerAccount) {
+	// ! [limit_order_with_customer_account]
+	Order order = OrderSamples::LimitOrder(action, quantity, limitPrice);
+	order.customerAccount = customerAccount;
+	// ! [limit_order_with_customer_account]
+	return order;
+}
+
+OrderCancel OrderSamples::OrderCancelEmpty() {
+	// ! [order_cancel_empty]
+	OrderCancel orderCancel;
+	// ! [order_cancel_empty]
+	return orderCancel;
+}
+
+OrderCancel OrderSamples::OrderCancelWithManualTime(std::string manualOrderCancelTime) {
+	// ! [order_cancel_with_manual_time]
+	OrderCancel orderCancel;
+	orderCancel.manualOrderCancelTime = manualOrderCancelTime;
+	// ! [order_cancel_with_manual_time]
+	return orderCancel;
+}
+
+Order OrderSamples::Rfq() {
+	// ! [rfq]
+	Order order = OrderSamples::RfqEmpty();
+	order.extOperator = "Ext Operator 1";
+	order.externalUserId = "External User Id 1";
+	order.manualOrderIndicator = 1;
+	// ! [rfq]
+	return order;
+}
+
+Order OrderSamples::RfqEmpty() {
+	// ! [rfq_empty]
+	Order order;
+	order.orderType = "QUOTE";
+	order.totalQuantity = DecimalFunctions::stringToDecimal("1");
+	// ! [rfq_empty]
+	return order;
+}
+
+OrderCancel OrderSamples::RfqCancel() {
+	// ! [rfq_cancel]
+	OrderCancel orderCancel;
+	orderCancel.extOperator = "Ext Operator 2";
+	orderCancel.externalUserId = "External User Id 2";
+	orderCancel.manualOrderIndicator = 1;
+	// ! [rfq_cancel]
+	return orderCancel;
+}

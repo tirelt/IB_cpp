@@ -1,8 +1,8 @@
 CXX=g++
-CXXFLAGS=-pthread -Wall -Wno-switch -Wpedantic -Wno-unused-function -lbidgcc000
+CXXFLAGS=-pthread -Wall -Wno-switch -Wpedantic -Wno-unused-function -lbidgcc000 -std=c++20
+DEBUG_FLAG=-fdiagnostics-color=always -g
 TARGET=MyApp
 
-DEBUG_FLAG=-fdiagnostics-color=always -g
 PATH_SRC=src
 PATH_INLUCE=include
 PATH_OBJ=obj/src
