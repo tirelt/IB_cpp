@@ -13,7 +13,7 @@ $(TARGET):
 	$(CXX) $(CXXFLAGS) $(INCLUDES) $(BASE_SRC_DIR)/*.cpp ./*.cpp -L$(LIB_DIR) -l$(LIB_NAME_A) -o$(TARGET)
 
 $(TARGET)Dynamic:
-	$(CXX) $(CXXFLAGS) $(INCLUDES)  ./*.cpp -L$(LIB_DIR) -l$(LIB_NAME_A) -l$(SOURCE_LIB) -o$(TARGET)Dynamic
+	$(CXX) $(CXXFLAGS) $(INCLUDES) ./*.cpp -L$(LIB_DIR) -l$(LIB_NAME_A) -l$(SOURCE_LIB) -o$(TARGET)Dynamic
 
 run$(TARGET):
 	LD_LIBRARY_PATH=$(PWD)/$(LIB_DIR):$(LD_LIBRARY_PATH) ./$(TARGET)

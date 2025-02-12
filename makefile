@@ -1,15 +1,16 @@
 CXX=g++
-CXXFLAGS=-pthread -Wall -Wno-switch -Wpedantic -Wno-unused-function -lbidgcc000 -std=c++20
+CXXFLAGS=-pthread -Wall -Wno-switch -Wpedantic -Wno-unused-function -std=c++20
 DEBUG_FLAG=-fdiagnostics-color=always -g
 TARGET=MyApp
 
+LIB_DIR=lib
+LIB_NAME=bid
 PATH_SRC=src
-PATH_INLUCE=include
 PATH_OBJ=obj/src
 PATH_OBJ_CLIENT=obj/client
 PATH_LIB=tws_api/IBJts/source/cppclient
 PATH_CLIENT=$(PATH_LIB)/client
-PATH_LIBOBJ=$(PATH_CLIENT)/libTwsSocketClient.so
+PATH_LIBOBJ=$(LIB_DIR)/libTwsSocketClient.so
 
 SRCS := $(wildcard $(PATH_SRC)/*.cpp)
 OBJS := $(SRCS:$(PATH_SRC)/%cpp=$(PATH_OBJ)/%o)
@@ -20,13 +21,13 @@ OBJS_CLIENT := $(SRCS_CLIENT:$(PATH_CLIENT)/%cpp=$(PATH_OBJ_CLIENT)/%o)
 all: $(TARGET)
 
 $(TARGET): dir $(OBJS) $(OBJS_CLIENT)
-	$(CXX) $(OBJS) $(OBJS_CLIENT) $(CXXFLAGS) -o $(TARGET)
+	$(CXX) $(OBJS) $(OBJS_CLIENT) $(CXXFLAGS) -L$(LIB_DIR) -l$(LIB_NAME) -o $(TARGET)
 
 $(PATH_OBJ)/%.o: $(PATH_SRC)/%.cpp $(PATH_INLUCE)/%.h
-	${CXX} $(DEBUG_FLAG) -c $< -I $(PATH_INLUCE) -I $(PATH_LIB) -I $(PATH_CLIENT) -o $@
+	${CXX} $(CXXFLAGS) $(DEBUG_FLAG) -c $< -L$(LIB_DIR) -l$(LIB_NAME) -I$(PATH_CLIENT) -I$(PATH_INLUCE) -o $@
 
 $(PATH_OBJ_CLIENT)/%.o: $(PATH_CLIENT)/%.cpp $(PATH_CLIENT)/%.h
-	${CXX} $(DEBUG_FLAG) -c $< -I $(PATH_LIB) -I $(PATH_CLIENT) -I $(PATH_INLUCE) -o $@
+	${CXX} $(CXXFLAGS) $(DEBUG_FLAG) -c $< -L$(LIB_DIR) -l$(LIB_NAME) -I$(PATH_CLIENT) -o $@
 
 dir: 
 	mkdir -p $(PATH_OBJ) $(PATH_OBJ_CLIENT)

@@ -1,18 +1,13 @@
-﻿/* Copyright (C) 2019 Interactive Brokers LLC. All rights reserved. This code is subject to the terms
- * and conditions of the IB API Non-Commercial License or the IB API Commercial License, as applicable. */
-
 #pragma once
-#ifndef TWS_API_SAMPLES_CPPCLIENT_CPPCLIENT_H
-#define TWS_API_SAMPLES_CPPCLIENT_CPPCLIENT_H
+#ifndef TWS_API_SAMPLES_TESTCPPCLIENT_TESTCPPCLIENT_H
+#define TWS_API_SAMPLES_TESTCPPCLIENT_TESTCPPCLIENT_H
 
 #include "EWrapper.h"
 #include "EReaderOSSignal.h"
 #include "EReader.h"
-#include "Log.h"
 
 #include <memory>
 #include <vector>
-#include <fstream>
 
 class EClientSocket;
 
@@ -109,10 +104,8 @@ enum State {
 	ST_IBKRATSSAMPLE_ACK,
 	ST_WSH,
 	ST_WSH_ACK,
-	ST_GET_OPTIONS,
-	ST_GET_OPTIONS_ACK,
-	ST_GET_MKT_DATA,
-	ST_GET_MKT_DATA_ACk
+	ST_RFQOPERATIONS,
+	ST_RFQOPERATIONS_ACK
 };
 
 //! [ewrapperimpl]
@@ -124,80 +117,18 @@ public:
 	Client();
 	~Client();
 
-	void setConnectOptions(const std::string&);
 	void processMessages();
-
-	void myInstructions();
-
-	void selectContract(Contract);
 
 public:
 
 	bool connect(const char * host, int port, int clientId = 0);
 	void disconnect() const;
 	bool isConnected() const;
-	State getState() const;
-private:
-	void subscribeToMktData();
-    void pnlOperation();
-    void pnlSingleOperation();
-	void tickDataOperation();
-	void tickOptionComputationOperation();
-	void delayedTickDataOperation();
-	void marketDepthOperations();
-	void realTimeBars();
-	void marketDataType();
-	void historicalDataRequests();
-	void optionsOperations();
-	void accountOperations();
-	void orderOperations();
-	void ocaSamples();
-	void conditionSamples();
-	void bracketSample();
-	void hedgeSample();
-	void contractOperations();
-	void marketScanners();
-	void fundamentals();
-	void bulletins();
-	void testAlgoSamples();
-	void financialAdvisorOrderSamples();
-	void financialAdvisorOperations();
-	void testDisplayGroups();
-	void miscelaneous();
-	void reqFamilyCodes();
-	void reqMatchingSymbols();
-	void reqMktDepthExchanges();
-	void reqNewsTicks();
-	void reqSmartComponents();
-	void reqNewsProviders();
-	void reqNewsArticle();
-	void reqHistoricalNews();
-	void reqHeadTimestamp();
-	void reqHistogramData();
-	void rerouteCFDOperations();
-	void marketRuleOperations();
-	void continuousFuturesOperations();
-    void reqHistoricalTicks();
-    void reqTickByTickData();
-	void whatIfSamples();
-	void ibkratsSample();
-	void wshCalendarOperations();
-
 	void reqCurrentTime();
 
-	void getOptions();
-
-	Contract contract;
 public:
 	// events
 	#include "EWrapper_prototypes.h"
-
-
-private:
-	void printContractMsg(const Contract& contract);
-	void printContractDetailsMsg(const ContractDetails& contractDetails);
-	void printContractDetailsSecIdList(const TagValueListSPtr &secIdList);
-	void printBondContractDetailsMsg(const ContractDetails& contractDetails);
 
 private:
 	//! [socket_declare]
@@ -206,13 +137,11 @@ private:
 	//! [socket_declare]
 	State m_state;
 	time_t m_sleepDeadline;
-	TickerId m_tickerId;
+
 	OrderId m_orderId;
 	std::unique_ptr<EReader> m_pReader;
     bool m_extraAuth;
 	std::string m_bboExchange;
-	std::shared_ptr<MyLog> my_log;
-	bool write_my_log;
 };
 
 #endif
