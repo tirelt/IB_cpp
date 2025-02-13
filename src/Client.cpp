@@ -100,14 +100,13 @@ void Client::processMessages()
 //////////////////////////////////////////////////////////////////
 // methods
 //! [connectack]
-void Client::connectAck() {
+void Client::connectAck(){
 	if (!m_extraAuth && m_pClient->asyncEConnect())
         m_pClient->startApi();
 }
 //! [connectack]
 
-void Client::reqCurrentTime()
-{
+void Client::reqCurrentTime(){
 	printf( "Requesting Current Time\n");
 
 	// set ping deadline to "now + n seconds"
@@ -119,8 +118,7 @@ void Client::reqCurrentTime()
 }
 
 //! [nextvalidid]
-void Client::nextValidId( OrderId orderId)
-{
+void Client::nextValidId( OrderId orderId){
 	printf("Next Valid Id: %ld\n", orderId);
 	m_orderId = orderId;
 	//! [nextvalidid]
@@ -172,8 +170,7 @@ void Client::nextValidId( OrderId orderId)
 }
 
 
-void Client::currentTime( long time)
-{
+void Client::currentTime( long time){
 	if ( m_state == ST_PING_ACK) {
 		time_t t = ( time_t)time;
         struct tm timeinfo;
