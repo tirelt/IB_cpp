@@ -1,5 +1,6 @@
 CXX=g++
 CXXFLAGS=-pthread -Wall -Wno-switch -Wpedantic -Wno-unused-function -std=c++20
+DEBUG_FLAG=-fdiagnostics-color=always -g
 ROOT_DIR=../../../source/cppclient
 BASE_SRC_DIR=${ROOT_DIR}/client
 INCLUDES=-I${BASE_SRC_DIR} -I${ROOT_DIR}
@@ -10,7 +11,7 @@ LIB_NAME_A=bid
 TARGET=TestCppClient
 
 $(TARGET):
-	$(CXX) $(CXXFLAGS) $(INCLUDES) $(BASE_SRC_DIR)/*.cpp ./*.cpp -L$(LIB_DIR) -l$(LIB_NAME_A) -o$(TARGET)
+	$(CXX) $(CXXFLAGS) $(DEBUG_FLAG) $(INCLUDES) $(BASE_SRC_DIR)/*.cpp ./*.cpp -L$(LIB_DIR) -l$(LIB_NAME_A) -o$(TARGET)
 
 $(TARGET)Dynamic:
 	$(CXX) $(CXXFLAGS) $(INCLUDES) ./*.cpp -L$(LIB_DIR) -l$(LIB_NAME_A) -l$(SOURCE_LIB) -o$(TARGET)Dynamic

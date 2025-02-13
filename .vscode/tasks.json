@@ -9,7 +9,17 @@
                 "cwd": "${cwd}"
             },
             "detail": "Build the app (MyApp) using the makefile"
-        }     
+        },
+        {
+            "type": "cppbuild",
+            "label": "Build TestCppClient",
+            "command": "make",
+            "args": [],
+            "options": {
+                "cwd": "${cwd}/tws_api/IBJts/samples/Cpp/TestCppClient"
+            },
+            "detail": "Build the TestCppClient using the makefile"
+        }       
     ],
     "version": "2.0.0"
 }

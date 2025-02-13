@@ -12,6 +12,15 @@
             "args": [],
             "cwd": "${cwd}",
             "preLaunchTask": "Build MyApp"
-          }
+        },
+        {
+            "name": "Debug TestCppClient",
+            "type": "lldb",
+            "request": "launch",
+            "program": "${cwd}/tws_api/IBJts/samples/Cpp/TestCppClient/TestCppClient",
+            "args": [],
+            "cwd": "${cwd}/tws_api/IBJts/samples/Cpp/TestCppClient",
+            "preLaunchTask": "Build TestCppClient"
+        }
     ]
 }
