@@ -1499,7 +1499,7 @@ void TestCppClient::nextValidId( OrderId orderId)
     //m_state = ST_TICKOPTIONCOMPUTATIONOPERATION; 
     //m_state = ST_TICKDATAOPERATION; 
     //m_state = ST_OPTIONSOPERATIONS;
-    //m_state = ST_REQTICKBYTICKDATA; 
+    m_state = ST_REQTICKBYTICKDATA; 
     //m_state = ST_REQHISTORICALTICKS; 
     //m_state = ST_CONTFUT; 
     //m_state = ST_PNLSINGLE; 
@@ -1539,7 +1539,7 @@ void TestCppClient::nextValidId( OrderId orderId)
 	//m_state = ST_PING;
 	//m_state = ST_WHATIFSAMPLES;
 	//m_state = ST_WSH;
-	m_state = ST_RFQOPERATIONS;
+	//m_state = ST_RFQOPERATIONS;
 }
 
 

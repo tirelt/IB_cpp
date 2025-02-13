@@ -16,28 +16,14 @@ int main(){
 	int port = 7497;
 	int clientId = 0;
 
-	unsigned attempt = 0;
-	printf( "Start of C++ Socket Client Test %u\n", attempt);
+	printf( "Start of C++ Socket Client Test\n");
 
-	for (;;) {
-		++attempt;
-		printf( "Attempt %u of %u\n", attempt, MAX_ATTEMPTS);
-
-		Client client;
-
-		client.connect( host, port, clientId);
-		
-		while( client.isConnected()) {
-			client.processMessages();
-		}
-		if( attempt >= MAX_ATTEMPTS) {
-			break;
-		}
-
-		printf( "Sleeping %u seconds before next attempt\n", SLEEP_TIME);
+	Client client;
+	client.connect(host, port, clientId);
+	while(client.isConnected()){
+		client.processMessages();
 		std::this_thread::sleep_for(std::chrono::seconds(SLEEP_TIME));
 	}
-
-	printf ( "End of C++ Socket Client Test\n");
+	printf ("End of C++ Socket Client Test\n");
 }
 

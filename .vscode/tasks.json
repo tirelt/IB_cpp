@@ -4,7 +4,7 @@
             "type": "cppbuild",
             "label": "Build MyApp",
             "command": "make",
-            "args": ["all"],
+            "args": [],
             "options": {
                 "cwd": "${cwd}"
             },
