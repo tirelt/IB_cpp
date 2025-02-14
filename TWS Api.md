@@ -38,3 +38,5 @@ Initial handshake msg id
 4 ERR_MSG
 
 81 TICK_REQ_PARAMS
+
+reqTickByTickData>  processTickByTickDataMsg 99
