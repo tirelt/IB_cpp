@@ -8,7 +8,6 @@
 
 #include "Client.h"
 
-const unsigned MAX_ATTEMPTS = 50;
 const unsigned SLEEP_TIME = 10;
 
 int main(){

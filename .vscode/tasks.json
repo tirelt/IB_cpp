@@ -14,9 +14,9 @@
             "type": "cppbuild",
             "label": "Build TestCppClient",
             "command": "make",
-            "args": [],
+            "args": ["Test"],
             "options": {
-                "cwd": "${cwd}/tws_api/IBJts/samples/Cpp/TestCppClient"
+                "cwd": "${cwd}"
             },
             "detail": "Build the TestCppClient using the makefile"
         }       
