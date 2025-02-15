@@ -7,8 +7,7 @@
 #include <thread>
 
 #include "Client.h"
-
-const unsigned SLEEP_TIME = 10;
+//const unsigned SLEEP_TIME = 10;
 
 int main(){
 	const char* host = "";
@@ -21,7 +20,7 @@ int main(){
 	client.connect(host, port, clientId);
 	while(client.isConnected()){
 		client.processMessages();
-		std::this_thread::sleep_for(std::chrono::seconds(SLEEP_TIME));
+		//std::this_thread::sleep_for(std::chrono::seconds(SLEEP_TIME));
 	}
 	printf ("End of C++ Socket Client Test\n");
 }

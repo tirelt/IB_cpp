@@ -12,6 +12,10 @@
 class EClientSocket;
 
 enum State {
+	ST_REQPOSITIONS,
+	ST_REQSLICE,
+	ST_DISCONNECT,
+	ST_REQPOSITIONS_ACK,
 	ST_CONNECT,
 	ST_TICKDATAOPERATION,
 	ST_TICKDATAOPERATION_ACK,
@@ -120,6 +124,12 @@ public:
 	void disconnect() const;
 	bool isConnected() const;
 
+	void reqPositions();
+	void position( const std::string& account, const Contract& contract, Decimal position, double avgCost);
+	void positionEnd();
+	void reqSlice();
+	void printContractMsg(const Contract& contract);
+
 private:
 	void reqCurrentTime();
     void pnloperation(){}
@@ -190,9 +200,9 @@ public:
 	void updatePortfolio( const Contract& contract, Decimal position, double marketPrice, double marketValue, double averageCost, double unrealizedPNL, double realizedPNL, const std::string& accountName){}
 	void updateAccountTime(const std::string& timeStamp){}
 	void accountDownloadEnd(const std::string& accountName){}
-	void contractDetails( int reqId, const ContractDetails& contractDetails){}
+	void contractDetails( int reqId, const ContractDetails& contractDetails);
 	void bondContractDetails( int reqId, const ContractDetails& contractDetails){}
-	void contractDetailsEnd( int reqId){}
+	void contractDetailsEnd( int reqId);
 	void execDetails( int reqId, const Contract& contract, const Execution& execution){}
 	void execDetailsEnd( int reqId){}
 	void error(int id, int errorCode, const std::string& errorString, const std::string& advancedOrderRejectJson){}
@@ -212,8 +222,6 @@ public:
 	void tickSnapshotEnd( int reqId){}
 	void marketDataType( TickerId reqId, int marketDataType){}
 	void commissionReport( const CommissionReport& commissionReport){}
-	void position( const std::string& account, const Contract& contract, Decimal position, double avgCost){}
-	void positionEnd(){}
 	void accountSummary( int reqId, const std::string& account, const std::string& tag, const std::string& value, const std::string& curency){}
 	void accountSummaryEnd( int reqId){}
 	void verifyMessageAPI( const std::string& apiData){}

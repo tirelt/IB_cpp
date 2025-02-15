@@ -10,6 +10,8 @@
 #include <ctime>
 #include <fstream>
 #include <cstdint>
+#include "Utils.h"
+#include "Contracts.h"
 
 const int PING_DEADLINE = 2; // seconds
 const int SLEEP_BETWEEN_PINGS = 30; // seconds
@@ -90,6 +92,16 @@ void Client::processMessages()
 				return;
 			}
 			break;
+		case ST_REQPOSITIONS:
+			reqPositions();
+			m_state = ST_REQSLICE;
+			break;
+		case ST_REQSLICE:
+			reqSlice();
+			break;
+		case ST_DISCONNECT:
+			disconnect();
+			return;
 	}
 
 	m_osSignal.waitForSignal();
@@ -117,11 +129,55 @@ void Client::reqCurrentTime(){
 	m_pClient->reqCurrentTime();
 }
 
-//! [nextvalidid]
+void Client::reqPositions(){
+	printf("Requesting Positions");
+	m_pClient->reqPositions();
+}
+
+void Client::position( const std::string& account, const Contract& contract, Decimal position, double avgCost) {
+    printf( "Position. %s - Symbol: %s, SecType: %s, Currency: %s, Position: %s, Avg Cost: %s\n", account.c_str(), contract.symbol.c_str(), contract.secType.c_str(), contract.currency.c_str(), DecimalFunctions::decimalStringToDisplay(position).c_str(), Utils::doubleMaxString(avgCost).c_str());
+}
+
+void Client::positionEnd() {
+	printf( "PositionEnd\n");
+	m_pClient->cancelPositions();
+}
+
+void Client::reqSlice(){
+	printf("Requesting Slice");
+	m_pClient->reqContractDetails(1,MyContract::OPTION_SLICE("OESX","20250321"));
+}
+
+void Client::contractDetails( int reqId, const ContractDetails& contractDetails) {
+    printContractMsg(contractDetails.contract);
+}
+
+void Client::contractDetailsEnd( int reqId) {
+	printf( "Slice End. %d\n", reqId);
+	m_state = ST_DISCONNECT;
+}
+
+void Client::printContractMsg(const Contract& contract){
+	printf("\tConId: %ld\n", contract.conId);
+	printf("\tSymbol: %s\n", contract.symbol.c_str());
+	printf("\tSecType: %s\n", contract.secType.c_str());
+	printf("\tLastTradeDateOrContractMonth: %s\n", contract.lastTradeDateOrContractMonth.c_str());
+	printf("\tLastTradeDate: %s\n", contract.lastTradeDate.c_str());
+	printf("\tStrike: %s\n", Utils::doubleMaxString(contract.strike).c_str());
+	printf("\tRight: %s\n", contract.right.c_str());
+	printf("\tMultiplier: %s\n", contract.multiplier.c_str());
+	printf("\tExchange: %s\n", contract.exchange.c_str());
+	printf("\tPrimaryExchange: %s\n", contract.primaryExchange.c_str());
+	printf("\tCurrency: %s\n", contract.currency.c_str());
+	printf("\tLocalSymbol: %s\n", contract.localSymbol.c_str());
+	printf("\tTradingClass: %s\n", contract.tradingClass.c_str());
+}
+
 void Client::nextValidId( OrderId orderId){
 	printf("Next Valid Id: %ld\n", orderId);
 	m_orderId = orderId;
 	//! [nextvalidid]
+	m_state = ST_REQPOSITIONS;
 
     //m_state = ST_TICKOPTIONCOMPUTATIONOPERATION; 
     //m_state = ST_TICKDATAOPERATION; 
@@ -163,12 +219,11 @@ void Client::nextValidId( OrderId orderId){
 	//m_state = ST_REQHISTOGRAMDATA;
 	//m_state = ST_REROUTECFD;
 	//m_state = ST_MARKETRULE;
-	m_state = ST_PING;
+	//m_state = ST_PING;
 	//m_state = ST_WHATIFSAMPLES;
 	//m_state = ST_WSH;
 	//m_state = ST_RFQOPERATIONS;
 }
-
 
 void Client::currentTime( long time){
 	if ( m_state == ST_PING_ACK) {
