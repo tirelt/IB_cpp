@@ -8,7 +8,8 @@ struct Contract;
 
 class MyContract {
 public:
-	static Contract OPTION_SLICE(std::string trading_class, std::string expiration);
+	static Contract OPTION_SLICE(std::string symbol, std::string expiration, std::string exchange, std::string currency);
+    static Contract OptionWithTradingClass();
 };
 
 #endif

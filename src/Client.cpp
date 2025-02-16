@@ -145,7 +145,7 @@ void Client::positionEnd() {
 
 void Client::reqSlice(){
 	printf("Requesting Slice");
-	m_pClient->reqContractDetails(1,MyContract::OPTION_SLICE("OESX","20250321"));
+	m_pClient->reqContractDetails(1, MyContract::OPTION_SLICE("ESTX50","20250321","EUREX","EUR"));
 }
 
 void Client::contractDetails( int reqId, const ContractDetails& contractDetails) {
@@ -155,6 +155,14 @@ void Client::contractDetails( int reqId, const ContractDetails& contractDetails)
 void Client::contractDetailsEnd( int reqId) {
 	printf( "Slice End. %d\n", reqId);
 	m_state = ST_DISCONNECT;
+}
+
+void Client::error(int id, int errorCode, const std::string& errorString, const std::string& advancedOrderRejectJson){
+    if (!advancedOrderRejectJson.empty()) {
+        printf("Error. Id: %d, Code: %d, Msg: %s, AdvancedOrderRejectJson: %s\n", id, errorCode, errorString.c_str(), advancedOrderRejectJson.c_str());
+    } else {
+        printf("Error. Id: %d, Code: %d, Msg: %s\n", id, errorCode, errorString.c_str());
+    }
 }
 
 void Client::printContractMsg(const Contract& contract){

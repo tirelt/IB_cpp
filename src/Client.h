@@ -205,7 +205,7 @@ public:
 	void contractDetailsEnd( int reqId);
 	void execDetails( int reqId, const Contract& contract, const Execution& execution){}
 	void execDetailsEnd( int reqId){}
-	void error(int id, int errorCode, const std::string& errorString, const std::string& advancedOrderRejectJson){}
+	void error(int id, int errorCode, const std::string& errorString, const std::string& advancedOrderRejectJson);
 	void updateMktDepth(TickerId id, int position, int operation, int side,	double price, Decimal size){}
 	void updateMktDepthL2(TickerId id, int position, const std::string& marketMaker, int operation,	int side, double price, Decimal size, bool isSmartDepth){}
 	void updateNewsBulletin(int msgId, int msgType, const std::string& newsMessage, const std::string& originExch){}
