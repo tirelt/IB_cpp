@@ -13,9 +13,6 @@
 #include "Utils.h"
 #include "Contracts.h"
 
-const int PING_DEADLINE = 2; // seconds
-const int SLEEP_BETWEEN_PINGS = 30; // seconds
-
 ///////////////////////////////////////////////////////////
 // member funcs
 //! [socket_init]
@@ -68,23 +65,7 @@ bool Client::isConnected() const{
 }
 
 void Client::processMessages(){
-	time_t now = time(NULL);
 	switch (m_state) {
-		case ST_PING:
-			reqCurrentTime();
-			break;
-		case ST_PING_ACK:
-			if( m_sleepDeadline < now) {
-				disconnect();
-				return;
-			}
-			break;
-		case ST_IDLE:
-			if( m_sleepDeadline < now) {
-				m_state = ST_PING;
-				return;
-			}
-			break;
 		case ST_REQPOSITIONS:
 			reqPositions();
 			m_state = ST_REQSLICE;
@@ -115,18 +96,6 @@ void Client::processMessages(){
 void Client::connectAck(){
 	if (!m_extraAuth && m_pClient->asyncEConnect())
         m_pClient->startApi();
-}
-//! [connectack]
-
-void Client::reqCurrentTime(){
-	printf( "Requesting Current Time\n");
-
-	// set ping deadline to "now + n seconds"
-	m_sleepDeadline = time( NULL) + PING_DEADLINE;
-
-	m_state = ST_PING_ACK;
-
-	m_pClient->reqCurrentTime();
 }
 
 void Client::reqPositions(){
@@ -241,26 +210,4 @@ void Client::nextValidId( OrderId orderId){
 	//m_state = ST_WHATIFSAMPLES;
 	//m_state = ST_WSH;
 	//m_state = ST_RFQOPERATIONS;
-}
-
-void Client::currentTime( long time){
-	if ( m_state == ST_PING_ACK) {
-		time_t t = ( time_t)time;
-        struct tm timeinfo;
-        char currentTime[80];
-
-#if defined(IB_WIN32)
-        localtime_s(&timeinfo, &t);
-        asctime_s(currentTime, sizeof currentTime, &timeinfo);
-#else
-        localtime_r(&t, &timeinfo);
-        asctime_r(&timeinfo, currentTime);
-#endif
-        printf( "The current date/time is: %s", currentTime);
-
-		time_t now = ::time(NULL);
-		m_sleepDeadline = now + SLEEP_BETWEEN_PINGS;
-
-		m_state = ST_PING_ACK;
-	}
 }
