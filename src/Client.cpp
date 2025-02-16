@@ -89,9 +89,6 @@ void Client::processMessages(){
 	m_pReader->processMsgs();
 }
 
-//////////////////////////////////////////////////////////////////
-// methods
-//! [connectack]
 void Client::connectAck(){
 	if (!m_extraAuth && m_pClient->asyncEConnect())
         m_pClient->startApi();
@@ -125,7 +122,10 @@ void Client::reqSlice(){
 void Client::contractDetails( int reqId, const ContractDetails& contractDetails){
 	switch( reqId){
 	case ST_REQFIRSTFUT:
-		m_pSlice->forward.assign_contract( contractDetails.contract);
+		m_pSlice->assign_forward( contractDetails.contract);
+		break;
+	case ST_REQSLICE:
+		m_pSlice->assign_option( contractDetails.contract);
 		break;
 	}
     printContractMsg(contractDetails.contract);
