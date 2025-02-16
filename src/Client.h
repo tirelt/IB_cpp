@@ -14,6 +14,8 @@ class EClientSocket;
 enum State {
 	ST_REQPOSITIONS,
 	ST_REQSLICE,
+	ST_REQFIRSTFUT,
+	ST_ACK,
 	ST_DISCONNECT,
 	ST_REQPOSITIONS_ACK,
 	ST_CONNECT,
@@ -128,6 +130,7 @@ public:
 	void position( const std::string& account, const Contract& contract, Decimal position, double avgCost);
 	void positionEnd();
 	void reqSlice();
+	void reqFirstFut();
 	void printContractMsg(const Contract& contract);
 
 private:

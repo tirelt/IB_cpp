@@ -15,18 +15,12 @@ Contract MyContract::OPTION_SLICE(string symbol, string expiration, string excha
 	//contract.tradingClass = "OESX";
 	return contract;
 }
-Contract MyContract::OptionWithTradingClass(){
-	//! [optcontract_tradingclass]
+
+Contract MyContract::FUTURE(string symbol, string exchange, string currency){
 	Contract contract;
-	contract.symbol = "SANT";
-	contract.secType = "OPT";
-	contract.exchange = "MEFFRV";
-	contract.currency = "EUR";
-	contract.lastTradeDateOrContractMonth = "20190621";
-	contract.strike = 7.5;
-	contract.right = "C";
-	contract.multiplier = "100";
-	contract.tradingClass = "SANEU";
-	//! [optcontract_tradingclass]
+	contract.symbol = symbol;
+	contract.secType = "FUT";
+	contract.exchange = exchange;
+	contract.currency = currency;
 	return contract;
 }

@@ -57,25 +57,18 @@ bool Client::connect(const char *host, int port, int clientId){
 	return bRes;
 }
 
-void Client::disconnect() const
-{
+void Client::disconnect() const{
 	m_pClient->eDisconnect();
 
 	printf ( "Disconnected\n");
 }
 
-bool Client::isConnected() const
-{
+bool Client::isConnected() const{
 	return m_pClient->isConnected();
 }
 
-void Client::processMessages()
-{
+void Client::processMessages(){
 	time_t now = time(NULL);
-
-	/*****************************************************************/
-    /* Below are few quick-to-test examples on the IB API functions grouped by functionality. Uncomment the relevant methods. */
-    /*****************************************************************/
 	switch (m_state) {
 		case ST_PING:
 			reqCurrentTime();
@@ -96,12 +89,19 @@ void Client::processMessages()
 			reqPositions();
 			m_state = ST_REQSLICE;
 			break;
+		case ST_REQFIRSTFUT:
+			reqFirstFut();
+			break;
 		case ST_REQSLICE:
 			reqSlice();
 			break;
 		case ST_DISCONNECT:
 			disconnect();
 			return;
+		case ST_ACK:
+			const unsigned sleep(1);
+			std::this_thread::sleep_for(std::chrono::seconds(sleep));
+			break;
 	}
 
 	m_osSignal.waitForSignal();
@@ -143,9 +143,15 @@ void Client::positionEnd() {
 	m_pClient->cancelPositions();
 }
 
+void Client::reqFirstFut(){
+	m_state = ST_ACK;
+	m_pClient->reqContractDetails(1, MyContract::FUTURE("ESTX50","EUREX","EUR"));
+}
+
 void Client::reqSlice(){
 	printf("Requesting Slice");
-	m_pClient->reqContractDetails(1, MyContract::OPTION_SLICE("ESTX50","20250321","EUREX","EUR"));
+	m_state = ST_ACK;
+	m_pClient->reqContractDetails(2, MyContract::OPTION_SLICE("ESTX50","20250321","EUREX","EUR"));
 }
 
 void Client::contractDetails( int reqId, const ContractDetails& contractDetails) {
@@ -154,7 +160,11 @@ void Client::contractDetails( int reqId, const ContractDetails& contractDetails)
 
 void Client::contractDetailsEnd( int reqId) {
 	printf( "Slice End. %d\n", reqId);
-	m_state = ST_DISCONNECT;
+	if( reqId==1){
+		m_state = ST_REQSLICE;
+	} else{
+		m_state = ST_DISCONNECT;
+	}
 }
 
 void Client::error(int id, int errorCode, const std::string& errorString, const std::string& advancedOrderRejectJson){
@@ -178,14 +188,14 @@ void Client::printContractMsg(const Contract& contract){
 	printf("\tPrimaryExchange: %s\n", contract.primaryExchange.c_str());
 	printf("\tCurrency: %s\n", contract.currency.c_str());
 	printf("\tLocalSymbol: %s\n", contract.localSymbol.c_str());
-	printf("\tTradingClass: %s\n", contract.tradingClass.c_str());
+	printf("\tTradingClass: %s\n\n", contract.tradingClass.c_str());
 }
 
 void Client::nextValidId( OrderId orderId){
 	printf("Next Valid Id: %ld\n", orderId);
 	m_orderId = orderId;
 	//! [nextvalidid]
-	m_state = ST_REQPOSITIONS;
+	m_state = ST_REQFIRSTFUT;
 
     //m_state = ST_TICKOPTIONCOMPUTATIONOPERATION; 
     //m_state = ST_TICKDATAOPERATION; 
