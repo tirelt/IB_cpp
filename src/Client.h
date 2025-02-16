@@ -12,7 +12,7 @@
 
 class EClientSocket;
 
-enum State {
+enum State{
 	ST_REQPOSITIONS,
 	ST_REQSLICE,
 	ST_REQFIRSTFUT,
@@ -22,10 +22,7 @@ enum State {
 	ST_CONNECT,
 };
 
-//! [ewrapperimpl]
-class Client : public EWrapper
-{
-//! [ewrapperimpl]
+class Client : public EWrapper{
 public:
 	Client();
 	~Client();
@@ -180,17 +177,15 @@ public:
 	void userInfo(int reqId, const std::string& whiteBrandingId){}
 
 private:
-	//! [socket_declare]
 	EReaderOSSignal m_osSignal;
 	EClientSocket * const m_pClient;
-	//! [socket_declare]
 	State m_state;
 	time_t m_sleepDeadline;
-
 	OrderId m_orderId;
 	std::unique_ptr<EReader> m_pReader;
     bool m_extraAuth;
 	std::string m_bboExchange;
+public:
 	std::unique_ptr<Slice> m_pSlice;
 };
 

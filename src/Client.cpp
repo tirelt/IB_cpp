@@ -13,23 +13,22 @@
 #include "Utils.h"
 #include "Contracts.h"
 
-///////////////////////////////////////////////////////////
-// member funcs
-//! [socket_init]
 Client::Client() :
       m_osSignal(2000)//2-seconds timeout
     , m_pClient(new EClientSocket(this, &m_osSignal))
-	, m_state(ST_CONNECT)
+	, m_state(ST_CONNECT)	
 	, m_sleepDeadline(0)
 	, m_orderId(0)
-    , m_extraAuth(false){
+    , m_extraAuth(false)
+	, m_pSlice(new Slice){
 }
 //! [socket_init]
 Client::~Client(){
 	// destroy the reader before the client
 	if( m_pReader )
 		m_pReader.reset();
-
+	if( m_pSlice )
+		m_pSlice.reset();
 	delete m_pClient;
 }
 
@@ -114,22 +113,27 @@ void Client::positionEnd() {
 
 void Client::reqFirstFut(){
 	m_state = ST_ACK;
-	m_pClient->reqContractDetails(1, MyContract::FUTURE("ESTX50","EUREX","EUR"));
+	m_pClient->reqContractDetails(ST_REQFIRSTFUT, MyContract::FUTURE("ESTX50","EUREX","EUR"));
 }
 
 void Client::reqSlice(){
 	printf("Requesting Slice");
 	m_state = ST_ACK;
-	m_pClient->reqContractDetails(2, MyContract::OPTION_SLICE("ESTX50","20250321","EUREX","EUR"));
+	m_pClient->reqContractDetails(ST_REQSLICE, MyContract::OPTION_SLICE( m_pSlice->forward.contract.symbol, m_pSlice->forward.contract.lastTradeDate, m_pSlice->forward.contract.exchange, m_pSlice->forward.contract.currency));
 }
 
-void Client::contractDetails( int reqId, const ContractDetails& contractDetails) {
+void Client::contractDetails( int reqId, const ContractDetails& contractDetails){
+	switch( reqId){
+	case ST_REQFIRSTFUT:
+		m_pSlice->forward.assign_contract( contractDetails.contract);
+		break;
+	}
     printContractMsg(contractDetails.contract);
 }
 
 void Client::contractDetailsEnd( int reqId) {
 	printf( "Slice End. %d\n", reqId);
-	if( reqId==1){
+	if( reqId==ST_REQFIRSTFUT){
 		m_state = ST_REQSLICE;
 	} else{
 		m_state = ST_DISCONNECT;

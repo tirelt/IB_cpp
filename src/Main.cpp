@@ -22,6 +22,7 @@ int main(){
 		client.processMessages();
 		//std::this_thread::sleep_for(std::chrono::seconds(SLEEP_TIME));
 	}
+	auto temp = *(client.m_pSlice);
 	printf ("End of C++ Socket Client Test\n");
 }
 

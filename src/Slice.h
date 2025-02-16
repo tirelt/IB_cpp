@@ -11,6 +11,7 @@ struct Forward{
     float offer;
     float last;
     std::string expiry;
+    void assign_contract(const Contract&);
 };
 
 struct Slice{
