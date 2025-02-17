@@ -40,3 +40,8 @@ Initial handshake msg id
 81 TICK_REQ_PARAMS
 
 reqTickByTickData>  processTickByTickDataMsg 99
+
+tickReqParams
+tickPrice
+tickString
+tickSize

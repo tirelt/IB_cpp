@@ -75,12 +75,16 @@ void Client::processMessages(){
 		case ST_REQSLICE:
 			reqSlice();
 			break;
+		case ST_REQMKTDATA:
+			reqMktData();
+			break;
 		case ST_DISCONNECT:
 			disconnect();
 			return;
 		case ST_ACK:
-			const unsigned sleep(1);
-			std::this_thread::sleep_for(std::chrono::seconds(sleep));
+			//const unsigned sleep(1);
+			std::this_thread::sleep_for(std::chrono::milliseconds(100));
+			printf("\n\ncycle ACK\n\n");
 			break;
 	}
 
@@ -133,11 +137,36 @@ void Client::contractDetails( int reqId, const ContractDetails& contractDetails)
 
 void Client::contractDetailsEnd( int reqId) {
 	printf( "Slice End. %d\n", reqId);
-	if( reqId==ST_REQFIRSTFUT){
+	if( reqId == ST_REQFIRSTFUT ){
 		m_state = ST_REQSLICE;
-	} else{
+	} else if( reqId == ST_REQSLICE ) {
+		m_state = ST_REQMKTDATA;
+	} else {
 		m_state = ST_DISCONNECT;
 	}
+}
+
+void Client::reqMktData(){
+	m_state = ST_ACK;
+	m_pClient->reqMarketDataType(3);
+	m_pClient->reqMktData(100, m_pSlice->forward.contract, "", false, false, TagValueListSPtr());
+	m_pClient->reqMktData(101, m_pSlice->options[6000.][Option::CALL].contract, "", false, false, TagValueListSPtr());
+	//std::this_thread::sleep_for(std::chrono::seconds(10));
+	//m_pClient->cancelMktData(100);
+}
+
+void Client::tickSize( TickerId tickerId, TickType field, Decimal size){
+	printf( "Tick Size. Ticker Id: %ld, Field: %d, Size: %s\n", tickerId, (int)field, DecimalFunctions::decimalStringToDisplay(size).c_str());
+}
+void Client::tickString(TickerId tickerId, TickType tickType, const std::string& value){
+	printf( "Tick String. Ticker Id: %ld, Type: %d, Value: %s\n", tickerId, (int)tickType, value.c_str());
+}
+void Client::tickPrice( TickerId tickerId, TickType field, double price, const TickAttrib& attribs) {
+    printf( "Tick Price. Ticker Id: %ld, Field: %d, Price: %s, CanAutoExecute: %d, PastLimit: %d, PreOpen: %d\n", tickerId, (int)field, Utils::doubleMaxString(price).c_str(), attribs.canAutoExecute, attribs.pastLimit, attribs.preOpen);
+}
+void Client::tickReqParams(int tickerId, double minTick, const std::string& bboExchange, int snapshotPermissions){
+    printf("tickerId: %d, minTick: %s, bboExchange: %s, snapshotPermissions: %u\n", tickerId, Utils::doubleMaxString(minTick).c_str(), bboExchange.c_str(), snapshotPermissions);
+	m_bboExchange = bboExchange;
 }
 
 void Client::error(int id, int errorCode, const std::string& errorString, const std::string& advancedOrderRejectJson){

@@ -20,6 +20,7 @@ enum State{
 	ST_DISCONNECT,
 	ST_REQPOSITIONS_ACK,
 	ST_CONNECT,
+	ST_REQMKTDATA,
 };
 
 class Client : public EWrapper{
@@ -36,6 +37,7 @@ public:
 	void positionEnd();
 	void reqSlice();
 	void reqFirstFut();
+	void reqMktData();
 	void printContractMsg(const Contract& contract);
 	// events
 	void connectAck();
@@ -44,6 +46,11 @@ public:
 	void error(int id, int errorCode, const std::string& errorString, const std::string& advancedOrderRejectJson);
 	void contractDetails( int reqId, const ContractDetails& contractDetails);
 	
+	void tickReqParams(int tickerId, double minTick, const std::string& bboExchange, int snapshotPermissions);
+	void tickPrice( TickerId tickerId, TickType field, double price, const TickAttrib& attrib);
+	void tickString(TickerId tickerId, TickType tickType, const std::string& value);
+	void tickSize(TickerId tickerId, TickType field, Decimal size);
+
 private:
 	void reqCurrentTime(){};
     void pnloperation(){}
@@ -94,11 +101,8 @@ private:
 public:
 	// Overrides virtual members of EWrapper
 	void currentTime(long time){};
-	void tickPrice( TickerId tickerId, TickType field, double price, const TickAttrib& attrib){}
-	void tickSize(TickerId tickerId, TickType field, Decimal size){}
 	void tickOptionComputation( TickerId tickerId, TickType tickType, int tickAttrib, double impliedVol, double delta, double optPrice, double pvDividend, double gamma, double vega, double theta, double undPrice){}
 	void tickGeneric(TickerId tickerId, TickType tickType, double value){}
-	void tickString(TickerId tickerId, TickType tickType, const std::string& value){}
 	void tickEFP(TickerId tickerId, TickType tickType, double basisPoints, const std::string& formattedBasisPoints,	double totalDividends, int holdDays, const std::string& futureLastTradeDate, double dividendImpact, double dividendsToLastTradeDate){}
 	void orderStatus( OrderId orderId, const std::string& status, Decimal filled, Decimal remaining, double avgFillPrice, int permId, int parentId,	double lastFillPrice, int clientId, const std::string& whyHeld, double mktCapPrice){}
 	void openOrder( OrderId orderId, const Contract&, const Order&, const OrderState&){}
@@ -148,7 +152,6 @@ public:
 	void mktDepthExchanges(const std::vector<DepthMktDataDescription> &depthMktDataDescriptions){}
 	void tickNews(int tickerId, time_t timeStamp, const std::string& providerCode, const std::string& articleId, const std::string& headline, const std::string& extraData){}
 	void smartComponents(int reqId, const SmartComponentsMap& theMap){}
-	void tickReqParams(int tickerId, double minTick, const std::string& bboExchange, int snapshotPermissions){}
 	void newsProviders(const std::vector<NewsProvider> &newsProviders){}
 	void newsArticle(int requestId, int articleType, const std::string& articleText){}
 	void historicalNews(int requestId, const std::string& time, const std::string& providerCode, const std::string& articleId, const std::string& headline){}
