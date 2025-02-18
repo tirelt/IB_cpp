@@ -9,12 +9,12 @@
 struct Forward{
     enum Field {BID};
     Contract contract;
-    float bid;
-    float ask;
-    float last;
+    double bid;
+    double ask;
+    double last;
     std::string expiry;
     time_t last_update;  
-    void update_float_memb(const float value, const int field);
+    void update_float_memb( const int field,const double value);
 };
 
 struct Option : public Forward{

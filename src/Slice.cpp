@@ -18,7 +18,7 @@ void Slice::assign_option(const Contract& c){
     o.right = r;
 }
 
-void Forward::update_float_memb(const float value, const int field){
+void Forward::update_float_memb(const int field,const double value){
     switch (field)
     {
     case 66: //delayed bid
