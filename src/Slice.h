@@ -7,29 +7,26 @@
 #include <map>
 
 struct Forward{
+    enum Field {BID};
     Contract contract;
     float bid;
-    float offer;
+    float ask;
     float last;
     std::string expiry;
     time_t last_update;  
+    void update_float_memb(const float value, const int field);
 };
 
-struct Option{
+struct Option : public Forward{
     enum Right {PUT,CALL};
-    Contract contract;
-    float bid;
-    float offer;
-    float last;
-    std::string expiry;
     float strike;
     Right right; 
-    time_t last_update;    
 };
 
 struct Slice{
     Forward forward;
     std::map<float,std::map<Option::Right,Option>> options;
+    std::map<int,Forward *> reqid_to_instrument;
     void assign_forward(const Contract&);
     void assign_option(const Contract&);
 };

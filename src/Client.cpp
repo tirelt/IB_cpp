@@ -149,8 +149,16 @@ void Client::contractDetailsEnd( int reqId) {
 void Client::reqMktData(){
 	m_state = ST_ACK;
 	m_pClient->reqMarketDataType(3);
-	m_pClient->reqMktData(100, m_pSlice->forward.contract, "", false, false, TagValueListSPtr());
-	m_pClient->reqMktData(101, m_pSlice->options[6000.][Option::CALL].contract, "", false, false, TagValueListSPtr());
+	m_pClient->reqMktData(0, m_pSlice->forward.contract, "", false, false, TagValueListSPtr());
+	m_pSlice->reqid_to_instrument[0] = &m_pSlice->forward;
+	int counter = 1;
+	for(auto& opt:m_pSlice->options){
+		m_pClient->reqMktData(2*counter, opt.second.at(Option::CALL).contract, "", false, false, TagValueListSPtr());
+		m_pSlice->reqid_to_instrument[2*counter] = &opt.second.at(Option::CALL);
+		m_pClient->reqMktData(2*counter+1, opt.second.at(Option::PUT).contract, "", false, false, TagValueListSPtr());
+		m_pSlice->reqid_to_instrument[2*counter+1] = &opt.second.at(Option::PUT);
+		++counter;
+	}
 	//std::this_thread::sleep_for(std::chrono::seconds(10));
 	//m_pClient->cancelMktData(100);
 }

@@ -17,3 +17,27 @@ void Slice::assign_option(const Contract& c){
     o.strike = s;
     o.right = r;
 }
+
+void Forward::update_float_memb(const float value, const int field){
+    switch (field)
+    {
+    case 66: //delayed bid
+        bid = value;
+        break;
+    case 67: //delayed ask
+        ask = value;
+        break;
+    case 68: //delayed last
+        last = value;
+        break;
+    case 1: //bid
+        bid = value;
+        break;
+    case 2: //ask
+        ask = value;
+        break;
+    case 4: //last
+        last = value;
+        break;
+    }
+}
