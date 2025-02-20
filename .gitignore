@@ -30,7 +30,5 @@
 *.out
 *.app
 
-lib/decimalfp
-lib/IntelRDFPMathLib20U2
+lib
 MyApp
-lib/libbid.a
