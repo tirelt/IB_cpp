@@ -31,3 +31,6 @@
 *.app
 
 lib/decimalfp
+lib/IntelRDFPMathLib20U2
+MyApp
+lib/libbid.a
