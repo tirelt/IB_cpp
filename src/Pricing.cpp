@@ -1,12 +1,14 @@
 #include <iostream>
 #include <cmath>
 #include "Slice.h"
+#include "Pricing.h"
+#include <functional>
 
 double normal_cdf(double x, double mean = 0.0, double stddev = 1.0) {
     return 0.5 * (1.0 + std::erf((x - mean) / (stddev * std::sqrt(2))));
 }
 
-double gaussianDensity(double x, double mean = 0.0, double stddev = 1.0) {
+double gaussian_density(double x, double mean = 0.0, double stddev = 1.0) {
     return (1.0 / (stddev * std::sqrt(2 * M_PI))) * std::exp(-0.5 * std::pow((x - mean) / stddev, 2));
 }
 
@@ -21,5 +23,22 @@ double black_formula( Option::Right right, double forward, double strike, double
 }
 
 double vega( double forward, double strike, double vol, double time_to_maturity, double discount ){
+    double temp = vol * std::sqrt( time_to_maturity); 
+    double d_1 = ( std::log(forward/strike) + std::pow(temp,2) / 2 ) / temp; 
+    return discount * forward * gaussian_density( d_1) * std::sqrt( time_to_maturity);
+}
 
+// Newton's method to find the root, thank you copilot
+double newtonMethod( double (*f)(double ), double (*d)(double ), double initialGuess, double tolerance, int maxIterations) {
+    double x = initialGuess;
+    for (int i = 0; i < maxIterations; ++i) {
+        double fx = f(x);
+        double dfx = d(x);
+        double xNext = x - fx / dfx;
+        if (std::fabs(xNext - x) < tolerance){
+            return xNext;
+        }
+        x = xNext;
+    }
+    return x;
 }
