@@ -1,7 +1,7 @@
 
-double normal_cdf(double x, double mean = 0.0, double stddev = 1.0);
+double normal_cdf(double x, double mean, double stddev );
 
-double gaussian_density(double x, double mean = 0.0, double stddev = 1.0);
+double gaussian_density(double x, double mean , double stddev );
 
 double normal_cdf(double x, double mean , double stddev);
 

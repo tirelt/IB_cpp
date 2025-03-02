@@ -29,7 +29,7 @@ double vega( double forward, double strike, double vol, double time_to_maturity,
 }
 
 // Newton's method to find the root, thank you copilot
-double newtonMethod( double (*f)(double ), double (*d)(double ), double initialGuess, double tolerance, int maxIterations) {
+double newton_method( double (*f)(double ), double (*d)(double ), double initialGuess, double tolerance, int maxIterations ) {
     double x = initialGuess;
     for (int i = 0; i < maxIterations; ++i) {
         double fx = f(x);

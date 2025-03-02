@@ -171,7 +171,8 @@ void Client::tickString(TickerId tickerId, TickType tickType, const std::string&
 }
 void Client::tickPrice( TickerId tickerId, TickType field, double price, const TickAttrib& attribs) {
     printf( "Tick Price. Ticker Id: %ld, Field: %d, Price: %s, CanAutoExecute: %d, PastLimit: %d, PreOpen: %d\n", tickerId, (int)field, Utils::doubleMaxString(price).c_str(), attribs.canAutoExecute, attribs.pastLimit, attribs.preOpen);
-	m_pSlice->reqid_to_instrument[tickerId]->update_float_memb(field,price);	
+	Forward* instrument = m_pSlice->reqid_to_instrument[tickerId];
+	m_pSlice->update_float_memb(instrument,field,price);	
 }
 void Client::tickReqParams(int tickerId, double minTick, const std::string& bboExchange, int snapshotPermissions){
     printf("tickerId: %d, minTick: %s, bboExchange: %s, snapshotPermissions: %u\n", tickerId, Utils::doubleMaxString(minTick).c_str(), bboExchange.c_str(), snapshotPermissions);
