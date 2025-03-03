@@ -8,20 +8,23 @@
 
 struct Forward{
     enum Field {BID};
+    enum Right {PUT,CALL,FORWARD};
     Contract contract;
+    Right right; 
     double bid;
     double ask;
     double last;
     std::string expiry;
     time_t last_update;  
-    void work_after_update( double Forward::* ){}
+    double time_to_maturity;
+    void work_after_update( const double& fwd_price, double Forward::* memb ){}
 };
 
 struct Option : public Forward{
-    enum Right {PUT,CALL};
     float strike;
-    Right right; 
-    void work_after_update( double Forward::* );
+    double vol_bid;
+    double vol_ask;
+    void work_after_update( const double& fwd_price, double Forward::* memb );
 };
 
 struct Slice{

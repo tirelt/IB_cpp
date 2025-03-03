@@ -10,6 +10,7 @@ void Slice::assign_forward(const Contract& c){
     if( forward.expiry=="" || forward.expiry>c.lastTradeDate){
         forward.contract = c;
         forward.expiry = c.lastTradeDate;
+        forward.right = Forward::FORWARD;
     }
 }
 
@@ -23,10 +24,9 @@ void Slice::assign_option(const Contract& c){
     o.right = r;
 }
 
-void Option::work_after_update( double Forward::* memb ){
+void Option::work_after_update( const double& fwd_price, double Forward::* memb ){
     //std::function<double(double)> f,d;
     //f = bind(black_formula,)    double ( Option::Right right, double forward, double strike, double vol, double time_to_maturity, double discount ){
-    double Forward::* fwd_price;
     if( memb == &Forward::ask){
         if(right == Option::CALL){
 
@@ -35,29 +35,35 @@ void Option::work_after_update( double Forward::* memb ){
 
     }
 }
-void Slice::update_float_memb( Forward * fwd,const int field,const double value){
-    double Forward::* memb;
+void Slice::update_float_memb( Forward * instrument,const int field,const double value){
+    double fwd_price = 0;
+    if(instrument->right == Forward::PUT)
+        fwd_price = forward.ask;
+    else
+        fwd_price = forward.bid;
     switch (field)
     {
     case 66: //delayed bid
-        memb = &Forward::bid;
+        instrument->bid = value;
         break;
     case 67: //delayed ask
-        memb = &Forward::ask;
+        instrument->ask = value;
         break;
     case 68: //delayed last
-        memb = &Forward::last;
+        instrument->last = value;
         break;
     case 1: //bid
-        memb = &Forward::bid;
+        instrument->bid = value;
         break;
     case 2: //ask
-        memb = &Forward::ask;
+        instrument->ask = value;
         break;
     case 4: //last
-        memb = &Forward::last;
+        instrument->last = value;
         break;
-    }
-    fwd->*memb = value;
+    default:
+        return;
+    } 
+
     //work_after_update(memb);
 }
