@@ -6,8 +6,8 @@
     "configurations": [
         {
             "name": "Debug MyApp",
-            "type": "cppdbg",
-            //"type": "lldb",
+            //"type": "cppdbg",
+            "type": "lldb",
             "request": "launch",
             "program": "${cwd}/MyApp",
             "args": [],
@@ -16,8 +16,8 @@
         },
         {
             "name": "Debug TestCppClient",
-            "type": "cppdbg",
-            //"type": "lldb",
+           // "type": "cppdbg",
+            "type": "lldb",
             "request": "launch",
             "program": "${cwd}/tws_api/IBJts/samples/Cpp/TestCppClient/TestCppClient",
             "args": [],
