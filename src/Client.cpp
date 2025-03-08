@@ -126,10 +126,10 @@ void Client::reqSlice(){
 void Client::contractDetails( int reqId, const ContractDetails& contractDetails){
 	switch( reqId){
 	case ST_REQFIRSTFUT:
-		m_pSlice->assign_forward( contractDetails.contract);
+		m_pSlice->assign_forward( contractDetails );
 		break;
 	case ST_REQSLICE:
-		m_pSlice->assign_option( contractDetails.contract);
+		m_pSlice->assign_option( contractDetails );
 		break;
 	}
     printContractMsg(contractDetails.contract);

@@ -6,7 +6,7 @@
 #include <ctime>
 
 struct Date{
-    std::time_t create_from_string( const std::string , const std::string , const std::string );
+    static std::time_t create_from_string( const std::string time_str, const std::string date_str, const std::string exchange);
 };
 
 #endif

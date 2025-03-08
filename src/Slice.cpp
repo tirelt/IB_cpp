@@ -2,24 +2,27 @@
 #include "Contract.h"
 #include "Pricing.h"
 #include <functional>
+#include "Date.h"
 
 using  namespace std::placeholders;
 using std::bind;
 
-void Slice::assign_forward(const Contract& c){
-    if( forward.expiry=="" || forward.expiry>c.lastTradeDate){
-        forward.contract = c;
-        forward.expiry = c.lastTradeDate;
+void Slice::assign_forward( const ContractDetails& c){
+    if( forward.expiry_str=="" || forward.expiry_str>c.realExpirationDate){
+        forward.contract = c.contract;
+        forward.expiry_str = c.realExpirationDate;
+        forward.expiry = Date::create_from_string( c.lastTradeTime, c.realExpirationDate, c.contract.exchange );
         forward.right = Forward::FORWARD;
     }
 }
 
-void Slice::assign_option(const Contract& c){
-    const float s = c.strike;
-    const Option::Right r = c.right == "C" ? Option::CALL : Option::PUT;
+void Slice::assign_option(const ContractDetails& c){
+    const float s = c.contract.strike;
+    const Option::Right r = c.contract.right == "C" ? Option::CALL : Option::PUT;
     Option& o = options[s][r];
-    o.contract = c;
-    o.expiry = c.lastTradeDate;
+    o.contract = c.contract;
+    o.expiry_str = c.realExpirationDate;
+    o.expiry = Date::create_from_string( c.lastTradeTime, c.realExpirationDate, c.contract.exchange );
     o.strike = s;
     o.right = r;
 }
