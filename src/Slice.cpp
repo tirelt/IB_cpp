@@ -6,6 +6,7 @@
 
 using  namespace std::placeholders;
 using std::bind;
+using std::function;
 
 void Slice::assign_forward( const ContractDetails& c){
     if( forward.expiry_str=="" || forward.expiry_str>c.realExpirationDate){
@@ -28,45 +29,49 @@ void Slice::assign_option(const ContractDetails& c){
 }
 
 void Option::work_after_update( const double& fwd_price, double Forward::* memb ){
-    //std::function<double(double)> f,d;
-    //f = bind(black_formula,)    double ( Option::Right right, double forward, double strike, double vol, double time_to_maturity, double discount ){
+    double Option::* memb_vol;
     if( memb == &Forward::ask){
-        if(right == Option::CALL){
-
-        } 
+        memb_vol = &Option::vol_ask;
     } else if (memb == &Forward::bid){
-
+        memb_vol = &Option::vol_bid;
     }
+    function<double(double)> f = bind( black_formula, right, fwd_price, strike, _1, 1, 1 );
+    function<double(double)> d = bind( vega, fwd_price, strike, _1, 1, 1 );
+    this->*memb_vol = newton_method( f, d, 0.2, 0.0001, 10 );
 }
+
 void Slice::update_float_memb( Forward * instrument,const int field,const double value){
     double fwd_price = 0;
-    if(instrument->right == Forward::PUT)
-        fwd_price = forward.ask;
-    else
-        fwd_price = forward.bid;
+    double Forward::* memb;
     switch (field)
     {
     case 66: //delayed bid
-        instrument->bid = value;
+        memb = &Forward::bid;
         break;
     case 67: //delayed ask
-        instrument->ask = value;
+        memb = &Forward::ask;
         break;
     case 68: //delayed last
-        instrument->last = value;
+        memb = &Forward::last;
         break;
     case 1: //bid
-        instrument->bid = value;
+        memb = &Forward::bid;
         break;
     case 2: //ask
-        instrument->ask = value;
+        memb = &Forward::ask;
         break;
     case 4: //last
-        instrument->last = value;
+        memb = &Forward::last;
         break;
     default:
         return;
     } 
-
+    if( (instrument->right == Forward::CALL && memb == &Forward::ask ) || (instrument->right == Forward::PUT && memb == &Forward::bid ) )
+        fwd_price = forward.ask;
+    else if( (instrument->right == Forward::CALL && memb == &Forward::bid ) || (instrument->right == Forward::PUT && memb == &Forward::ask ) )
+        fwd_price = forward.bid;
+    instrument->*memb = value;
+    if( fwd_price)
+        instrument->work_after_update( fwd_price, memb );
     //work_after_update(memb);
 }
