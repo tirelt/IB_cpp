@@ -121,6 +121,7 @@ void Client::reqSlice(){
 	printf("Requesting Slice");
 	m_state = ST_ACK;
 	m_pClient->reqContractDetails(ST_REQSLICE, MyContract::OPTION_SLICE( m_pSlice->forward.contract.symbol, m_pSlice->forward.contract.lastTradeDate, m_pSlice->forward.contract.exchange, m_pSlice->forward.contract.currency));
+	std::this_thread::sleep_for(std::chrono::milliseconds(500));
 }
 
 void Client::contractDetails( int reqId, const ContractDetails& contractDetails){
@@ -153,10 +154,11 @@ void Client::reqMktData(){
 	m_pSlice->reqid_to_instrument[0] = &m_pSlice->forward;
 	int counter = 1;
 	for(auto& opt:m_pSlice->options){
-		m_pClient->reqMktData(2*counter, opt.second.at(Option::CALL).contract, "", false, false, TagValueListSPtr());
-		m_pSlice->reqid_to_instrument[2*counter] = &opt.second.at(Option::CALL);
-		m_pClient->reqMktData(2*counter+1, opt.second.at(Option::PUT).contract, "", false, false, TagValueListSPtr());
-		m_pSlice->reqid_to_instrument[2*counter+1] = &opt.second.at(Option::PUT);
+		int counter_bis = 0;
+		for(auto& opt_ :opt.second){
+			m_pClient->reqMktData(2*counter+counter_bis, opt_.second.contract, "", false, false, TagValueListSPtr());
+			m_pSlice->reqid_to_instrument[2*counter+counter_bis] = &opt_.second;
+		}
 		++counter;
 	}
 	//std::this_thread::sleep_for(std::chrono::seconds(10));

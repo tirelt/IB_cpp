@@ -30,19 +30,21 @@ void Slice::assign_option(const ContractDetails& c){
 
 void Option::work_after_update( const double& fwd_price, double Forward::* memb ){
     double Option::* memb_vol;
+    time_to_maturity = (expiry - last_update) / (364.2425 * 24 * 60 * 60); 
     if( memb == &Forward::ask){
         memb_vol = &Option::vol_ask;
     } else if (memb == &Forward::bid){
         memb_vol = &Option::vol_bid;
     }
-    function<double(double)> f = bind( black_formula, right, fwd_price, strike, _1, 1, 1 );
-    function<double(double)> d = bind( vega, fwd_price, strike, _1, 1, 1 );
+    function<double(double)> f = bind( black_formula, right, fwd_price, strike, _1, time_to_maturity, 1 );
+    function<double(double)> d = bind( vega, fwd_price, strike, _1, time_to_maturity, 1 );
     this->*memb_vol = newton_method( f, d, 0.2, 0.0001, 10 );
 }
 
 void Slice::update_float_memb( Forward * instrument,const int field,const double value){
     double fwd_price = 0;
     double Forward::* memb;
+    instrument->last_update = time(nullptr);
     switch (field)
     {
     case 66: //delayed bid
@@ -71,7 +73,9 @@ void Slice::update_float_memb( Forward * instrument,const int field,const double
     else if( (instrument->right == Forward::CALL && memb == &Forward::bid ) || (instrument->right == Forward::PUT && memb == &Forward::ask ) )
         fwd_price = forward.bid;
     instrument->*memb = value;
-    if( fwd_price)
-        instrument->work_after_update( fwd_price, memb );
+    if( fwd_price){
+        Option* opt = dynamic_cast<Option*>(instrument);
+        opt->work_after_update( fwd_price, memb );
+    }
     //work_after_update(memb);
 }

@@ -18,14 +18,14 @@ struct Forward{
     std::string expiry_str;
     time_t last_update;  
     double time_to_maturity;
-    void work_after_update( const double& fwd_price, double Forward::* memb ){}
+    virtual void work_after_update( const double& fwd_price, double Forward::* memb ){}
 };
 
 struct Option : public Forward{
     float strike;
     double vol_bid;
     double vol_ask;
-    void work_after_update( const double& fwd_price, double Forward::* memb );
+    void work_after_update( const double& fwd_price, double Forward::* memb ) override;
 };
 
 struct Slice{

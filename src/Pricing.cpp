@@ -5,6 +5,7 @@
 #include <functional>
 
 using std::function;
+using std::isnan;
 
 double normal_cdf(double x, double mean = 0.0, double stddev = 1.0) {
     return 0.5 * (1.0 + std::erf((x - mean) / (stddev * std::sqrt(2))));
@@ -35,7 +36,11 @@ double newton_method( function<double(double)> f, function<double(double)> d, do
     double x = initialGuess;
     for (int i = 0; i < maxIterations; ++i) {
         double fx = f(x);
+        if(isnan(fx) || fx<0.00000001)
+            return -1;
         double dfx = d(x);
+        if(isnan(dfx) || dfx<0.00000001)
+            return -1;
         double xNext = x - fx / dfx;
         if (std::fabs(xNext - x) < tolerance){
             return xNext;
