@@ -9,7 +9,7 @@ using std::bind;
 using std::function;
 
 void Slice::assign_forward( const ContractDetails& c){
-    if( forward.expiry_str=="" || forward.expiry_str>c.realExpirationDate){
+    if( c.contractMonth == contractMonth || forward.expiry_str == "" || forward.expiry_str>c.realExpirationDate){
         forward.contract = c.contract;
         forward.expiry_str = c.realExpirationDate;
         forward.expiry = Date::create_from_string( c.lastTradeTime, c.realExpirationDate, c.contract.exchange );
@@ -38,7 +38,7 @@ void Option::work_after_update( const double& fwd_price, double Forward::* memb 
     }
     function<double(double)> f = bind( black_formula, right, fwd_price, strike, _1, time_to_maturity, 1 );
     function<double(double)> d = bind( vega, fwd_price, strike, _1, time_to_maturity, 1 );
-    this->*memb_vol = newton_method( f, d, 0.2, 0.0001, 10 );
+    this->*memb_vol = newton_method( f, d,this->*memb, 0.2, 0.0001, 10 );
 }
 
 void Slice::update_float_memb( Forward * instrument,const int field,const double value){
@@ -73,7 +73,7 @@ void Slice::update_float_memb( Forward * instrument,const int field,const double
     else if( (instrument->right == Forward::CALL && memb == &Forward::bid ) || (instrument->right == Forward::PUT && memb == &Forward::ask ) )
         fwd_price = forward.bid;
     instrument->*memb = value;
-    if( fwd_price){
+    if( fwd_price && value > 0 ){
         Option* opt = dynamic_cast<Option*>(instrument);
         opt->work_after_update( fwd_price, memb );
     }

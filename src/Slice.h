@@ -29,6 +29,7 @@ struct Option : public Forward{
 };
 
 struct Slice{
+    std::string contractMonth; 
     Forward forward;
     std::map<float,std::map<Option::Right,Option>> options;
     std::map<int,Forward *> reqid_to_instrument;

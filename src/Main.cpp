@@ -17,6 +17,7 @@ int main(){
 	printf( "Start of C++ Socket Client Test\n");
 
 	Client client;
+	client.m_pSlice->contractMonth = "202506";
 	client.connect(host, port, clientId);
 	while(client.isConnected()){
 		client.processMessages();

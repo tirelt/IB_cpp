@@ -12,6 +12,7 @@
 #include <cstdint>
 #include "Utils.h"
 #include "Contracts.h"
+#include "stdexcept"
 
 Client::Client() :
       m_osSignal(2000)//2-seconds timeout
@@ -130,6 +131,8 @@ void Client::contractDetails( int reqId, const ContractDetails& contractDetails)
 		m_pSlice->assign_forward( contractDetails );
 		break;
 	case ST_REQSLICE:
+		if(!m_pSlice->forward.expiry_str.size())
+			throw std::runtime_error("Forward inccorectly set");
 		m_pSlice->assign_option( contractDetails );
 		break;
 	}
@@ -158,6 +161,7 @@ void Client::reqMktData(){
 		for(auto& opt_ :opt.second){
 			m_pClient->reqMktData(2*counter+counter_bis, opt_.second.contract, "", false, false, TagValueListSPtr());
 			m_pSlice->reqid_to_instrument[2*counter+counter_bis] = &opt_.second;
+			++counter_bis;
 		}
 		++counter;
 	}
