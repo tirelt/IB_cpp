@@ -25,7 +25,7 @@ enum State{
 
 class Client : public EWrapper{
 public:
-	Client();
+	Client(Slice* pSlice);
 	~Client();
 	void processMessages();
 	bool connect(const char * host, int port, int clientId = 0);
@@ -189,7 +189,7 @@ private:
     bool m_extraAuth;
 	std::string m_bboExchange;
 public:
-	std::unique_ptr<Slice> m_pSlice;
+	Slice* m_pSlice;
 };
 
 #endif

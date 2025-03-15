@@ -5,6 +5,7 @@
 #include <string>
 #include "Contract.h"
 #include <map>
+#include "TaskQueue.h"
 
 struct Forward{
     enum Field {BID};
@@ -29,6 +30,10 @@ struct Option : public Forward{
 };
 
 struct Slice{
+    Slice();
+    ~Slice();
+    TaskQueue* imply_vol_queue;
+    std::thread imply_vol_t;
     std::string contractMonth; 
     Forward forward;
     std::map<float,std::map<Option::Right,Option>> options;

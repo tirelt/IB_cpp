@@ -13,23 +13,23 @@
 #include "Utils.h"
 #include "Contracts.h"
 #include "stdexcept"
+#include "memory"
+#include "TaskQueue.h"
 
-Client::Client() :
+Client::Client( Slice* pSlice):
       m_osSignal(2000)//2-seconds timeout
     , m_pClient(new EClientSocket(this, &m_osSignal))
 	, m_state(ST_CONNECT)	
 	, m_sleepDeadline(0)
 	, m_orderId(0)
     , m_extraAuth(false)
-	, m_pSlice(new Slice){
+	, m_pSlice(pSlice){
 }
 //! [socket_init]
 Client::~Client(){
 	// destroy the reader before the client
 	if( m_pReader )
 		m_pReader.reset();
-	if( m_pSlice )
-		m_pSlice.reset();
 	delete m_pClient;
 }
 

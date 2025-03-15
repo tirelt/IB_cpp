@@ -3,10 +3,22 @@
 #include "Pricing.h"
 #include <functional>
 #include "Date.h"
+#include <thread>
+#include "TaskQueue.h"
 
 using  namespace std::placeholders;
 using std::bind;
 using std::function;
+
+Slice::Slice():imply_vol_queue(new TaskQueue),imply_vol_t(workerThread, imply_vol_queue){
+}
+
+Slice::~Slice(){
+    imply_vol_queue->stop();
+    if(imply_vol_t.joinable())
+        imply_vol_t.join();
+    delete imply_vol_queue; 
+}
 
 void Slice::assign_forward( const ContractDetails& c){
     if( c.contractMonth == contractMonth || forward.expiry_str == "" || forward.expiry_str>c.realExpirationDate){
