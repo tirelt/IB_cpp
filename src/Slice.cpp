@@ -87,7 +87,7 @@ void Slice::update_float_memb( Forward * instrument,const int field,const double
     instrument->*memb = value;
     if( fwd_price && value > 0 ){
         Option* opt = dynamic_cast<Option*>(instrument);
-        opt->work_after_update( fwd_price, memb );
+        imply_vol_queue->addTask([&opt,&fwd_price,&memb]{opt->work_after_update( fwd_price, memb );});
     }
     //work_after_update(memb);
 }

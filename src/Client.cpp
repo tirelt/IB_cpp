@@ -16,7 +16,7 @@
 #include "memory"
 #include "TaskQueue.h"
 
-Client::Client( Slice* pSlice):
+Client::Client( std::shared_ptr<Slice> pSlice):
       m_osSignal(2000)//2-seconds timeout
     , m_pClient(new EClientSocket(this, &m_osSignal))
 	, m_state(ST_CONNECT)	
