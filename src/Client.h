@@ -6,6 +6,7 @@
 #include "EReaderOSSignal.h"
 #include "EReader.h"
 #include "Slice.h"
+#include "Position.h"
 
 #include <memory>
 #include <vector>
@@ -25,7 +26,7 @@ enum State{
 
 class Client : public EWrapper{
 public:
-	Client(std::shared_ptr<Slice> Slice);
+	Client(std::shared_ptr<Slice> Slice,std::shared_ptr<std::map<long,Position>> positions);
 	~Client();
 	void processMessages();
 	bool connect(const char * host, int port, int clientId = 0);
@@ -190,6 +191,7 @@ private:
 	std::string m_bboExchange;
 public:
 	std::shared_ptr<Slice> m_pSlice;
+	std::shared_ptr<std::map<long,Position>> m_pPositions;
 };
 
 #endif

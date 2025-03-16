@@ -15,21 +15,30 @@
 #include "stdexcept"
 #include "memory"
 #include "TaskQueue.h"
+#include "Position.h"
 
-Client::Client( std::shared_ptr<Slice> pSlice):
+using std::shared_ptr;
+
+Client::Client( shared_ptr<Slice> pSlice, shared_ptr<std::map<long,Position>> positions):
       m_osSignal(2000)//2-seconds timeout
     , m_pClient(new EClientSocket(this, &m_osSignal))
 	, m_state(ST_CONNECT)	
 	, m_sleepDeadline(0)
 	, m_orderId(0)
     , m_extraAuth(false)
-	, m_pSlice(pSlice){
+	, m_pSlice(pSlice)
+	, m_pPositions(positions)
+	{
 }
 //! [socket_init]
 Client::~Client(){
 	// destroy the reader before the client
 	if( m_pReader )
 		m_pReader.reset();
+	// cancel subscriptions to positions and mktdata
+	m_pClient->cancelPositions();
+	for(const auto& [id,fwd]:m_pSlice->reqid_to_instrument)
+		m_pClient->cancelMktData(id);
 	delete m_pClient;
 }
 
@@ -68,7 +77,6 @@ void Client::processMessages(){
 	switch (m_state) {
 		case ST_REQPOSITIONS:
 			reqPositions();
-			m_state = ST_REQSLICE;
 			break;
 		case ST_REQFIRSTFUT:
 			reqFirstFut();
@@ -102,10 +110,12 @@ void Client::connectAck(){
 void Client::reqPositions(){
 	printf("Requesting Positions");
 	m_pClient->reqPositions();
+	m_state = ST_REQFIRSTFUT; 
 }
 
 void Client::position( const std::string& account, const Contract& contract, Decimal position, double avgCost) {
     printf( "Position. %s - Symbol: %s, SecType: %s, Currency: %s, Position: %s, Avg Cost: %s\n", account.c_str(), contract.symbol.c_str(), contract.secType.c_str(), contract.currency.c_str(), DecimalFunctions::decimalStringToDisplay(position).c_str(), Utils::doubleMaxString(avgCost).c_str());
+	(*m_pPositions)[contract.conId] = Position(contract,stoi(DecimalFunctions::decimalStringToDisplay(position)),avgCost);
 }
 
 void Client::positionEnd() {
@@ -212,51 +222,5 @@ void Client::printContractMsg(const Contract& contract){
 void Client::nextValidId( OrderId orderId){
 	printf("Next Valid Id: %ld\n", orderId);
 	m_orderId = orderId;
-	//! [nextvalidid]
-	m_state = ST_REQFIRSTFUT;
-
-    //m_state = ST_TICKOPTIONCOMPUTATIONOPERATION; 
-    //m_state = ST_TICKDATAOPERATION; 
-    //m_state = ST_OPTIONSOPERATIONS;
-    //m_state = ST_REQTICKBYTICKDATA; 
-    //m_state = ST_REQHISTORICALTICKS; 
-    //m_state = ST_CONTFUT; 
-    //m_state = ST_PNLSINGLE; 
-    //m_state = ST_PNL; 
-	//m_state = ST_DELAYEDTICKDATAOPERATION; 
-	//m_state = ST_MARKETDEPTHOPERATION;
-	//m_state = ST_REALTIMEBARS;
-	//m_state = ST_MARKETDATATYPE;
-	//m_state = ST_HISTORICALDATAREQUESTS;
-	//m_state = ST_CONTRACTOPERATION;
-	//m_state = ST_MARKETSCANNERS;
-	//m_state = ST_FUNDAMENTALS;
-	//m_state = ST_BULLETINS;
-	//m_state = ST_ACCOUNTOPERATIONS;
-	//m_state = ST_ORDEROPERATIONS;
-	//m_state = ST_OCASAMPLES;
-	//m_state = ST_CONDITIONSAMPLES;
-	//m_state = ST_BRACKETSAMPLES;
-	//m_state = ST_HEDGESAMPLES;
-	//m_state = ST_TESTALGOSAMPLES;
-	//m_state = ST_FAORDERSAMPLES;
-	//m_state = ST_FAOPERATIONS;
-	//m_state = ST_DISPLAYGROUPS;
-	//m_state = ST_MISCELANEOUS;
-	//m_state = ST_FAMILYCODES;
-	//m_state = ST_SYMBOLSAMPLES;
-	//m_state = ST_REQMKTDEPTHEXCHANGES;
-	//m_state = ST_REQNEWSTICKS;
-	//m_state = ST_REQSMARTCOMPONENTS;
-	//m_state = ST_NEWSPROVIDERS;
-	//m_state = ST_REQNEWSARTICLE;
-	//m_state = ST_REQHISTORICALNEWS;
-	//m_state = ST_REQHEADTIMESTAMP;
-	//m_state = ST_REQHISTOGRAMDATA;
-	//m_state = ST_REROUTECFD;
-	//m_state = ST_MARKETRULE;
-	//m_state = ST_PING;
-	//m_state = ST_WHATIFSAMPLES;
-	//m_state = ST_WSH;
-	//m_state = ST_RFQOPERATIONS;
+	m_state = ST_REQPOSITIONS;
 }
