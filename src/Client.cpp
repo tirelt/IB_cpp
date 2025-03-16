@@ -163,20 +163,14 @@ void Client::contractDetailsEnd( int reqId) {
 void Client::reqMktData(){
 	m_state = ST_ACK;
 	m_pClient->reqMarketDataType(3);
-	m_pClient->reqMktData(0, m_pSlice->forward.contract, "", false, false, TagValueListSPtr());
-	m_pSlice->reqid_to_instrument[0] = &m_pSlice->forward;
-	int counter = 1;
+	m_pClient->reqMktData(m_pSlice->forward.contract.conId, m_pSlice->forward.contract, "", false, false, TagValueListSPtr());
+	m_pSlice->reqid_to_instrument[m_pSlice->forward.contract.conId] = &m_pSlice->forward;
 	for(auto& opt:m_pSlice->options){
-		int counter_bis = 0;
 		for(auto& opt_ :opt.second){
-			m_pClient->reqMktData(2*counter+counter_bis, opt_.second.contract, "", false, false, TagValueListSPtr());
-			m_pSlice->reqid_to_instrument[2*counter+counter_bis] = &opt_.second;
-			++counter_bis;
+			m_pClient->reqMktData(opt_.second.contract.conId, opt_.second.contract, "", false, false, TagValueListSPtr());
+			m_pSlice->reqid_to_instrument[opt_.second.contract.conId] = &opt_.second;
 		}
-		++counter;
 	}
-	//std::this_thread::sleep_for(std::chrono::seconds(10));
-	//m_pClient->cancelMktData(100);
 }
 
 void Client::tickSize( TickerId tickerId, TickType field, Decimal size){
