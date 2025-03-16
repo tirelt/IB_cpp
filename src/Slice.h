@@ -6,6 +6,7 @@
 #include "Contract.h"
 #include <map>
 #include "TaskQueue.h"
+#include <utility>
 
 struct Forward{
     enum Field {BID};
@@ -28,6 +29,12 @@ struct Option : public Forward{
     double vol_ask;
     void work_after_update( const double& fwd_price, double Forward::* memb ) override;
 };
+struct Synthetic{
+    double price=-1;
+    Option* call;
+    Option* put;
+    double forward_price = -1;
+};
 
 struct Slice{
     Slice();
@@ -41,6 +48,10 @@ struct Slice{
     void assign_forward(const ContractDetails&);
     void assign_option(const ContractDetails&);
     void update_float_memb( Forward * fwd,const int field,const double value);
+    Synthetic* synthetic_arb;
+    Synthetic long_synth;
+    Synthetic short_synth; 
+    void update_synthetic(bool long_side, Option* call, Option* put);
 };
 
 #endif

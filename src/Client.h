@@ -22,6 +22,7 @@ enum State{
 	ST_REQPOSITIONS_ACK,
 	ST_CONNECT,
 	ST_REQMKTDATA,
+	ST_ORDER_SYNTH,
 };
 
 class Client : public EWrapper{
