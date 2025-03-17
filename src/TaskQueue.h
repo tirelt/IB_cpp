@@ -13,6 +13,7 @@ class TaskQueue {
         void addTask(const std::function<void()> task);
         std::function<void()> getTask();
         void stop();
+        int size();
     private:
         std::queue<std::function<void()>> queue_;
         std::mutex mutex_;

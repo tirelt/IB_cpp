@@ -7,6 +7,8 @@
 #include <map>
 #include "TaskQueue.h"
 #include <utility>
+#include <fstream>
+#include "Log.h"
 
 struct Forward{
     enum Field {BID};
@@ -52,6 +54,7 @@ struct Slice{
     Synthetic long_synth;
     Synthetic short_synth; 
     void update_synthetic(bool long_side, Option* call, Option* put);
+    Logger log;
 };
 
 #endif

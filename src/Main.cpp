@@ -12,8 +12,7 @@ int main(){
 
 	printf( "Start of C++ Socket Client Test\n");
 	shared_ptr<Slice> slice(new Slice);
-	shared_ptr<std::map<long,Position>> positions = std::make_shared<std::map<long,Position>>();
-
+	shared_ptr<std::map<long,Position>> positions = std::make_shared<std::map<long,Position>>();	
 	Client client(slice, positions);
 	slice->contractMonth = "202506";
 	client.connect(host, port, clientId);

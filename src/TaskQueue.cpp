@@ -34,6 +34,11 @@ void TaskQueue::stop(){
     condition_.notify_all();
 }
 
+int TaskQueue::size(){
+    unique_lock<mutex> lock(mutex_);
+    return queue_.size();
+}
+
 void workerThread(TaskQueue* taskQueue){
     while(true){
         auto task = taskQueue->getTask();

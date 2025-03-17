@@ -5,12 +5,14 @@
 #include "Date.h"
 #include <thread>
 #include "TaskQueue.h"
+#include <fstream>
 
 using  namespace std::placeholders;
 using std::bind;
 using std::function;
 
-Slice::Slice():imply_vol_queue(new TaskQueue),imply_vol_t(workerThread, imply_vol_queue){
+Slice::Slice():imply_vol_queue(new TaskQueue),imply_vol_t(workerThread, imply_vol_queue),log("log/slice.txt"){
+    //
 }
 
 Slice::~Slice(){
@@ -119,6 +121,7 @@ void Slice::update_float_memb( Forward * instrument,const int field,const double
         bool long_side = true;
         if( fwd_price && value > 0  ){
             imply_vol_queue->addTask([opt,fwd_price,memb]{opt->work_after_update( fwd_price, memb );});  
+            log << imply_vol_queue->size();
         }
         if( opt->right == Option::CALL){
             call = opt;
