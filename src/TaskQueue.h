@@ -10,7 +10,7 @@
 
 class TaskQueue {
     public:
-        void addTask(const std::function<void()>& task);
+        void addTask(const std::function<void()> task);
         std::function<void()> getTask();
         void stop();
     private:

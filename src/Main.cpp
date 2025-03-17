@@ -15,7 +15,7 @@ int main(){
 	shared_ptr<std::map<long,Position>> positions = std::make_shared<std::map<long,Position>>();
 
 	Client client(slice, positions);
-	client.m_pSlice->contractMonth = "202506";
+	slice->contractMonth = "202506";
 	client.connect(host, port, clientId);
 	while(client.isConnected()){
 		client.processMessages();

@@ -9,7 +9,7 @@ using std::mutex;
 using std::function;
 using std::unique_lock;
 
-void TaskQueue::addTask(const function<void()>& task) {
+void TaskQueue::addTask(const function<void()> task) {
     unique_lock<mutex> lock(mutex_);
     queue_.push(task);
     condition_.notify_one();

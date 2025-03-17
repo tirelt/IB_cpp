@@ -118,7 +118,7 @@ void Slice::update_float_memb( Forward * instrument,const int field,const double
         Option* put,* call;
         bool long_side = true;
         if( fwd_price && value > 0  ){
-            imply_vol_queue->addTask([&opt,&fwd_price,&memb]{opt->work_after_update( fwd_price, memb );});
+            imply_vol_queue->addTask([opt,fwd_price,memb]{opt->work_after_update( fwd_price, memb );});  
         }
         if( opt->right == Option::CALL){
             call = opt;

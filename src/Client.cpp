@@ -75,7 +75,8 @@ bool Client::isConnected() const{
 
 void Client::processMessages(){
 	if(m_pSlice->synthetic_arb){
-		m_state = ST_ORDER_SYNTH;	
+		int a = 0;
+		//m_state = ST_ORDER_SYNTH;	
 	}
 	switch (m_state) {
 		case ST_REQPOSITIONS:
