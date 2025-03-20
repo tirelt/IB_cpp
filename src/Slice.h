@@ -15,9 +15,9 @@ struct Forward{
     enum Right {PUT,CALL,FORWARD};
     Contract contract;
     Right right; 
-    double bid;
-    double ask;
-    double last;
+    double bid = -1;
+    double ask = -1;
+    double last = -1;
     time_t expiry;
     std::string expiry_str;
     time_t last_update;  

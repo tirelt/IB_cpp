@@ -10,6 +10,7 @@
 using  namespace std::placeholders;
 using std::bind;
 using std::function;
+using std::endl;
 
 Slice::Slice():imply_vol_queue(new TaskQueue),imply_vol_t(workerThread, imply_vol_queue),log("log/slice.txt"){
     //
@@ -66,12 +67,15 @@ void Slice::update_synthetic(bool long_side, Option* call, Option* put){
         synth = &short_synth;
         ref_price = forward.ask;
     }
-    double price = call_price-put_price+call->strike;
+    if(call_price == -1 || put_price == -1 )
+        return;
+    const double price = call_price-put_price+call->strike;
     if( synth->price == -1 || comp(price,synth->price)){
-        synth->price = price;
+        //synth->price = price;
         synth->call = call;
         synth->put = put; 
         if(comp(price,ref_price)){
+            log << "Fwd arb: side = " << long_side << " - strike= " << call->strike << endl;
             synthetic_arb = synth;
         }
     } 
@@ -121,7 +125,7 @@ void Slice::update_float_memb( Forward * instrument,const int field,const double
         bool long_side = true;
         if( fwd_price && value > 0  ){
             imply_vol_queue->addTask([opt,fwd_price,memb]{opt->work_after_update( fwd_price, memb );});  
-            log << imply_vol_queue->size();
+            log << "Queue imply vol: " << imply_vol_queue->size() << endl;
         }
         if( opt->right == Option::CALL){
             call = opt;

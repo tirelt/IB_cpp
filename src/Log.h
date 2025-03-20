@@ -4,15 +4,19 @@
 
 class Logger {
     public:
-        Logger(const std::string& fileName) : logFile(fileName, std::ios::app) {}
+        Logger(const std::string& fileName) : logFile(fileName ) {}
         ~Logger() { if (logFile.is_open()) logFile.close(); }
 
        template<typename T>
         Logger& operator<<(const T& value) {
             if(logFile.is_open())
                 logFile << value; 
-            logFile << std::endl;   
             return *this; 
+        }
+        Logger& operator<<(std::ostream& (*manip)(std::ostream&)) {
+            if (logFile.is_open())
+                logFile << manip;
+            return *this;
         }
     private:
         std::ofstream logFile;
