@@ -9,6 +9,9 @@
 #include <utility>
 #include <fstream>
 #include "Log.h"
+#include "Client.h"
+
+class Client;
 
 struct Forward{
     enum Field {BID};
@@ -55,6 +58,7 @@ struct Slice{
     Synthetic short_synth; 
     void update_synthetic(bool long_side, Option* call, Option* put);
     Logger log;
+    Client* m_pClient;
 };
 
 #endif

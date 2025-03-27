@@ -13,7 +13,6 @@ using std::function;
 using std::endl;
 
 Slice::Slice():imply_vol_queue(new TaskQueue),imply_vol_t(workerThread, imply_vol_queue),log("log/slice.txt"){
-    //
 }
 
 Slice::~Slice(){
@@ -77,6 +76,7 @@ void Slice::update_synthetic(bool long_side, Option* call, Option* put){
         if(comp(price,ref_price)){
             log << "Fwd arb: side = " << long_side << " - strike= " << call->strike << endl;
             synthetic_arb = synth;
+            //m_pClient->
         }
     } 
 }

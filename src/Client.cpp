@@ -20,15 +20,16 @@
 using std::shared_ptr;
 
 Client::Client( shared_ptr<Slice> pSlice, shared_ptr<std::map<long,Position>> positions):
-      m_osSignal(2000)//2-seconds timeout
-    , m_pClient(new EClientSocket(this, &m_osSignal))
-	, m_state(ST_CONNECT)	
-	, m_sleepDeadline(0)
-	, m_orderId(0)
-    , m_extraAuth(false)
-	, m_pSlice(pSlice)
-	, m_pPositions(positions)
-	{
+		m_osSignal(2000)//2-seconds timeout
+		, m_pClient(new EClientSocket(this, &m_osSignal))
+		, m_state(ST_CONNECT)	
+		, m_sleepDeadline(0)
+		, m_orderId(0)
+		, m_extraAuth(false)
+		, m_pSlice(pSlice)
+		, m_pPositions(positions)
+		, log("log/client.txt"){
+	m_pSlice->m_pClient = this;
 }
 //! [socket_init]
 Client::~Client(){
@@ -164,6 +165,7 @@ void Client::contractDetailsEnd( int reqId) {
 	}
 }
 
+//void Client::send
 void Client::reqMktData(){
 	m_state = ST_ACK;
 	m_pClient->reqMarketDataType(3);

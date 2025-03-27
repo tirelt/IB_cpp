@@ -1,3 +1,7 @@
+#pragma once
+#ifndef LOGGER_H
+#define LOGGER_H 
+
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -21,3 +25,5 @@ class Logger {
     private:
         std::ofstream logFile;
 };
+
+#endif

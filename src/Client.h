@@ -7,11 +7,14 @@
 #include "EReader.h"
 #include "Slice.h"
 #include "Position.h"
+#include "Log.h"
 
 #include <memory>
 #include <vector>
 
+
 class EClientSocket;
+struct Slice;
 
 enum State{
 	ST_REQPOSITIONS,
@@ -193,6 +196,7 @@ private:
 public:
 	std::shared_ptr<Slice> m_pSlice;
 	std::shared_ptr<std::map<long,Position>> m_pPositions;
+	Logger log;
 };
 
 #endif
