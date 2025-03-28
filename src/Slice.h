@@ -53,7 +53,6 @@ struct Slice{
     void assign_forward(const ContractDetails&);
     void assign_option(const ContractDetails&);
     void update_float_memb( Forward * fwd,const int field,const double value);
-    Synthetic* synthetic_arb;
     Synthetic long_synth;
     Synthetic short_synth; 
     void update_synthetic(bool long_side, Option* call, Option* put);

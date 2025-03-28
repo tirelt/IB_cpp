@@ -75,10 +75,6 @@ bool Client::isConnected() const{
 }
 
 void Client::processMessages(){
-	if(m_pSlice->synthetic_arb){
-		int a = 0;
-		//m_state = ST_ORDER_SYNTH;	
-	}
 	switch (m_state) {
 		case ST_REQPOSITIONS:
 			reqPositions();
@@ -101,7 +97,7 @@ void Client::processMessages(){
 			printf("\n\ncycle ACK\n\n");
 			break;
 	}
-
+	log << "Number of mesages: " << m_pReader->getQueueSize() << std::endl;
 	m_osSignal.waitForSignal();
 	errno = 0;
 	m_pReader->processMsgs();
@@ -165,7 +161,9 @@ void Client::contractDetailsEnd( int reqId) {
 	}
 }
 
-//void Client::send
+void Client::sendSynth( bool long_side){
+
+}
 void Client::reqMktData(){
 	m_state = ST_ACK;
 	m_pClient->reqMarketDataType(3);

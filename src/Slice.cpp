@@ -75,8 +75,7 @@ void Slice::update_synthetic(bool long_side, Option* call, Option* put){
         synth->put = put; 
         if(comp(price,ref_price)){
             log << "Fwd arb: side = " << long_side << " - strike= " << call->strike << endl;
-            synthetic_arb = synth;
-            //m_pClient->
+            m_pClient->sendSynth( long_side);
         }
     } 
 }

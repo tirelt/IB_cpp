@@ -4,13 +4,8 @@ Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
-Queue imply vol: 2
-Queue imply vol: 3
 Queue imply vol: 1
 Queue imply vol: 1
-Queue imply vol: 2
-Queue imply vol: 2
-Queue imply vol: 3
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
@@ -30,7 +25,6 @@ Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
-Queue imply vol: 0
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
@@ -52,201 +46,6 @@ Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 2
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 2
-Queue imply vol: 3
-Queue imply vol: 3
-Queue imply vol: 1
-Queue imply vol: 2
-Queue imply vol: 3
-Queue imply vol: 0
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 2
-Queue imply vol: 3
-Queue imply vol: 4
-Queue imply vol: 5
-Queue imply vol: 2
-Queue imply vol: 2
-Queue imply vol: 2
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 2
-Queue imply vol: 3
-Queue imply vol: 4
-Queue imply vol: 4
-Queue imply vol: 3
-Queue imply vol: 4
-Queue imply vol: 2
-Queue imply vol: 1
-Queue imply vol: 2
-Queue imply vol: 2
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 2
-Queue imply vol: 1
-Queue imply vol: 2
-Queue imply vol: 2
-Queue imply vol: 3
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 2
-Queue imply vol: 1
-Queue imply vol: 2
-Queue imply vol: 2
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 2
-Queue imply vol: 1
-Queue imply vol: 2
-Queue imply vol: 3
-Queue imply vol: 2
-Queue imply vol: 1
-Queue imply vol: 2
-Queue imply vol: 3
-Queue imply vol: 4
-Queue imply vol: 3
-Queue imply vol: 3
-Queue imply vol: 4
-Queue imply vol: 5
-Queue imply vol: 6
-Queue imply vol: 7
-Queue imply vol: 8
-Queue imply vol: 9
-Queue imply vol: 1
-Queue imply vol: 2
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 2
-Queue imply vol: 3
-Queue imply vol: 4
-Queue imply vol: 2
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
@@ -306,29 +105,271 @@ Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 2
 Queue imply vol: 1
+Queue imply vol: 1
 Queue imply vol: 2
-Queue imply vol: 3
+Queue imply vol: 2
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 2
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4075
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4025
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4000
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4100
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4050
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
 Fwd arb: side = 1 - strike= 3900
-Queue imply vol: 4
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
-Queue imply vol: 2
-Queue imply vol: 3
-Queue imply vol: 4
+Queue imply vol: 0
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
 Fwd arb: side = 1 - strike= 3950
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
-Fwd arb: side = 1 - strike= 3850
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
 Queue imply vol: 1
 Fwd arb: side = 1 - strike= 3875
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 3800
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 3850
 Queue imply vol: 1
 Queue imply vol: 1
 Fwd arb: side = 1 - strike= 3925
@@ -336,6 +377,9 @@ Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 3975
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
@@ -355,64 +399,40 @@ Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4225
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4200
 Queue imply vol: 1
 Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4250
 Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4100
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4175
 Queue imply vol: 1
 Fwd arb: side = 1 - strike= 4125
-Queue imply vol: 1
-Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
 Fwd arb: side = 1 - strike= 4150
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4250
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4075
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4225
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4050
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4025
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4200
+Fwd arb: side = 1 - strike= 4175
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4000
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
-Fwd arb: side = 1 - strike= 3975
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4400
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
@@ -429,20 +449,6 @@ Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4450
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4275
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4350
 Queue imply vol: 1
 Fwd arb: side = 1 - strike= 4425
 Queue imply vol: 1
@@ -450,46 +456,28 @@ Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4525
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4675
+Queue imply vol: 1
+Queue imply vol: 0
 Fwd arb: side = 1 - strike= 4325
 Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4550
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4375
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4300
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4575
 Queue imply vol: 1
 Queue imply vol: 1
 Fwd arb: side = 1 - strike= 4475
 Queue imply vol: 1
 Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4525
+Fwd arb: side = 1 - strike= 4275
 Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4400
 Queue imply vol: 1
 Queue imply vol: 1
 Fwd arb: side = 1 - strike= 4500
 Queue imply vol: 1
 Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4450
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
@@ -497,13 +485,32 @@ Queue imply vol: 1
 Fwd arb: side = 1 - strike= 4600
 Queue imply vol: 1
 Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4550
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4725
 Queue imply vol: 1
 Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4800
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4700
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4350
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4300
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4650
 Queue imply vol: 1
 Queue imply vol: 1
 Fwd arb: side = 1 - strike= 4625
 Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4575
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4375
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
@@ -514,27 +521,24 @@ Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4650
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4850
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4875
 Queue imply vol: 1
 Queue imply vol: 1
 Fwd arb: side = 1 - strike= 4825
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4700
 Queue imply vol: 1
 Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4725
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4850
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4675
-Queue imply vol: 2
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4875
-Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4800
 Queue imply vol: 1
 Queue imply vol: 1
 Fwd arb: side = 1 - strike= 4775
@@ -547,77 +551,11 @@ Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4900
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
 Queue imply vol: 2
-Queue imply vol: 3
-Queue imply vol: 3
-Queue imply vol: 4
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4950
+Fwd arb: side = 1 - strike= 5150
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
@@ -628,6 +566,1121 @@ Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4975
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 5050
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 5025
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 5075
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 5175
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 5125
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4950
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4900
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4925
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 5100
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6100
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 0
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6125
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6050
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 0
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6075
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6550
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6425
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6450
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6475
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6400
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6525
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 0
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6150
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6300
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6225
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6500
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6325
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6275
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6375
+Queue imply vol: 1
+Queue imply vol: 2
+Fwd arb: side = 0 - strike= 6200
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6250
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6350
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6175
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6700
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6600
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 2
+Fwd arb: side = 0 - strike= 6800
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 2
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6125
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6550
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4600
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 3925
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4325
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 3950
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4050
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6000
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6275
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6200
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4825
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4075
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4175
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4425
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6100
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4275
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4875
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4400
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4525
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6400
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 3900
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4625
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 3850
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4350
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6150
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4725
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6700
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4500
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4225
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4075
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4125
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4100
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 3875
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6075
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4150
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4950
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6525
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 3825
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4200
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6475
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4750
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4675
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4375
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6350
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4250
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4800
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6800
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4000
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 5000
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6450
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6375
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4450
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4700
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6425
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4475
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6025
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4450
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4300
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6300
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6225
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4550
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6250
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4775
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4850
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4500
+Queue imply vol: 1
+Queue imply vol: 2
+Fwd arb: side = 1 - strike= 4600
+Queue imply vol: 1
+Queue imply vol: 2
+Fwd arb: side = 0 - strike= 6175
+Queue imply vol: 1
+Queue imply vol: 2
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 2
+Fwd arb: side = 1 - strike= 3800
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6325
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4650
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4575
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 3975
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6600
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6500
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6050
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4475
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4025
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 2
+Queue imply vol: 2
+Queue imply vol: 1
+Queue imply vol: 2
+Queue imply vol: 3
+Queue imply vol: 4
+Queue imply vol: 5
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 2
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 2
+Queue imply vol: 3
+Queue imply vol: 2
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 2
+Fwd arb: side = 1 - strike= 5050
+Queue imply vol: 1
+Queue imply vol: 2
+Queue imply vol: 2
+Queue imply vol: 2
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 5025
+Queue imply vol: 1
+Queue imply vol: 2
+Queue imply vol: 3
+Queue imply vol: 4
+Queue imply vol: 3
+Queue imply vol: 3
+Queue imply vol: 4
+Queue imply vol: 1
+Queue imply vol: 2
+Queue imply vol: 3
+Fwd arb: side = 1 - strike= 4875
+Queue imply vol: 3
+Queue imply vol: 4
+Queue imply vol: 2
+Queue imply vol: 1
+Queue imply vol: 2
+Queue imply vol: 3
+Queue imply vol: 2
+Queue imply vol: 1
+Queue imply vol: 2
+Fwd arb: side = 1 - strike= 4800
+Queue imply vol: 3
+Queue imply vol: 4
+Queue imply vol: 5
+Queue imply vol: 6
+Queue imply vol: 4
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 2
+Fwd arb: side = 1 - strike= 5125
+Queue imply vol: 3
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 2
+Queue imply vol: 3
+Queue imply vol: 4
+Fwd arb: side = 1 - strike= 4850
+Queue imply vol: 4
+Queue imply vol: 5
+Queue imply vol: 6
+Queue imply vol: 1
+Queue imply vol: 2
+Queue imply vol: 3
+Queue imply vol: 1
+Queue imply vol: 2
+Queue imply vol: 3
+Fwd arb: side = 1 - strike= 5100
+Queue imply vol: 1
+Queue imply vol: 2
+Queue imply vol: 3
+Queue imply vol: 4
+Queue imply vol: 5
+Fwd arb: side = 1 - strike= 5025
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 5075
+Queue imply vol: 1
+Queue imply vol: 2
+Queue imply vol: 3
+Queue imply vol: 4
+Queue imply vol: 5
+Queue imply vol: 6
+Queue imply vol: 7
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 2
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 2
+Queue imply vol: 3
+Queue imply vol: 4
+Queue imply vol: 5
+Queue imply vol: 4
+Queue imply vol: 0
+Queue imply vol: 1
+Queue imply vol: 2
+Queue imply vol: 3
+Queue imply vol: 4
+Queue imply vol: 5
+Queue imply vol: 6
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4425
+Queue imply vol: 1
+Queue imply vol: 2
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4125
+Queue imply vol: 1
+Queue imply vol: 0
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4150
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 0
+Fwd arb: side = 1 - strike= 4325
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 5000
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4350
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4625
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4750
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4800
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4675
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4650
+Queue imply vol: 2
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4600
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4550
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4475
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4400
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6125
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6550
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4325
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 3925
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 3950
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 5150
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4050
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 5075
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6000
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6275
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 5200
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6200
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4975
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4825
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4975
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4075
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4175
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4425
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6100
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4275
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 5050
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4875
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 5050
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4525
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6400
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4900
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 3900
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4625
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 3850
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6150
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4350
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4725
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6700
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 5025
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4500
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 5000
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4225
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4025
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4700
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4125
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4100
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4725
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4875
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 3875
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6075
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4150
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4950
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 5125
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6525
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 3825
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6475
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4200
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4950
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4750
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4675
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4375
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6350
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4250
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 0
+Fwd arb: side = 1 - strike= 4800
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6800
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4850
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4000
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6450
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6375
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 5025
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4825
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4450
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 5175
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4700
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6425
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 5100
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4900
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4475
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6025
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4450
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4300
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6300
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6225
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 5100
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4550
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 5075
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6250
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4775
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4850
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4500
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4600
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4650
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4775
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6175
+Queue imply vol: 1
+Queue imply vol: 2
+Fwd arb: side = 0 - strike= 5975
+Queue imply vol: 3
+Queue imply vol: 4
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 3800
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6325
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4575
+Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
@@ -642,106 +1695,118 @@ Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4975
+Fwd arb: side = 1 - strike= 3975
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4525
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4775
+Fwd arb: side = 1 - strike= 4925
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6600
 Queue imply vol: 1
 Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6050
 Queue imply vol: 1
 Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6500
 Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
+Fwd arb: side = 1 - strike= 3975
 Queue imply vol: 0
 Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4100
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4275
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4300
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4400
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4375
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4625
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4175
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4475
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4650
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4550
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4875
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4950
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4675
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4925
 Queue imply vol: 1
 Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 0 - strike= 5900
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 0 - strike= 5925
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 0 - strike= 5825
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 0 - strike= 5800
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 0 - strike= 5725
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4400
 Queue imply vol: 1
 Queue imply vol: 1
 Fwd arb: side = 0 - strike= 6125
 Queue imply vol: 1
 Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 0 - strike= 6025
-Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6550
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
-Fwd arb: side = 0 - strike= 5875
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4600
 Queue imply vol: 1
 Queue imply vol: 1
-Queue imply vol: 0
-Fwd arb: side = 0 - strike= 5975
 Queue imply vol: 1
 Queue imply vol: 1
-Fwd arb: side = 0 - strike= 6100
 Queue imply vol: 1
 Queue imply vol: 1
-Fwd arb: side = 0 - strike= 5850
+Fwd arb: side = 1 - strike= 3925
 Queue imply vol: 1
 Queue imply vol: 1
-Fwd arb: side = 0 - strike= 5775
+Fwd arb: side = 1 - strike= 4325
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 3950
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4050
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
@@ -749,47 +1814,43 @@ Queue imply vol: 1
 Fwd arb: side = 0 - strike= 6000
 Queue imply vol: 1
 Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 0 - strike= 6075
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 0 - strike= 6050
+Fwd arb: side = 0 - strike= 6275
 Queue imply vol: 1
 Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6200
 Queue imply vol: 1
 Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 0 - strike= 5750
-Queue imply vol: 1
-Fwd arb: side = 0 - strike= 5950
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 0 - strike= 5700
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 0 - strike= 5725
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4850
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4675
+Fwd arb: side = 1 - strike= 4975
 Queue imply vol: 1
 Queue imply vol: 1
 Fwd arb: side = 1 - strike= 4825
 Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4975
 Queue imply vol: 1
 Queue imply vol: 1
-Fwd arb: side = 0 - strike= 5775
 Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4825
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4075
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4175
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4425
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6100
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4275
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4725
+Queue imply vol: 1
+Queue imply vol: 1
 Queue imply vol: 1
 Fwd arb: side = 0 - strike= 6150
 Queue imply vol: 1
@@ -798,19 +1859,7 @@ Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4525
 Queue imply vol: 1
 Queue imply vol: 1
 Fwd arb: side = 0 - strike= 6400
@@ -818,58 +1867,93 @@ Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4900
 Queue imply vol: 1
-Fwd arb: side = 0 - strike= 6450
 Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4625
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 3900
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 3850
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 5025
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4350
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4725
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6700
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4500
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 5000
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4225
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 2
+Fwd arb: side = 1 - strike= 4525
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 2
+Queue imply vol: 2
+Fwd arb: side = 1 - strike= 4025
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4700
+Queue imply vol: 2
+Queue imply vol: 3
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4125
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4100
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6075
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4875
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 3875
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4750
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 0
-Fwd arb: side = 0 - strike= 6425
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4150
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
-Fwd arb: side = 0 - strike= 6350
+Fwd arb: side = 1 - strike= 4800
 Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 0 - strike= 6175
-Queue imply vol: 1
-Queue imply vol: 1
+Queue imply vol: 2
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
-Fwd arb: side = 0 - strike= 6475
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 0 - strike= 6550
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 0 - strike= 6375
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 0 - strike= 6200
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 0 - strike= 6275
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 0 - strike= 6300
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 0 - strike= 6250
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 0 - strike= 6225
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 0 - strike= 6500
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 0 - strike= 6325
 Queue imply vol: 1
 Queue imply vol: 1
 Fwd arb: side = 0 - strike= 6525
@@ -877,65 +1961,79 @@ Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 2
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 0 - strike= 6600
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 0 - strike= 6700
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 2
-Fwd arb: side = 0 - strike= 6800
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 2
-Fwd arb: side = 1 - strike= 3875
-Queue imply vol: 1
-Queue imply vol: 2
-Fwd arb: side = 1 - strike= 3900
-Queue imply vol: 2
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 3925
-Queue imply vol: 1
-Queue imply vol: 1
 Fwd arb: side = 1 - strike= 3825
 Queue imply vol: 1
 Queue imply vol: 1
-Fwd arb: side = 1 - strike= 3950
+Fwd arb: side = 1 - strike= 4200
 Queue imply vol: 1
 Queue imply vol: 1
-Fwd arb: side = 1 - strike= 3850
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 0 - strike= 5975
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4050
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4075
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 0 - strike= 5950
+Fwd arb: side = 0 - strike= 6475
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4975
+Fwd arb: side = 1 - strike= 4950
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4750
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4675
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4375
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6350
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4250
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4800
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6800
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4850
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4000
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 5000
 Queue imply vol: 1
 Queue imply vol: 1
 Fwd arb: side = 0 - strike= 6375
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6450
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4825
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
 Fwd arb: side = 1 - strike= 4450
@@ -944,102 +2042,6 @@ Queue imply vol: 1
 Fwd arb: side = 0 - strike= 6425
 Queue imply vol: 1
 Queue imply vol: 1
-Fwd arb: side = 0 - strike= 6325
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4925
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 0 - strike= 6225
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4125
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 0 - strike= 6150
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4950
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4225
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4150
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 0 - strike= 6100
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4950
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4375
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4275
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4200
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 0 - strike= 6800
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4325
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4100
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4250
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 0 - strike= 6700
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 0 - strike= 6175
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 0 - strike= 6275
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 0 - strike= 5675
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4300
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 0 - strike= 6250
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4025
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 0 - strike= 6400
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 0 - strike= 6125
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4175
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4000
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 0 - strike= 6000
-Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
@@ -1047,92 +2049,45 @@ Fwd arb: side = 1 - strike= 4900
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
-Fwd arb: side = 1 - strike= 3975
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4575
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4550
+Fwd arb: side = 1 - strike= 4700
 Queue imply vol: 1
 Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4350
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4525
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4425
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4575
 Queue imply vol: 1
 Queue imply vol: 1
 Fwd arb: side = 1 - strike= 4475
 Queue imply vol: 1
 Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4400
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4550
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4500
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 0 - strike= 6075
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4700
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 0 - strike= 6450
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 0 - strike= 6525
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 0 - strike= 5800
+Fwd arb: side = 1 - strike= 4450
 Queue imply vol: 1
 Queue imply vol: 1
 Fwd arb: side = 0 - strike= 6025
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4800
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4300
 Queue imply vol: 1
 Queue imply vol: 1
-Fwd arb: side = 0 - strike= 5900
+Fwd arb: side = 0 - strike= 6300
 Queue imply vol: 1
 Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4675
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 0 - strike= 5875
+Fwd arb: side = 0 - strike= 6225
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
-Fwd arb: side = 0 - strike= 6600
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4550
 Queue imply vol: 1
 Queue imply vol: 1
-Fwd arb: side = 0 - strike= 5750
+Fwd arb: side = 0 - strike= 6250
 Queue imply vol: 1
 Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4775
 Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4850
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
@@ -1140,45 +2095,12 @@ Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
-Fwd arb: side = 0 - strike= 6200
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4700
+Fwd arb: side = 1 - strike= 4500
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 0 - strike= 6550
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 0 - strike= 6050
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4625
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4800
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 0 - strike= 6500
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 0 - strike= 5825
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 0 - strike= 6475
-Queue imply vol: 1
-Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4600
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
@@ -1189,20 +2111,748 @@ Queue imply vol: 1
 Queue imply vol: 1
 Fwd arb: side = 1 - strike= 4650
 Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4775
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6175
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 3800
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6325
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4575
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 3975
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4925
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6600
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6500
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4575
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6050
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4450
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4475
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4575
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4625
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4525
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4375
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4550
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 3975
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4100
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4750
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4400
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6125
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6550
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4600
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 3925
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4325
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 3950
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4050
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6000
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6275
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6200
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4075
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4175
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4425
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6100
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4275
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6150
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6400
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4525
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4625
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 3900
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 3850
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4350
 Queue imply vol: 1
 Queue imply vol: 1
 Fwd arb: side = 1 - strike= 4725
 Queue imply vol: 1
 Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6700
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4500
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4225
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4025
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4125
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4100
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6075
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 3875
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4150
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6525
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 3825
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6475
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4200
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 5950
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4675
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4250
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4275
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6350
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4375
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 2
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6800
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 0
+Fwd arb: side = 1 - strike= 4000
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 2
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6375
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6450
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 2
+Queue imply vol: 3
+Queue imply vol: 4
+Queue imply vol: 5
+Queue imply vol: 5
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6425
+Queue imply vol: 1
+Queue imply vol: 2
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4700
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4475
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6025
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4450
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4675
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4300
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6300
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6225
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4300
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4550
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6250
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4400
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4500
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
 Fwd arb: side = 1 - strike= 4600
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 5975
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4650
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 2
+Queue imply vol: 3
+Fwd arb: side = 0 - strike= 6175
+Queue imply vol: 4
+Queue imply vol: 2
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 2
+Fwd arb: side = 1 - strike= 3800
+Queue imply vol: 3
+Queue imply vol: 3
+Fwd arb: side = 0 - strike= 5925
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6325
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4575
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4650
+Queue imply vol: 1
+Queue imply vol: 2
+Queue imply vol: 1
+Queue imply vol: 2
+Queue imply vol: 3
+Queue imply vol: 3
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 3975
+Queue imply vol: 2
+Queue imply vol: 3
+Queue imply vol: 4
+Queue imply vol: 5
+Queue imply vol: 6
+Queue imply vol: 7
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6500
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6600
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6050
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4175
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4600
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4125
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4050
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4875
 Queue imply vol: 1
 Fwd arb: side = 1 - strike= 4625
 Queue imply vol: 1
 Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4400
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6125
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6550
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4325
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 3925
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 5800
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 3950
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6025
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6275
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6200
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4825
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4075
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4325
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4175
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6100
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4425
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4275
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4725
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6150
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6400
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4525
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4900
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 3900
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4625
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 3850
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4350
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4725
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6700
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 5775
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4500
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4225
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4025
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4700
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4125
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4100
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6075
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 3875
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4875
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4750
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4150
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 2
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 5850
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4425
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6525
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 3825
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6475
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4200
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4950
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4675
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4750
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4250
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4375
 Queue imply vol: 1
 Queue imply vol: 1
 Fwd arb: side = 0 - strike= 6350
@@ -1212,42 +2862,108 @@ Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4800
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4000
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6800
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 0 - strike= 5850
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4750
 Queue imply vol: 1
 Queue imply vol: 2
+Queue imply vol: 3
+Queue imply vol: 4
+Queue imply vol: 3
 Queue imply vol: 1
 Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4775
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4825
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6375
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4350
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6450
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4900
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6425
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4450
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 5925
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4700
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4475
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4450
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 0
+Fwd arb: side = 1 - strike= 4675
+Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
 Fwd arb: side = 0 - strike= 6300
 Queue imply vol: 1
-Queue imply vol: 2
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4300
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6225
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4550
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4775
 Queue imply vol: 1
 Queue imply vol: 2
-Fwd arb: side = 0 - strike= 5925
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 3850
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6250
 Queue imply vol: 2
-Fwd arb: side = 1 - strike= 4700
-Queue imply vol: 2
-Fwd arb: side = 1 - strike= 4575
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4850
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4500
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
@@ -1257,7 +2973,115 @@ Fwd arb: side = 1 - strike= 4600
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4050
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6325
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4475
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4775
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4650
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 0
+Fwd arb: side = 0 - strike= 6175
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 3800
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4575
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4650
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4550
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 3975
+Queue imply vol: 1
+Queue imply vol: 2
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4925
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6500
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6600
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6050
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4000
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4600
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
@@ -1269,217 +3093,63 @@ Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
 Fwd arb: side = 1 - strike= 4425
 Queue imply vol: 1
+Queue imply vol: 2
 Queue imply vol: 1
 Queue imply vol: 1
-Fwd arb: side = 1 - strike= 3825
+Queue imply vol: 2
 Queue imply vol: 1
+Queue imply vol: 2
+Queue imply vol: 3
 Queue imply vol: 1
 Queue imply vol: 1
-Fwd arb: side = 1 - strike= 3900
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4225
 Queue imply vol: 1
 Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4800
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 0 - strike= 5900
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4850
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4925
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 0 - strike= 5875
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4125
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4875
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4950
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 3975
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4950
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4150
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4700
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4375
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4200
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4325
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4625
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4100
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4550
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4800
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4250
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4525
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 3950
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4925
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4300
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4825
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4575
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4650
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4875
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4350
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4400
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4025
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 3875
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4725
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4475
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4600
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4175
-Queue imply vol: 1
-Fwd arb: side = 0 - strike= 5775
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4500
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4000
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 3925
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4900
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4750
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Fwd arb: side = 1 - strike= 4775
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
-Queue imply vol: 1
+Queue imply vol: 2
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
@@ -1494,11 +3164,297 @@ Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 2
+Queue imply vol: 3
+Queue imply vol: 0
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4675
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4300
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4500
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4475
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6075
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4925
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 5900
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4400
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 5850
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4150
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4225
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4200
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4275
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4050
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4400
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6125
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6550
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4325
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 3925
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 3950
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6000
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6200
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6275
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4075
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4175
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6100
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 3950
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4425
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4275
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6150
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4525
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6400
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 3900
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4625
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 3850
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4350
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6700
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4500
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4225
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4025
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4525
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 3825
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4250
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4125
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4100
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6075
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 3875
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
@@ -1515,6 +3471,7 @@ Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4150
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
@@ -1524,12 +3481,16 @@ Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6525
 Queue imply vol: 1
 Queue imply vol: 1
+Fwd arb: side = 1 - strike= 3825
 Queue imply vol: 1
 Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6475
 Queue imply vol: 1
 Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4200
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
@@ -1538,16 +3499,20 @@ Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4675
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4250
 Queue imply vol: 1
 Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4375
 Queue imply vol: 1
 Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6350
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
@@ -1556,12 +3521,14 @@ Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4000
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6800
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
@@ -1574,11 +3541,13 @@ Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6375
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6450
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
@@ -1589,6 +3558,7 @@ Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6425
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
@@ -1596,20 +3566,27 @@ Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4700
 Queue imply vol: 1
 Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4475
 Queue imply vol: 1
 Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4450
 Queue imply vol: 1
 Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6025
 Queue imply vol: 1
 Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6300
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4300
 Queue imply vol: 1
 Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6225
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
@@ -1617,6 +3594,7 @@ Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4550
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
@@ -1627,12 +3605,87 @@ Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6250
 Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4375
 Queue imply vol: 1
 Queue imply vol: 1
+Queue imply vol: 2
 Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4025
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
 Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4600
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 2
+Queue imply vol: 3
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6325
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4650
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6175
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 2
+Queue imply vol: 3
+Queue imply vol: 4
+Fwd arb: side = 1 - strike= 3800
+Queue imply vol: 5
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4575
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4650
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 4050
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 1 - strike= 3975
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6500
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6600
+Queue imply vol: 1
+Queue imply vol: 1
+Fwd arb: side = 0 - strike= 6050

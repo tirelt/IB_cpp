@@ -58,6 +58,7 @@ public:
     void processMsgs(void);
 	bool putMessageToQueue();
 	void start();
+    int getQueueSize(){return m_msgQueue.size();};
   void stop();
 };
 

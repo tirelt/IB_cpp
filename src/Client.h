@@ -55,6 +55,7 @@ public:
 	void tickPrice( TickerId tickerId, TickType field, double price, const TickAttrib& attrib);
 	void tickString(TickerId tickerId, TickType tickType, const std::string& value);
 	void tickSize(TickerId tickerId, TickType field, Decimal size);
+	void sendSynth( bool long_side);
 
 private:
 	void reqCurrentTime(){};
