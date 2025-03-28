@@ -55,3 +55,6 @@ cleanClient:
 
 cleanTest:
 	rm -f $(TARGET_TEST) $(PATH_OBJ_TEST)/*.o
+
+profile:
+	xcrun xctrace record --template "Time Profiler" --launch MyApp --output MyApp.trace

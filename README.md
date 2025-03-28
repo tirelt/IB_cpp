@@ -79,6 +79,7 @@ Next Valid Id: 1
 
 We created a custom `Makefile` to only recompile changed files and link the shared objects `libTwsSocketClient.so`. Simply run `make`.
 Use `make run` to run the app.
+`make profile` to profile the app with Instruments.
 
 ## Doc
 

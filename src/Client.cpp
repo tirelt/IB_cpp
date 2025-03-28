@@ -93,7 +93,7 @@ void Client::processMessages(){
 			return;
 		case ST_ACK:
 			//const unsigned sleep(1);
-			std::this_thread::sleep_for(std::chrono::milliseconds(100));
+			std::this_thread::sleep_for(std::chrono::microseconds(10));
 			printf("\n\ncycle ACK\n\n");
 			break;
 	}
