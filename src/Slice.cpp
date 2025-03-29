@@ -114,13 +114,14 @@ void Slice::update_float_memb( Forward * instrument,const int field,const double
     }
 }
 
-bool check_fly_aux(Option* l_opt,Option* m_opt,Option* h_opt){
+void Slice::check_fly_aux(Option* l_opt,Option* m_opt,Option* h_opt){
     float l_ask = l_opt->ask;
     float m_bid = m_opt->bid; 
     float h_ask = h_opt->ask;
     float fly = l_ask - 2 * m_bid + m_bid;
-    if(l_ask > -1 && m_bid > -1 && m_bid > -1 && fly > 0){
+    if(l_ask > -1 && m_bid > -1 && m_bid > -1 && fly <= 0){
         //send orders for fly  
+        m_pClient->placeOrderFly(l_opt,m_opt,h_opt);
     }
 }
 

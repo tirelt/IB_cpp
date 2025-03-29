@@ -55,7 +55,9 @@ public:
 	void tickPrice( TickerId tickerId, TickType field, double price, const TickAttrib& attrib);
 	void tickString(TickerId tickerId, TickType tickType, const std::string& value);
 	void tickSize(TickerId tickerId, TickType field, Decimal size);
+	void placeOrderFly( Option* l_opt,Option* m_opt,Option* h_opt);
 	void sendSynth( bool long_side);
+
 
 private:
 	void reqCurrentTime(){};
@@ -106,7 +108,7 @@ private:
 
 public:
 	// Overrides virtual members of EWrapper
-	void currentTime(long time){};
+	void currentTime(long time){}
 	void tickOptionComputation( TickerId tickerId, TickType tickType, int tickAttrib, double impliedVol, double delta, double optPrice, double pvDividend, double gamma, double vega, double theta, double undPrice){}
 	void tickGeneric(TickerId tickerId, TickType tickType, double value){}
 	void tickEFP(TickerId tickerId, TickType tickType, double basisPoints, const std::string& formattedBasisPoints,	double totalDividends, int holdDays, const std::string& futureLastTradeDate, double dividendImpact, double dividendsToLastTradeDate){}

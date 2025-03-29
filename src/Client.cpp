@@ -16,6 +16,8 @@
 #include "memory"
 #include "TaskQueue.h"
 #include "Position.h"
+#include "Orders.h"
+#include "Order.h"
 
 using std::shared_ptr;
 
@@ -36,7 +38,8 @@ Client::~Client(){
 	// destroy the reader before the client
 	if( m_pReader )
 		m_pReader.reset();
-	// cancel subscriptions to positions and mktdata
+	// cancel subscriptions to positions and mktdata and orders
+	m_pClient->reqGlobalCancel();
 	m_pClient->cancelPositions();
 	for(const auto& [id,fwd]:m_pSlice->reqid_to_instrument)
 		m_pClient->cancelMktData(id);
@@ -123,7 +126,6 @@ void Client::position( const std::string& account, const Contract& contract, Dec
 
 void Client::positionEnd() {
 	printf( "PositionEnd\n");
-	m_pClient->cancelPositions();
 }
 
 void Client::reqFirstFut(){
@@ -161,6 +163,13 @@ void Client::contractDetailsEnd( int reqId) {
 	} else {
 		m_state = ST_DISCONNECT;
 	}
+}
+
+void Client::placeOrderFly( Option* l_opt,Option* m_opt,Option* h_opt){
+	Contract fly = MyContract::FLY(l_opt->contract,m_opt->contract,h_opt->contract);
+	long long qty = 1; 
+	Order order = MyOrder::COMBOLIMITORDER("BUY", qty, 0, false);
+	m_pClient->placeOrder(m_orderId++,fly,order);	
 }
 
 void Client::sendSynth( bool long_side){
