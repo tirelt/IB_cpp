@@ -12,7 +12,7 @@ using std::bind;
 using std::function;
 using std::endl;
 
-Slice::Slice():imply_vol_queue(new TaskQueue),imply_vol_t(workerThread, imply_vol_queue),log("log/slice.txt"){
+Slice::Slice():imply_vol_queue(new TaskQueue),imply_vol_t(workerThread, imply_vol_queue),log("log/slice.txt"),best_synth_prices{-1,-1}{
 }
 
 Slice::~Slice(){
@@ -54,31 +54,6 @@ void Option::work_after_update( const double& fwd_price, double Forward::* memb 
     function<double(double)> d = bind( vega, fwd_price, strike, _1, time_to_maturity, 1 );
     this->*memb_vol = newton_method( f, d,this->*memb, 0.2, 0.0001, 10 );
 }
-void Slice::update_synthetic(bool long_side, Option* call, Option* put){
-    double call_price = call->ask;
-    double put_price = put->bid;
-    Synthetic* synth = &long_synth;
-    auto comp = [&long_side](double a, double b){return (long_side?a<b:a>b);};
-    double ref_price = forward.bid;
-    if(!long_side){
-        call_price = call->bid;
-        put_price = put->ask;
-        synth = &short_synth;
-        ref_price = forward.ask;
-    }
-    if(call_price == -1 || put_price == -1 )
-        return;
-    const double price = call_price-put_price+call->strike;
-    if( synth->price == -1 || comp(price,synth->price)){
-        //synth->price = price;
-        synth->call = call;
-        synth->put = put; 
-        if(comp(price,ref_price)){
-            log << "Fwd arb: side = " << long_side << " - strike= " << call->strike << endl;
-            m_pClient->sendSynth( long_side);
-        }
-    } 
-}
 
 void Slice::update_float_memb( Forward * instrument,const int field,const double value){
     double fwd_price = 0;
@@ -113,31 +88,53 @@ void Slice::update_float_memb( Forward * instrument,const int field,const double
         fwd_price = forward.bid;
     instrument->*memb = value;
 
-    if( instrument->right == Forward::FORWARD){
-        if(memb == &Forward::ask)
-            short_synth.forward_price = value;        
-        else if(memb == &Forward::bid)
-            long_synth.forward_price = value;        
-    } else if( (memb == &Forward::ask || memb == &Forward::bid) && ( instrument->right == Forward::CALL ||  instrument->right == Forward::PUT )){
+    if( (memb == &Forward::ask || memb == &Forward::bid) && ( instrument->right == Forward::CALL ||  instrument->right == Forward::PUT )){
         Option* opt = dynamic_cast<Option*>(instrument);
         Option* put,* call;
-        bool long_side = true;
-        if( fwd_price && value > 0  ){
+        float strike = opt->strike;
+        updated_synth.insert(strike);
+        if( fwd_price && value > 0  ){ // Imply new vol on the imply_vol_thread
             imply_vol_queue->addTask([opt,fwd_price,memb]{opt->work_after_update( fwd_price, memb );});  
             log << "Queue imply vol: " << imply_vol_queue->size() << endl;
         }
         if( opt->right == Option::CALL){
             call = opt;
             put = &(this->options[opt->strike][Option::PUT]);
-            if(memb == &Forward::bid)
-                long_side = false;
         } else{
             call = &(this->options[opt->strike][Option::CALL]);
             put = opt;
-            if(memb == &Forward::ask)
-                long_side = false;
         }
-        update_synthetic(long_side, call, put);
-    //work_after_update(memb);
+        synth_prices[strike] = { -1,-1};
+        if(call->bid > -1 && put->ask > -1 )
+            synth_prices[strike].first = call->bid-put->ask + strike;
+        if(call->ask > -1 && put->bid> -1 )
+            synth_prices[strike].second = call->ask-put->bid + strike;
+    }
+}
+
+void Slice::update_synthetic(){
+    for(const float& strike : updated_synth){
+        if(synth_prices[strike].first > -1){
+            if(synth_prices[strike].first > best_synth_prices.first ){
+                best_synth.first.clear();
+                best_synth.first.push_back(strike);
+            } else if(synth_prices[strike].first  == best_synth_prices.first){
+                best_synth.first.push_back(strike);
+            }
+        }
+        if(synth_prices[strike].second > -1 ){
+            if( synth_prices[strike].second < best_synth_prices.second ){
+                best_synth.second.clear();
+                best_synth.second.push_back(strike);
+            } else if(synth_prices[strike].second  == best_synth_prices.second){
+                best_synth.second.push_back(strike);
+            }
+        }
+    }
+    if( forward.bid > best_synth_prices.first ){
+        // buy the synth from best_synth.first and sell the futiure
+    }
+    if( forward.ask > best_synth_prices.second ){
+        // sell the synth from best_synth.second and buy the futiure
     }
 }

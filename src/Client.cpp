@@ -101,6 +101,8 @@ void Client::processMessages(){
 	m_osSignal.waitForSignal();
 	errno = 0;
 	m_pReader->processMsgs();
+	log << "Number of mesages after process: " << m_pReader->getQueueSize() << std::endl;
+	m_pSlice->update_synthetic();
 }
 
 void Client::connectAck(){

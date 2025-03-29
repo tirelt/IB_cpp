@@ -53,9 +53,11 @@ struct Slice{
     void assign_forward(const ContractDetails&);
     void assign_option(const ContractDetails&);
     void update_float_memb( Forward * fwd,const int field,const double value);
-    Synthetic long_synth;
-    Synthetic short_synth; 
-    void update_synthetic(bool long_side, Option* call, Option* put);
+    std::map<float,std::pair<float,float>> synth_prices;
+    std::set<float> updated_synth;
+    std::pair<float,float> best_synth_prices;
+    std::pair<std::vector<float>,std::vector<float>> best_synth;
+    void update_synthetic();
     Logger log;
     Client* m_pClient;
 };
