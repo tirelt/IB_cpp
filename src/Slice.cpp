@@ -11,6 +11,8 @@ using  namespace std::placeholders;
 using std::bind;
 using std::function;
 using std::endl;
+using std::next;
+using std::prev;
 
 Slice::Slice():imply_vol_queue(new TaskQueue),imply_vol_t(workerThread, imply_vol_queue),log("log/slice.txt"),best_synth_prices{-1,-1}{
 }
@@ -92,7 +94,7 @@ void Slice::update_float_memb( Forward * instrument,const int field,const double
         Option* opt = dynamic_cast<Option*>(instrument);
         Option* put,* call;
         float strike = opt->strike;
-        updated_synth.insert(strike);
+        updated_strikes.insert(strike);
         if( fwd_price && value > 0  ){ // Imply new vol on the imply_vol_thread
             imply_vol_queue->addTask([opt,fwd_price,memb]{opt->work_after_update( fwd_price, memb );});  
             log << "Queue imply vol: " << imply_vol_queue->size() << endl;
@@ -112,8 +114,47 @@ void Slice::update_float_memb( Forward * instrument,const int field,const double
     }
 }
 
+bool check_fly_aux(Option* l_opt,Option* m_opt,Option* h_opt){
+    float l_ask = l_opt->ask;
+    float m_bid = m_opt->bid; 
+    float h_ask = h_opt->ask;
+    float fly = l_ask - 2 * m_bid + m_bid;
+    if(l_ask > -1 && m_bid > -1 && m_bid > -1 && fly > 0){
+        //send orders for fly  
+    }
+}
+
+void Slice::check_fly(){
+    // assuming we have more than 4 strikes so second != second_last always
+    float fwd_mid = (forward.bid + forward.ask ) / 2;
+    for(const float& strike : updated_strikes){
+        const Option::Right right = strike>fwd_mid?Option::CALL:Option::PUT;
+        const auto it = options.find(strike), beg = options.begin(), end = options.end();
+        const auto second = next(beg);
+        const auto last = prev(end);
+        const auto second_last = prev(last);
+        if(it != options.end()){
+            if(it != beg && it != second){
+                float p_strike = prev(it)->first; 
+                float pp_strike = prev(prev(it))->first;
+                check_fly_aux(&options[pp_strike][right],&options[p_strike][right],&options[strike][right]);
+            }
+            if(it != last && it != second_last){
+                float n_strike = next(it)->first;
+                float nn_strike = next(next(it))->first;
+                check_fly_aux(&options[strike][right],&options[nn_strike][right],&options[nn_strike][right]);
+            }
+            if(it != beg && it != last ){
+                float n_strike = next(it)->first; 
+                float p_strike = prev(it)->first; 
+                check_fly_aux(&options[p_strike][right],&options[strike][right],&options[n_strike][right]);
+            }
+        }
+    }
+}
+
 void Slice::update_synthetic(){
-    for(const float& strike : updated_synth){
+    for(const float& strike : updated_strikes){
         if(synth_prices[strike].first > -1){
             if(synth_prices[strike].first > best_synth_prices.first ){
                 best_synth.first.clear();

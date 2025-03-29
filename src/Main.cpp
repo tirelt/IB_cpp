@@ -10,7 +10,7 @@ int main(){
 	int port = 7497;
 	int clientId = 0;
 
-	printf( "Start of C++ Socket Client Test\n");
+	printf( "Start of C++ Socket Client\n");
 	shared_ptr<Slice> slice(new Slice);
 	shared_ptr<std::map<long,Position>> positions = std::make_shared<std::map<long,Position>>();	
 	Client client(slice, positions);
@@ -19,6 +19,6 @@ int main(){
 	while(client.isConnected()){
 		client.processMessages();
 	}
-	printf ("End of C++ Socket Client Test\n");
+	printf ("End of C++ Socket Client\n");
 }
 

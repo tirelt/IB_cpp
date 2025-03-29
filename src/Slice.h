@@ -54,10 +54,11 @@ struct Slice{
     void assign_option(const ContractDetails&);
     void update_float_memb( Forward * fwd,const int field,const double value);
     std::map<float,std::pair<float,float>> synth_prices;
-    std::set<float> updated_synth;
+    std::set<float> updated_strikes;
     std::pair<float,float> best_synth_prices;
     std::pair<std::vector<float>,std::vector<float>> best_synth;
     void update_synthetic();
+    void Slice::check_fly();
     Logger log;
     Client* m_pClient;
 };
