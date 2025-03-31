@@ -58,8 +58,8 @@ struct Slice{
     std::pair<float,float> best_synth_prices;
     std::pair<std::vector<float>,std::vector<float>> best_synth;
     void update_synthetic();
-    void Slice::check_fly();
-    void Slice::check_fly_aux(Option* l_opt,Option* m_opt,Option* h_opt);
+    void check_fly();
+    void check_fly_aux(Option* l_opt,Option* m_opt,Option* h_opt);
     Logger log;
     Client* m_pClient;
 };

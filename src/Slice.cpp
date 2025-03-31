@@ -14,7 +14,7 @@ using std::endl;
 using std::next;
 using std::prev;
 
-Slice::Slice():imply_vol_queue(new TaskQueue),imply_vol_t(workerThread, imply_vol_queue),log("log/slice.txt"),best_synth_prices{-1,-1}{
+Slice::Slice():imply_vol_queue(new TaskQueue),imply_vol_t(workerThread, imply_vol_queue),best_synth_prices{-1,-1},log("log/slice.txt"){
 }
 
 Slice::~Slice(){
@@ -118,7 +118,7 @@ void Slice::check_fly_aux(Option* l_opt,Option* m_opt,Option* h_opt){
     float l_ask = l_opt->ask;
     float m_bid = m_opt->bid; 
     float h_ask = h_opt->ask;
-    float fly = l_ask - 2 * m_bid + m_bid;
+    float fly = l_ask - 2 * m_bid + h_ask;
     if(l_ask > -1 && m_bid > -1 && m_bid > -1 && fly <= 0){
         //send orders for fly  
         m_pClient->placeOrderFly(l_opt,m_opt,h_opt);
@@ -143,7 +143,7 @@ void Slice::check_fly(){
             if(it != last && it != second_last){
                 float n_strike = next(it)->first;
                 float nn_strike = next(next(it))->first;
-                check_fly_aux(&options[strike][right],&options[nn_strike][right],&options[nn_strike][right]);
+                check_fly_aux(&options[strike][right],&options[n_strike][right],&options[nn_strike][right]);
             }
             if(it != beg && it != last ){
                 float n_strike = next(it)->first; 

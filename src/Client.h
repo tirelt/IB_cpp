@@ -15,6 +15,7 @@
 
 class EClientSocket;
 struct Slice;
+struct Option;
 
 enum State{
 	ST_REQPOSITIONS,
@@ -26,6 +27,7 @@ enum State{
 	ST_CONNECT,
 	ST_REQMKTDATA,
 	ST_ORDER_SYNTH,
+	ST_DUMMY_ORDER,
 };
 
 class Client : public EWrapper{
@@ -58,6 +60,10 @@ public:
 	void placeOrderFly( Option* l_opt,Option* m_opt,Option* h_opt);
 	void sendSynth( bool long_side);
 
+	void openOrder( OrderId orderId, const Contract&, const Order&, const OrderState&);
+	void openOrderEnd();
+	void orderStatus( OrderId orderId, const std::string& status, Decimal filled, Decimal remaining, double avgFillPrice, int permId, int parentId,	double lastFillPrice, int clientId, const std::string& whyHeld, double mktCapPrice);
+	void dummy_order();
 
 private:
 	void reqCurrentTime(){};
@@ -112,9 +118,6 @@ public:
 	void tickOptionComputation( TickerId tickerId, TickType tickType, int tickAttrib, double impliedVol, double delta, double optPrice, double pvDividend, double gamma, double vega, double theta, double undPrice){}
 	void tickGeneric(TickerId tickerId, TickType tickType, double value){}
 	void tickEFP(TickerId tickerId, TickType tickType, double basisPoints, const std::string& formattedBasisPoints,	double totalDividends, int holdDays, const std::string& futureLastTradeDate, double dividendImpact, double dividendsToLastTradeDate){}
-	void orderStatus( OrderId orderId, const std::string& status, Decimal filled, Decimal remaining, double avgFillPrice, int permId, int parentId,	double lastFillPrice, int clientId, const std::string& whyHeld, double mktCapPrice){}
-	void openOrder( OrderId orderId, const Contract&, const Order&, const OrderState&){}
-	void openOrderEnd(){}
 	void winError( const std::string& str, int lastError){}
 	void connectionClosed(){}
 	void updateAccountValue(const std::string& key, const std::string& val,	const std::string& currency, const std::string& accountName){}

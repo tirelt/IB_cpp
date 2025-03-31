@@ -16,12 +16,13 @@ Contract MyContract::OPTION_SLICE(string symbol, string expiration, string excha
 	return contract;
 }
 
-Contract MyContract::FUTURE(string symbol, string exchange, string currency){
+Contract MyContract::FUTURE(string symbol, string exchange, string tradingClass, string currency){
 	Contract contract;
 	contract.symbol = symbol;
 	contract.secType = "FUT";
 	contract.exchange = exchange;
 	contract.currency = currency;
+	contract.tradingClass = tradingClass;
 	return contract;
 }
 
