@@ -21,8 +21,10 @@
 #include "OrderState.h"
 
 using std::shared_ptr;
+using std::map;
+using std::pair;
 
-Client::Client( shared_ptr<Slice> pSlice, shared_ptr<std::map<long,Position>> positions):
+Client::Client( shared_ptr<Slice> pSlice, shared_ptr<map<long,Position>> positions, shared_ptr<map<long,LiveOrder>> orders):
 		m_osSignal(2000)//2-seconds timeout
 		, m_pClient(new EClientSocket(this, &m_osSignal))
 		, m_state(ST_CONNECT)	
@@ -31,6 +33,7 @@ Client::Client( shared_ptr<Slice> pSlice, shared_ptr<std::map<long,Position>> po
 		, m_extraAuth(false)
 		, m_pSlice(pSlice)
 		, m_pPositions(positions)
+		, m_pOrders(orders)
 		, log("log/client.txt"){
 	m_pSlice->m_pClient = this;
 	//m_pClient->reqGlobalCancel();
@@ -257,9 +260,19 @@ void Client::printContractMsg(const Contract& contract){
 void Client::orderStatus(OrderId orderId, const std::string& status, Decimal filled,
 	Decimal remaining, double avgFillPrice, int permId, int parentId,
 	double lastFillPrice, int clientId, const std::string& whyHeld, double mktCapPrice){
-printf("OrderStatus. Id: %ld, Status: %s, Filled: %s, Remaining: %s, AvgFillPrice: %s, PermId: %s, LastFillPrice: %s, ClientId: %s, WhyHeld: %s, MktCapPrice: %s\n", 
-	orderId, status.c_str(), DecimalFunctions::decimalStringToDisplay(filled).c_str(), DecimalFunctions::decimalStringToDisplay(remaining).c_str(), Utils::doubleMaxString(avgFillPrice).c_str(), Utils::intMaxString(permId).c_str(),
-	Utils::doubleMaxString(lastFillPrice).c_str(), Utils::intMaxString(clientId).c_str(), whyHeld.c_str(), Utils::doubleMaxString(mktCapPrice).c_str());
+	printf("OrderStatus. Id: %ld, Status: %s, Filled: %s, Remaining: %s, AvgFillPrice: %s, PermId: %s, LastFillPrice: %s, ClientId: %s, WhyHeld: %s, MktCapPrice: %s\n", 
+		orderId, status.c_str(), DecimalFunctions::decimalStringToDisplay(filled).c_str(), DecimalFunctions::decimalStringToDisplay(remaining).c_str(), Utils::doubleMaxString(avgFillPrice).c_str(), Utils::intMaxString(permId).c_str(),
+		Utils::doubleMaxString(lastFillPrice).c_str(), Utils::intMaxString(clientId).c_str(), whyHeld.c_str(), Utils::doubleMaxString(mktCapPrice).c_str());
+	(*m_pOrders)[orderId].status = status;
+	(*m_pOrders)[orderId].filled = filled;
+	(*m_pOrders)[orderId].remaining = remaining;
+	(*m_pOrders)[orderId].avgFillPrice = avgFillPrice;
+	(*m_pOrders)[orderId].permId = permId;
+	(*m_pOrders)[orderId].parentId = parentId;
+	(*m_pOrders)[orderId].lastFillPrice = lastFillPrice;
+	(*m_pOrders)[orderId].clientId = clientId;
+	(*m_pOrders)[orderId].whyHeld = whyHeld;
+	(*m_pOrders)[orderId].mktCapPrice = mktCapPrice;
 }
 
 void Client::openOrder( OrderId orderId, const Contract& contract, const Order& order, const OrderState& orderState) {
@@ -273,6 +286,9 @@ void Client::openOrder( OrderId orderId, const Contract& contract, const Order& 
         order.competeAgainstBestOffset == COMPETE_AGAINST_BEST_OFFSET_UP_TO_MID ? "UpToMid" : Utils::doubleMaxString(order.competeAgainstBestOffset).c_str(),
         Utils::doubleMaxString(order.midOffsetAtWhole).c_str(), Utils::doubleMaxString(order.midOffsetAtHalf).c_str(),
         order.faGroup.c_str(), order.faMethod.c_str(), order.customerAccount.c_str(), (order.professionalCustomer ? "true" : "false"), order.bondAccruedInterest.c_str());
+	(*m_pOrders)[orderId].contract = contract;
+	(*m_pOrders)[orderId].order = order;
+	(*m_pOrders)[orderId].orderState = orderState;
 }
 
 void Client::openOrderEnd() {

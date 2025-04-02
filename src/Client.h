@@ -8,6 +8,7 @@
 #include "Slice.h"
 #include "Position.h"
 #include "Log.h"
+#include "Orders.h"
 
 #include <memory>
 #include <vector>
@@ -32,7 +33,7 @@ enum State{
 
 class Client : public EWrapper{
 public:
-	Client(std::shared_ptr<Slice> Slice,std::shared_ptr<std::map<long,Position>> positions);
+	Client(std::shared_ptr<Slice> Slice,std::shared_ptr<std::map<long,Position>> positions, std::shared_ptr<std::map<long,LiveOrder>> orders);
 	~Client();
 	void processMessages();
 	bool connect(const char * host, int port, int clientId = 0);
@@ -202,6 +203,7 @@ private:
 public:
 	std::shared_ptr<Slice> m_pSlice;
 	std::shared_ptr<std::map<long,Position>> m_pPositions;
+	std::shared_ptr<std::map<long,LiveOrder>> m_pOrders;
 	Logger log;
 };
 
