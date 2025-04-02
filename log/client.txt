@@ -2,9 +2,14 @@ Number of mesages: 0
 Number of mesages after process: 0
 Number of mesages: 0
 Number of mesages after process: 0
-Number of mesages: 10
+Number of mesages: 0
+Number of mesages after process: 0
+Number of mesages: 0
 Number of mesages after process: 0
 Number of mesages: 0
 Number of mesages after process: 0
 Number of mesages: 0
 Number of mesages after process: 0
+Number of mesages: 0
+Number of mesages after process: 0
+Number of mesages: 0

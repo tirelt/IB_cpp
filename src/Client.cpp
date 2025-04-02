@@ -104,7 +104,7 @@ void Client::processMessages(){
 		case ST_ACK:
 			//const unsigned sleep(1);
 			//std::this_thread::sleep_for(std::chrono::microseconds(10));
-			std::this_thread::sleep_for(std::chrono::milliseconds(100));
+			std::this_thread::sleep_for(std::chrono::milliseconds(1));
 			printf("\n\ncycle ACK\n\n");
 			break;
 	}
@@ -113,6 +113,7 @@ void Client::processMessages(){
 	errno = 0;
 	m_pReader->processMsgs();
 	log << "Number of mesages after process: " << m_pReader->getQueueSize() << std::endl;
+	m_pSlice->check_fly();
 	m_pSlice->update_synthetic();
 }
 
@@ -143,8 +144,8 @@ void Client::connectAck(){
 void Client::reqPositions(){
 	printf("Requesting Positions");
 	m_pClient->reqPositions();
-	//m_state = ST_REQFIRSTFUT; 
-	m_state = ST_DUMMY_ORDER; 
+	m_state = ST_REQFIRSTFUT; 
+	//m_state = ST_DUMMY_ORDER; 
 }
 
 void Client::position( const std::string& account, const Contract& contract, Decimal position, double avgCost) {

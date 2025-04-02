@@ -56,7 +56,7 @@ struct Slice{
     std::map<float,std::pair<float,float>> synth_prices;
     std::set<float> updated_strikes;
     std::pair<float,float> best_synth_prices;
-    std::pair<std::vector<float>,std::vector<float>> best_synth;
+    std::pair<std::set<float>,std::set<float>> best_synth;
     void update_synthetic();
     void check_fly();
     void check_fly_aux(Option* l_opt,Option* m_opt,Option* h_opt);

@@ -119,7 +119,7 @@ void Slice::check_fly_aux(Option* l_opt,Option* m_opt,Option* h_opt){
     float m_bid = m_opt->bid; 
     float h_ask = h_opt->ask;
     float fly = l_ask - 2 * m_bid + h_ask;
-    if(l_ask > -1 && m_bid > -1 && m_bid > -1 && fly <= 0){
+    if(l_ask > -1 && m_bid > -1 && h_ask > -1 && fly <= 0){
         //send orders for fly  
         m_pClient->placeOrderFly(l_opt,m_opt,h_opt);
     }
@@ -156,27 +156,44 @@ void Slice::check_fly(){
 
 void Slice::update_synthetic(){
     for(const float& strike : updated_strikes){
+        
+        best_synth.second.erase( strike);
         if(synth_prices[strike].first > -1){
             if(synth_prices[strike].first > best_synth_prices.first ){
                 best_synth.first.clear();
-                best_synth.first.push_back(strike);
+                best_synth.first.insert(strike);
+                best_synth_prices.first = synth_prices[strike].first; 
             } else if(synth_prices[strike].first  == best_synth_prices.first){
-                best_synth.first.push_back(strike);
+                best_synth.first.insert(strike);
+            } else if(best_synth.first.find( strike) != best_synth.first.end()){
+                best_synth.first.erase( strike);
+            }
+            if( !best_synth.first.size()){
+                best_synth_prices.first  = -1;
             }
         }
         if(synth_prices[strike].second > -1 ){
-            if( synth_prices[strike].second < best_synth_prices.second ){
+            if( best_synth_prices.second == -1 || synth_prices[strike].second < best_synth_prices.second ){
                 best_synth.second.clear();
-                best_synth.second.push_back(strike);
+                best_synth.second.insert(strike);
+                best_synth_prices.second = synth_prices[strike].second;
             } else if(synth_prices[strike].second  == best_synth_prices.second){
-                best_synth.second.push_back(strike);
+                best_synth.second.insert(strike);
+            } else if(best_synth.second.find( strike) != best_synth.second.end()){
+                best_synth.second.erase( strike);
+            }
+            if( !best_synth.second.size()){
+                best_synth_prices.second  = -1;
             }
         }
     }
-    if( forward.bid > best_synth_prices.first ){
+    if( best_synth_prices.second > -1 && forward.bid > best_synth_prices.second ){
         // buy the synth from best_synth.first and sell the futiure
+        m_pClient->sendSynth( true);
     }
-    if( forward.ask > best_synth_prices.second ){
+    if( forward.ask < best_synth_prices.first ){
         // sell the synth from best_synth.second and buy the futiure
+        m_pClient->sendSynth( false);
     }
+
 }
