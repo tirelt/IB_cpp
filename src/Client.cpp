@@ -23,6 +23,7 @@
 using std::shared_ptr;
 using std::map;
 using std::pair;
+using std::string;
 
 Client::Client( shared_ptr<Slice> pSlice, shared_ptr<map<long,Position>> positions, shared_ptr<map<long,LiveOrder>> orders):
 		m_osSignal(2000)//2-seconds timeout
@@ -196,13 +197,32 @@ void Client::contractDetailsEnd( int reqId) {
 
 void Client::placeOrderFly( Option* l_opt,Option* m_opt,Option* h_opt){
 	Contract fly = MyContract::FLY(l_opt->contract,m_opt->contract,h_opt->contract);
-	long long qty = 1; 
+	long long qty = DecimalFunctions::doubleToDecimal(1); 
 	Order order = MyOrder::COMBO_LIMIT_ORDER("BUY", qty, 0, false);
 	m_pClient->placeOrder(m_orderId++,fly,order);	
 }
 
 void Client::sendSynth( bool long_side){
-
+	string flag;
+	float strike; 
+	double limitPrice;
+	const Forward& fwd = m_pSlice->forward;
+	if( long_side){
+		flag = "BUY";
+		strike = *(m_pSlice->best_synth.second.begin());
+		limitPrice = fwd.bid-strike;
+	} else{
+		flag = "SELL";
+		strike = *(m_pSlice->best_synth.first.begin());
+		limitPrice = fwd.ask-strike;
+	}
+	const Option& call = m_pSlice->options.at(strike).at(Option::CALL);
+	const Option& put = m_pSlice->options.at(strike).at(Option::PUT);
+	Contract synth = MyContract::SYNTH( m_pSlice->forward.contract, call.contract, put.contract );
+	long long qty = DecimalFunctions::doubleToDecimal(1);
+	Order order = MyOrder::COMBO_LIMIT_ORDER(flag, qty, limitPrice, false);
+	m_pClient->placeOrder(m_orderId++,synth,order);
+	int a = 1;	
 }
 
 void Client::reqMktData(){

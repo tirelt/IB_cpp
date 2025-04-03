@@ -11,6 +11,7 @@ public:
 	static Contract OPTION_SLICE(std::string symbol, std::string expiration, std::string exchange, std::string currency);
 	static Contract FUTURE(std::string symbol, std::string exchange, std::string tradingClass, std::string currency);
 	static Contract FLY(Contract& l_c,Contract& m_c, Contract& h_c);
+	static Contract SYNTH( const Contract& fwd, const Contract& Call, const Contract& Put );
 };
 
 #endif
